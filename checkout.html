@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaowcase</title>
+    <!-- Fontawesome5_Js_link -->
+    <script src="assets/js/fontawesomepro.js"></script>
+    <!-- Bootstrap5_Css_link -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Owl_carousel_Css_link -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <!-- Fancybox_Css_link -->
+    <link rel="stylesheet" href="assets/css/fancybox.css">
+    <!-- meanmenu_Css_link -->
+    <link rel="stylesheet" href="assets/css/meanmenu.css">
+    <!-- skitter_Css_link -->
+    <link rel="stylesheet" href="assets/css/skitter.css">
+    <!-- ion_range_slider_link -->
+    <link rel="stylesheet" href="assets/css/ion.rangeSlider.min.css">
+    <!-- exzoom_Css_link -->
+    <link rel="stylesheet" href="assets/css/jquery.exzoom.css">
+
+    <!-- Style_Css_link -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body onload="preloder_function()" class="">
+    <!-- preloader_area_start -->
+    <div id="preloader">
+        <div class="preloader-container">
+            <div class="loader"><span></span></div>
+            <div class="loader"><span></span></div>
+
+            <div class="loader"><i></i></div>
+            <div class="loader"><i></i></div>
+        </div>
+    </div>
+    <!-- preloader_area_end -->
+
+
+    <!-- Header_start -->
+    <header>
+        <div class="header_area fixed-top">
+            <nav>
+                <div class="mobile_menu d-lg-none">
+                    <nav id="mobile_menu">
+                        <ul>
+                            <li><a href="index.html" class="nav-link active">Home</a></li>
+                            <li><a href="javascript:void(0)" class="nav-link">Western</a></li>
+
+                            <li><a href="" class="nav-link">Product</a>
+                                <div class="mega-menu">
+                                    <ul>
+                                        <li><a href="#" class="nav-link">
+                                                <h5><span class="highlight"><i class="far fa-vihara"></i></span> Climate
+                                                </h5>
+                                            </a>
+                                            <ul>
+                                                <li><a href="#" class="nav-link">Western</a></li>
+                                                <li><a href="#" class="nav-link">Great american</a></li>
+                                                <li><a href="product.html" class="nav-link">Most Popular</a></li>
+                                                <li><a href="#" class="nav-link">Great America</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#" class="nav-link">
+                                                <h5><span class="highlight"><i class="far fa-walker"></i></span>
+                                                    Accessories</h5>
+                                            </a>
+                                            <ul>
+                                                <li><a href="#" class="nav-link">Etymology</a></li>
+                                                <li><a href="#" class="nav-link">Great american</a></li>
+                                                <li><a href="#" class="nav-link">Best sellers</a></li>
+                                                <li><a href="#" class="nav-link">Historical Figure</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#" class="nav-link">
+                                                <h5><span class="highlight"><i class="far fa-ring"></i></span> Tableware
+                                                </h5>
+                                            </a>
+                                            <ul class="">
+                                                <li><a href="product.html" class="nav-link">Most Popular</a></li>
+                                                <li><a href="#" class="nav-link">Etymology</a></li>
+                                                <li><a href="#" class="nav-link">Historical figure</a></li>
+                                                <li><a href="#" class="nav-link">Western</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li><a href="about.html" class="nav-link">About</a></li>
+                            <li><a href="blog.html" class="nav-link">Blog</a></li>
+                            <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="desktop_view">
+                    <div class="container">
+                        <div class="row align-items-center justify-content-between">
+                            <div class="col-xl-2 col-md-2 col-3">
+                                <div class="logo">
+                                    <a href=""><img src="assets/images/logo/logo.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-xl-7 col-lg-7 d-none d-lg-block">
+                                <div class="main_menu d-flex justify-content-end">
+                                    <nav>
+                                        <ul>
+                                            <li><a href="index.html" class="nav-link active">Home</a></li>
+                                            <li><a href="javascript:void(0)" class="nav-link">Western</a></li>
+                                            <li><a href="javascript:void(0)" class="nav-link">Product <i
+                                                        class="fal fa-angle-down nav_link_angle"></i></a>
+                                                <div class="mega-menu">
+                                                    <ul>
+                                                        <h5><span class="highlight"><i class="far fa-vihara"></i></span>
+                                                            Climate</h5>
+                                                        <li><a href="#" class="nav-link">Western</a></li>
+                                                        <li><a href="product.html" class="nav-link">Most Popular</a>
+                                                        </li>
+                                                        <li><a href="#" class="nav-link">Best sellers</a></li>
+                                                        <li><a href="#" class="nav-link">Great America</a></li>
+                                                    </ul>
+                                                    <ul>
+                                                        <h5><span class="highlight"><i class="far fa-walker"></i></span>
+                                                            Accessories</h5>
+                                                        <li><a href="#" class="nav-link">Etymology</a></li>
+                                                        <li><a href="#" class="nav-link">Great american</a></li>
+                                                        <li><a href="#" class="nav-link">Best sellers</a></li>
+                                                        <li><a href="#" class="nav-link">Historical Figure</a></li>
+                                                    </ul>
+                                                    <ul class="">
+                                                        <h5><span class="highlight"><i class="far fa-ring"></i></span>
+                                                            Tableware</h5>
+                                                        <li><a href="product.html" class="nav-link">Most Popular</a>
+                                                        </li>
+                                                        <li><a href="#" class="nav-link">Etymology</a></li>
+                                                        <li><a href="#" class="nav-link">Historical figure</a></li>
+                                                        <li><a href="#" class="nav-link">Western</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li><a href="about.html" class="nav-link">About</a></li>
+                                            <li><a href="blog.html" class="nav-link">Blog</a></li>
+                                            <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                                        </ul>
+
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-sm-5 col-8 me-3 me-lg-0">
+                                <div class="d-flex justify-content-start justify-content-md-end">
+                                    <div class="nav_icon">
+                                        <div class="shopping-cart ">
+                                            <button class="dropdown-toggle">
+                                                <i class="fal fa-shopping-cart" aria-hidden="true"></i>
+                                                <span class="count">2</span>
+                                            </button>
+                                            <ul class="cart-dropdown">
+                                                <div class="dropdown-box">
+                                                    <div class="menu-cart-top">
+                                                        <h5>Products in cart</h5>
+                                                        <h5 class="menu-cart-top-count">4</h5>
+                                                    </div>
+                                                    <li>
+                                                        <a class="dropdown-item" href="#">
+                                                            <img src="assets/images/products_image/2.png" alt="">
+                                                            <div class="text">
+                                                                <h6>Magna Aliquam Erat</h6>
+                                                                <small class="price-quantity">2 × $370.00</small> <br>
+
+                                                            </div>
+                                                            <button class="close">
+                                                                <i class="fal fa-times" aria-hidden="true"></i>
+                                                            </button>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="#">
+                                                            <img src="assets/images/products_image/3.png" alt="">
+                                                            <div class="text">
+                                                                <h6>Antique toys</h6>
+                                                                <small class="price-quantity">5 × $50</small> <br>
+
+                                                            </div>
+                                                            <button class="close">
+                                                                <i class="fal fa-times" aria-hidden="true"></i>
+                                                            </button>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="#">
+                                                            <img src="assets/images/products_image/4.png" alt="">
+                                                            <div class="text">
+                                                                <h6>Ducimus dislikes</h6>
+                                                                <small class="price-quantity">5 × $50</small> <br>
+
+                                                            </div>
+                                                            <button class="close">
+                                                                <i class="fal fa-times" aria-hidden="true"></i>
+                                                            </button>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="#">
+                                                            <img src="assets/images/products_image/5.png" alt="">
+                                                            <div class="text">
+                                                                <h6>Ducimus dislikes</h6>
+                                                                <small class="price-quantity">5 × $50</small> <br>
+
+                                                            </div>
+                                                            <button class="close">
+                                                                <i class="fal fa-times" aria-hidden="true"></i>
+                                                            </button>
+                                                        </a>
+                                                    </li>
+
+                                                </div>
+                                                <div class="cart-bottom">
+                                                    <p>Subtotal: <span>$50</span></p>
+                                                    <div class="btn_area d-flex justify-content-between">
+                                                        <button class="cmn_btn">View cart</button>
+                                                        <button class="cmn_btn">checkout</button>
+                                                    </div>
+                                                </div>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <ul class="menu_icon d-flex justify-content-end">
+                                        <li><a href="" class="nav-link"><span><i class="far fa-heart"></i></span>
+                                                <span class="counter">1</span></a>
+                                        </li>
+                                        <li><a href="" class="nav-link"><span><i class="fal fa-user"></i></span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- Header_End -->
+
+    <!-- banner_area_start -->
+    <div class="banner_area">
+        <div class="container">
+            <div class="row ">
+                <div class="col">
+                    <div class="breadcrumb_area">
+                        <h3>Checkout</h3>
+                        <ul class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="home-1.html">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Checkout</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner_area_end -->
+
+
+    <!-- checkout_area_start -->
+    <section class="checkout_area">
+        <div class="container">
+            <div class="row">
+                <div class="coupon_area text-center mb-50">
+                    <div class="section_header mb-30">
+                        <h4>Have a Coupon Code?</h4>
+                    </div>
+                    <div class="coupon_input">
+                        <input type="text" class="form-control" placeholder="Input your code">
+                    </div>
+                    <a href="" type="submit" class="cmn_btn mt-30">SUBMIT</a>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="section_left" data-aos="fade-left">
+                        <div class="section_header">
+                            <h2>Billing Information</h2>
+                        </div>
+                        <div class="billing_form_area mb-30">
+                            <form class="row g-3">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="First Name*" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="password" class="form-control" placeholder="Last Name*" required>
+                                </div>
+                                <div class="col-md-12">
+                                    <input type="email" class="form-control" placeholder="Email Address">
+                                </div>
+                                <div class="col-12">
+                                    <input type="tel" class="form-control" placeholder="Phone Number">
+                                </div>
+                                <div class="col-12">
+                                    <input type="text" class="form-control" placeholder="Company Name">
+                                </div>
+                                <div class="col-md-12">
+                                    <select id="inputState" class="form-select">
+                                        <option selected>Your Country</option>
+                                        <option>Bangladesh</option>
+                                        <option>USA</option>
+                                        <option>UK</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <input type="text" class="form-control" placeholder="Apartment, Street Address">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="State">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Zip / Postcode">
+                                </div>
+
+                                <div class="col-12">
+                                    <a type="submit">Ship to Another Address</a>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="form">
+                            <div class="col-md-12">
+                                <h4>Select Payment Method</h4>
+                                <div class="payment-box mb-4">
+                                    <div class="row g-2 mb-10">
+
+                                        <div class="col-4 col-sm-3 col-lg-2">
+                                            <input type="radio" class="btn-check" name="options" id="pay_opt_14"
+                                                autocomplete="off" />
+                                            <label class="btn btn-primary" for="pay_opt_14">
+                                                <img class="img-fluid" src="assets/images/gateway/cod-pay.png" alt="" />
+                                                <img src="assets/images/gateway/check.png" alt=""
+                                                    class="check" /></label>
+                                        </div>
+                                        <div class="col-12">
+                                            <h5 class="mb-0 mt-10">or</h5>
+                                        </div>
+                                    </div>
+                                    <div class="payment-options cmn_scroll mb-30">
+                                        <div class="row g-2">
+                                            <div class="col-4 col-sm-3 col-lg-2">
+                                                <input type="radio" class="btn-check" name="options" id="pay_opt_1"
+                                                    autocomplete="off" checked />
+                                                <label class="btn btn-primary" for="pay_opt_1">
+                                                    <img class="img-fluid" src="assets/images/gateway/2checkout.jpg"
+                                                        alt="" />
+                                                    <img src="assets/images/gateway/check.png" alt=""
+                                                        class="check" /></label>
+                                            </div>
+                                            <div class="col-4 col-sm-3 col-lg-2">
+                                                <input type="radio" class="btn-check" name="options" id="pay_opt_2"
+                                                    autocomplete="off" />
+                                                <label class="btn btn-primary" for="pay_opt_2">
+                                                    <img class="img-fluid" src="assets/images/gateway/authorize-net.jpg"
+                                                        alt="" />
+                                                    <img src="assets/images/gateway/check.png" alt=""
+                                                        class="check" /></label>
+                                            </div>
+                                            <div class="col-4 col-sm-3 col-lg-2">
+                                                <input type="radio" class="btn-check" name="options" id="pay_opt_3"
+                                                    autocomplete="off" />
+                                                <label class="btn btn-primary" for="pay_opt_3">
+                                                    <img class="img-fluid" src="assets/images/gateway/bank-transfer.jpg"
+                                                        alt="" />
+                                                    <img src="assets/images/gateway/check.png" alt=""
+                                                        class="check" /></label>
+                                            </div>
+                                            <div class="col-4 col-sm-3 col-lg-2">
+                                                <input type="radio" class="btn-check" name="options" id="pay_opt_4"
+                                                    autocomplete="off" />
+                                                <label class="btn btn-primary" for="pay_opt_4">
+                                                    <img class="img-fluid" src="assets/images/gateway/block-io.jpg"
+                                                        alt="" />
+                                                    <img src="assets/images/gateway/check.png" alt=""
+                                                        class="check" /></label>
+                                            </div>
+                                            <div class="col-4 col-sm-3 col-lg-2">
+                                                <input type="radio" class="btn-check" name="options" id="pay_opt_5"
+                                                    autocomplete="off" />
+                                                <label class="btn btn-primary" for="pay_opt_5">
+                                                    <img class="img-fluid" src="assets/images/gateway/blockchain.jpg"
+                                                        alt="" />
+                                                    <img src="assets/images/gateway/check.png" alt=""
+                                                        class="check" /></label>
+                                            </div>
+                                            <div class="col-4 col-sm-3 col-lg-2">
+                                                <input type="radio" class="btn-check" name="options" id="pay_opt_6"
+                                                    autocomplete="off" />
+                                                <label class="btn btn-primary" for="pay_opt_6">
+                                                    <img class="img-fluid" src="assets/images/gateway/coinbase.jpg"
+                                                        alt="" />
+                                                    <img src="assets/images/gateway/check.png" alt=""
+                                                        class="check" /></label>
+                                            </div>
+                                            <div class="col-4 col-sm-3 col-lg-2">
+                                                <input type="radio" class="btn-check" name="options" id="pay_opt_7"
+                                                    autocomplete="off" />
+                                                <label class="btn btn-primary" for="pay_opt_7">
+                                                    <img class="img-fluid" src="assets/images/gateway/coingate.jpg"
+                                                        alt="" />
+                                                    <img src="assets/images/gateway/check.png" alt=""
+                                                        class="check" /></label>
+                                            </div>
+                                            <div class="col-4 col-sm-3 col-lg-2">
+                                                <input type="radio" class="btn-check" name="options" id="pay_opt_8"
+                                                    autocomplete="off" />
+                                                <label class="btn btn-primary" for="pay_opt_8">
+                                                    <img class="img-fluid" src="assets/images/gateway/coin-payments.jpg"
+                                                        alt="" />
+                                                    <img src="assets/images/gateway/check.png" alt=""
+                                                        class="check" /></label>
+                                            </div>
+                                            <div class="col-4 col-sm-3 col-lg-2">
+                                                <input type="radio" class="btn-check" name="options" id="pay_opt_9"
+                                                    autocomplete="off" />
+                                                <label class="btn btn-primary" for="pay_opt_9">
+                                                    <img class="img-fluid" src="assets/images/gateway/flutterwave.jpg"
+                                                        alt="" />
+                                                    <img src="assets/images/gateway/check.png" alt=""
+                                                        class="check" /></label>
+                                            </div>
+                                            <div class="col-4 col-sm-3 col-lg-2">
+                                                <input type="radio" class="btn-check" name="options" id="pay_opt_10"
+                                                    autocomplete="off" />
+                                                <label class="btn btn-primary" for="pay_opt_10">
+                                                    <img class="img-fluid" src="assets/images/gateway/instamojo.jpg"
+                                                        alt="" />
+                                                    <img src="assets/images/gateway/check.png" alt=""
+                                                        class="check" /></label>
+                                            </div>
+                                            <div class="col-4 col-sm-3 col-lg-2">
+                                                <input type="radio" class="btn-check" name="options" id="pay_opt_11"
+                                                    autocomplete="off" />
+                                                <label class="btn btn-primary" for="pay_opt_11">
+                                                    <img class="img-fluid" src="assets/images/gateway/mercado-pago.jpg"
+                                                        alt="" />
+                                                    <img src="assets/images/gateway/check.png" alt=""
+                                                        class="check" /></label>
+                                            </div>
+                                            <div class="col-4 col-sm-3 col-lg-2">
+                                                <input type="radio" class="btn-check" name="options" id="pay_opt_12"
+                                                    autocomplete="off" />
+                                                <label class="btn btn-primary" for="pay_opt_12">
+                                                    <img class="img-fluid" src="assets/images/gateway/mollie.jpg"
+                                                        alt="" />
+                                                    <img src="assets/images/gateway/check.png" alt=""
+                                                        class="check" /></label>
+                                            </div>
+                                            <div class="col-4 col-sm-3 col-lg-2">
+                                                <input type="radio" class="btn-check" name="options" id="pay_opt_13"
+                                                    autocomplete="off" />
+                                                <label class="btn btn-primary" for="pay_opt_13">
+                                                    <img class="img-fluid" src="assets/images/gateway/monnify.jpg"
+                                                        alt="" />
+                                                    <img src="assets/images/gateway/check.png" alt=""
+                                                        class="check" /></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="mt-10">Your personal data will be used to process your order, support your
+                                        experience throughout this website, and for other purposes described in our
+                                        privacy
+                                        policy.</p>
+
+                                    <div class="condition_area mt-20 mb-20 form-check">
+                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                    </div>
+                                    <a href="" class="cmn_btn">PLACE ORDER</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="section_right" data-aos="fade-right">
+                        <div class="billing_information">
+                            <ul class="billing_list_area mb-20">
+                                <li>
+                                    <h5>Product</h5>
+                                    <h5>Total</h5>
+                                </li>
+                                <li><span>Cabinet Plate</span> <span>$200.00</span></li>
+                                <li><span>Matched Pairn</span> <span>$300.00</span></li>
+                                <li>
+                                    <h6>Cart Subtotal</h6>
+                                    <h6>$900.00</h6>
+                                </li>
+                                <li>
+                                    <h6>(+) Tax Charge</h6>
+                                    <h6>$100.00</h6>
+                                </li>
+                                <li>
+                                    <h6>(+) Shipping Charge</h6>
+                                    <h6>$500.00</h6>
+                                </li>
+                                <li>
+                                    <h5>Total</h5>
+                                    <h5>$1500.00</h5>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- checkout_area_end -->
+
+
+
+    <!-- footer_start -->
+    <section class="footer_area">
+        <div class="container">
+            <div class="row gy-4 gy-sm-5">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="footer_widget">
+                        <div class="widget_logo mb-30">
+                            <a href="#nav_area"><img class="footer_logo" src="assets/images/logo/footer-logo.png"
+                                    alt=""></a>
+                        </div>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur fuga odit excepturi,
+                            natus voluptate commodi qui sunt quisquam cupiditate molestiae?</p>
+                        <div class="social_area mt-50">
+                            <ul class="d-flex">
+                                <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                                <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                                <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <div class="footer_widget">
+                        <h5>Quick Links</h5>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3 ps-lg-5">
+                    <div class="footer_widget">
+                        <h5>Categories</h5>
+                        <ul>
+                            <li><a href="">Antique Vase</a></li>
+                            <li><a href="">Tableware</a></li>
+                            <li><a href="">Lightning</a></li>
+                            <li><a href="">Antique Vase</a></li>
+                            <li><a href="">All Category</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3">
+                    <div class="footer_widget">
+                        <h5>Contact Us</h5>
+                        <p>10714 163rd Pl, Orland Park, IL 60467, United States</p>
+                        <p>email@website.com</p>
+                        <p>354-4156745674</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer_end -->
+
+    <!-- copy_right_area_start -->
+    <div class="copy_right_area">
+        <div class="container">
+            <div class="row gy-4 ">
+                <div class="col-sm-6 text-sm-start text-center">
+                    <p>Copyright © 2023 <a href="" class="highlight">Shaowcase</a> All Rights Reserved</p>
+                </div>
+                <div class="col-sm-6">
+                    <div class="language text-sm-end text-center">
+                        <a href="" class="language">English</a>
+                        <a href="" class="language">Spanish</a>
+                        <a href="" class="language">Germany</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- copy_right_area_end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <a href="#" class="scroll_up">
+        <i class="far fa-arrow-to-top"></i>
+    </a>
+
+
+
+
+    <!-- Jquery_Js_link -->
+    <script src="assets/js/jquery-3.6.1.min.js"></script>
+
+    <!-- meanmenu_Js_link -->
+    <script src="assets/js/jquery.meanmenu.min.js"></script>
+    <!-- waypoints_Js_link -->
+    <script src="assets/js/jquery.waypoints.min.js"></script>
+    <!-- Bootstrap_Js_link -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Owl_carausel_Js_link -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- counterup_Js_link -->
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <!-- fancybox_Js_link -->
+    <script src="assets/js/fancybox.umd.js"></script>
+    <!-- skitter_Js_link -->
+    <script src="assets/js/jquery.skitter.min.js"></script>
+    <!-- easing_Js_link -->
+    <script src="assets/js/jquery.easing.1.3.js"></script>
+    <!-- rangSlider_Js_link -->
+    <script src="assets/js/ion.rangeSlider.min.js"></script>
+    <!-- exzoom_Js_link -->
+    <script src="assets/js/jquery.exzoom.js"></script>
+    <!-- countdown_Js_link -->
+    <script src="assets/js/jquery.countdown.min.js"></script>
+
+    <!-- Main_Js_link -->
+    <script src="assets/js/main.js"></script>
+
+
+</body>
+
+</html>
