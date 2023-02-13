@@ -19,113 +19,13 @@ window.addEventListener("scroll", function () {
     // console.log(scrollpos);
 });
 
-// mobile_menu
-jQuery('#mobile_menu').meanmenu({
-    meanScreenWidth: "991",
-    meanMenuContainer: '.mobile_menu',
-    meanMenuOpen: "<i class='fal fa-bars'></i>",
-    meanMenuClose: "<i class='far fa-times-circle'></i>"
-});
 
 
 $(document).ready(function () {
 
 
-    // hero_area
-    $(".skitter-large").skitter({
-        dots: false,
-        interval: 3000,
-        stop_over: false,
-        auto_play: true
-     });
-
     // trendy_products_area
-    $('.carousel_area2').owlCarousel({
-        loop: true,
-        autoplay: false,
-        margin: 30,
-        nav: false,
-        dots: false,
-        // rtl:true,
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items: 2
-            },
-            1000: {
-                items: 4
-            }
-        }
-    });
-
-
-    // best_saller_area
-    $('.carousel_area3').owlCarousel({
-        loop: true,
-        autoplay: false,
-        margin: 30,
-        nav: false,
-        dots: true,
-        // rtl:true,
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items: 1
-            },
-            1000: {
-                items: 1
-            }
-        }
-    });
-    // deal_outlet_area
-    $('.carousel_area5').owlCarousel({
-        loop: true,
-        autoplay: false,
-        margin: 30,
-        nav: false,
-        dots: true,
-        // rtl:true,
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items: 1
-            },
-            1000: {
-                items: 1
-            }
-        }
-    });
-
-
-    // deal_section_area
-    $('.carousel_area4').owlCarousel({
-        loop: true,
-        autoplay: false,
-        margin: 30,
-        nav: false,
-        dots: true,
-        // rtl:true,
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items: 2
-            },
-            1000: {
-                items: 4
-            }
-        }
-    });
-
-    // testimonial_area
-    $('.testimonial_carousel').owlCarousel({
+    $('.carousel-area1').owlCarousel({
         loop: true,
         autoplay: false,
         margin: 20,
@@ -136,29 +36,42 @@ $(document).ready(function () {
             0: {
                 items: 1
             },
-            600: {
+            400: {
                 items: 2
+            },
+            600: {
+                items: 3
+            },
+            800: {
+                items: 4
             },
             1000: {
-                items: 2
+                items: 5
             },
-            1150: {
-                items: 3
-            }
+            1220: {
+                items: 6
+            },
+            1450: {
+                items: 7
+            },
+            1620: {
+                items: 8
+            },
         }
     });
 
-    // achivement_area_start 
-    $('.about_counter').counterUp({
-        delay: 10,
-        time: 1000
-    });
 
-    // referrel_area 
-    $('.refarrel_counter').counterUp({
-        delay: 10,
-        time: 1000
-    });
+    
+
+
+   
+    
+
+    // achivement_area_start 
+    // $('.about_counter').counterUp({
+    //     delay: 10,
+    //     time: 1000
+    // });
 
     // scroll_up
     $(".scroll_up").fadeOut();
@@ -171,31 +84,24 @@ $(document).ready(function () {
     });
 
     // product_area_start range_area
-    $(".js_range_slider").ionRangeSlider({
-        type: "double",
-        min: 0,
-        max: 100,
-        from: 800,
-        to: 500,
-        grid: true
+    // $(".js_range_slider").ionRangeSlider({
+    //     type: "double",
+    //     min: 0,
+    //     max: 100,
+    //     from: 800,
+    //     to: 500,
+    //     grid: true
+    // });
+
+
+    // Initialise Carousel
+    const cardSlider = new Carousel(document.querySelector("#cardSlider"), {
+    Dots: false,
     });
 
 
-    
-
-
 });
 
-// coundown_area coundown
-$('#countdown1').countdown('2023/02/30', function (event) {
-    // $(this).html(event.strftime('days'));
-    $(this).html(event.strftime('<div class="single-coundown"><h5>%D</h5><span>Days</span> </div> <div class="single-coundown"><h5>%H</h5><span>Hours</span> </div> <div class="single-coundown"><h5>%M</h5><span>Minutes</span> </div> <div class="single-coundown"><h5>%S</h5><span>Second</span> </div>'));
-});
-
-$('#countdown2').countdown('2023/03/30', function (event) {
-    // $(this).html(event.strftime('days'));
-    $(this).html(event.strftime('<div class="single-coundown"><h5>%D</h5><span>Days</span> </div> <div class="single-coundown"><h5>%H</h5><span>Hours</span> </div> <div class="single-coundown"><h5>%M</h5><span>Minutes</span> </div> <div class="single-coundown"><h5>%S</h5><span>Second</span> </div>'));
-});
 
 // dashboard_toggle_sidemenu
 const toggleSideMenu = () => {
@@ -236,23 +142,3 @@ const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstra
 
 
 
-$(function () {
-    // //  product_details_area_start xzoom
-    $("#exzoom").exzoom({
-
-        // thumbnail nav options
-        "navWidth": 80,
-        "navHeight": 80,
-        "navItemNum": 5,
-        "navItemMargin": 7,
-        "navBorder": 1,
-
-        // autoplay
-        "autoPlay": false,
-
-        // autoplay interval in milliseconds
-        "autoPlayTimeout": 2000
-
-    });
-
-});
