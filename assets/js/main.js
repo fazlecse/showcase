@@ -60,12 +60,32 @@ $(document).ready(function () {
         }
     });
 
+    // Swiper-slider
+    var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+        },
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        loop: true,
 
-    
+    });
 
 
-   
-    
+
+
+
 
     // achivement_area_start 
     // $('.about_counter').counterUp({
@@ -96,7 +116,7 @@ $(document).ready(function () {
 
     // Initialise Carousel
     const cardSlider = new Carousel(document.querySelector("#cardSlider"), {
-    Dots: false,
+        Dots: false,
     });
 
 
@@ -117,23 +137,23 @@ const hideSidebar = () => {
 const tabs = document.getElementsByClassName("tab");
 const contents = document.getElementsByClassName("content");
 for (const element of tabs) {
-const tabId = element.getAttribute("tab-id");
-const content = document.getElementById(tabId);
-element.addEventListener("click", () => {
-    for (const t of tabs) {
-        t.classList.remove("active");
-    }
-    for (const c of contents) {
-        c.classList.remove("active");
-    }
-    element.classList.add("active");
-    content.classList.add("active");
-});
+    const tabId = element.getAttribute("tab-id");
+    const content = document.getElementById(tabId);
+    element.addEventListener("click", () => {
+        for (const t of tabs) {
+            t.classList.remove("active");
+        }
+        for (const c of contents) {
+            c.classList.remove("active");
+        }
+        element.classList.add("active");
+        content.classList.add("active");
+    });
 }
 
 // input file preview
 const previewImage = (id) => {
-document.getElementById(id).src = URL.createObjectURL(event.target.files[0]);
+    document.getElementById(id).src = URL.createObjectURL(event.target.files[0]);
 };
 
 // Tooltip
