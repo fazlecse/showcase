@@ -24,7 +24,7 @@ window.addEventListener("scroll", function () {
 $(document).ready(function () {
 
 
-    // trendy_products_area
+    // discover carousel
     $('.carousel-area1').owlCarousel({
         loop: true,
         autoplay: false,
@@ -56,6 +56,41 @@ $(document).ready(function () {
             },
             1620: {
                 items: 8
+            },
+        }
+    });
+    // What's New carousel
+    $('.carousel-area2').owlCarousel({
+        loop: true,
+        autoplay: false,
+        margin: 20,
+        nav: true,
+        dots: false,
+        // rtl:true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            400: {
+                items: 2
+            },
+            600: {
+                items: 3
+            },
+            800: {
+                items: 4
+            },
+            1000: {
+                items: 5
+            },
+            1220: {
+                items: 6
+            },
+            1450: {
+                items: 7
+            },
+            1620: {
+                items: 6
             },
         }
     });
@@ -93,13 +128,13 @@ $(document).ready(function () {
     //     time: 1000
     // });
 
-    // scroll_up
-    $(".scroll_up").fadeOut();
+    // scroll-up
+    $(".scroll-up").fadeOut();
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
-            $(".scroll_up").fadeIn();
+            $(".scroll-up").fadeIn();
         } else {
-            $(".scroll_up").fadeOut();
+            $(".scroll-up").fadeOut();
         }
     });
 
