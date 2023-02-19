@@ -116,7 +116,8 @@ $(document).ready(function () {
         loop: true,
 
     });
-
+    // select2 filter sidebar
+    $('.js-example-basic-single').select2();
 
 
 

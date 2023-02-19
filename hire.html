@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaowcase</title>
+    <!-- Fontawesome6_Js_link -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <!-- Bootstrap5_Css_link -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Owl_carousel_Css_link -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <!-- Swiper_Css_link -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <!-- select2_Css_link -->
+    <link rel="stylesheet" href="assets/css/select2.min.css">
+    <!-- Fancybox_Css_link -->
+    <!-- <link rel="stylesheet" href="assets/css/fancybox.css"> -->
+    <!-- meanmenu_Css_link -->
+    <!-- <link rel="stylesheet" href="assets/css/meanmenu.css"> -->
+    <!-- skitter_Css_link -->
+    <!-- <link rel="stylesheet" href="assets/css/skitter.css"> -->
+    <!-- ion_range_slider_link -->
+    <!-- <link rel="stylesheet" href="assets/css/ion.rangeSlider.min.css"> -->
+    <!-- exzoom_Css_link -->
+    <!-- <link rel="stylesheet" href="assets/css/jquery.exzoom.css"> -->
+
+    <!-- Style_Css_link -->
+    <link rel="stylesheet" href="assets/css/style.min.css">
+
+</head>
+
+<body onload="preloder_function()" class="">
+    <!-- Preloader area start -->
+    <div id="preloader">
+        <div class="preloader-container">
+            <div class="loader"><span></span></div>
+            <div class="loader"><span></span></div>
+
+            <div class="loader"><i></i></div>
+            <div class="loader"><i></i></div>
+        </div>
+    </div>
+    <!-- Preloader area end -->
+
+    <!-- Nav Area Start -->
+    <nav class="navbar hire-nav bg-body-tertiary fixed-top navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand logo" href="#"><img src="assets/images/logo/download.webp" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body align-items-center justify-content-between">
+                    <ul class="navbar-nav pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Your</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="discover.html">Discover</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="livestreams.html">Livestreams</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="hire.html">Hire</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Jobs</a>
+                        </li>
+                    </ul>
+                    <form class="search-area">
+                        <input type="text" class="form-control" placeholder="Search" aria-label="Username"
+                            aria-describedby="basic-addon1">
+                        <button class="input-group-text"><i class="fa-regular fa-magnifying-glass"></i></button>
+                    </form>
+                    <form>
+                        <ul class="nav-right d-flex">
+                            <li>
+                                <button class="login-btn" href="login.html">Login</button>
+                            </li>
+                            <li>
+                                <button class="signup-btn" href="signup.html">Signup</button>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Nav Area End -->
+
+    <!-- Hire hero area start -->
+    <div class="hire-hero-area">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="title-area">
+                    <h1>Hire Creatives</h1>
+                    <h3>Find the perfect freelancer for your next project</h3>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Hire hero area end -->
+
+    <!-- Hire page start -->
+    <div class="hire-page-area">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="filter-sidebar">
+                        <form class="search-area">
+                            <input type="text" class="form-control" placeholder="Search" aria-label="Username"
+                                aria-describedby="basic-addon1">
+                            <button class="input-group-text"><i class="fa-light fa-magnifying-glass"></i></button>
+                        </form>
+                        <ul class="accordion-root">
+                            <li class="availability-area">
+                                <div class="accordion" id="accordionExample">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingOne">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                                aria-expanded="false" aria-controls="collapseOne">
+                                                <i class="fa-regular fa-magnifying-glass-plus"></i>
+                                                <h6>Availability</h6>
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOne" class="accordion-collapse collapse"
+                                            aria-labelledby="headingOne" data-bs-parent="#accordionExample" style="">
+                                            <div class="accordion-body">
+                                                <div class="btn-area">
+                                                    <button class="availability-btn active btn1">All</button>
+                                                    <button class="availability-btn btn2">All</button>
+                                                    <button class="availability-btn btn3">All</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="creative-area">
+                                <div class="accordion" id="accordionExample">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingTwo">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                <i class="fa-brands fa-creative-commons-sampling-plus"></i>
+                                                <h6>Creative Fields</h6>
+                                            </button>
+                                        </h2>
+                                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample" style="">
+                                            <div class="accordion-body">
+                                                <div class="categories-list cmn-scroll">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="flexCheckChecked" checked>
+                                                        <label class="form-check-label" for="flexCheckChecked">
+                                                            <span>Best seller</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="flexCheckChecked2">
+                                                        <label class="form-check-label" for="flexCheckChecked2">
+                                                            <span>Deal Collection</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="flexCheckChecked3">
+                                                        <label class="form-check-label" for="flexCheckChecked3">
+                                                            <span>Etymology</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="flexCheckChecked4">
+                                                        <label class="form-check-label" for="flexCheckChecked4">
+                                                            <span>Featured products</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="flexCheckChecked5">
+                                                        <label class="form-check-label" for="flexCheckChecked5">
+                                                            <span>Great americans</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="flexCheckChecked6">
+                                                        <label class="form-check-label" for="flexCheckChecked6">
+                                                            <span>Historical figures</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="flexCheckChecked7">
+                                                        <label class="form-check-label" for="flexCheckChecked7">
+                                                            <span>New products</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="flexCheckChecked8">
+                                                        <label class="form-check-label" for="flexCheckChecked8">
+                                                            <span>Unique piece</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="location-area">
+                                <div class="accordion" id="accordionExample">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingOne">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseThree" aria-expanded="true"
+                                                aria-controls="collapseThree">
+                                                <i class="fa-regular fa-location-dot"></i>
+                                                <h6>Location</h6>
+                                            </button>
+                                        </h2>
+                                        <div id="collapseThree" class="accordion-collapse collapse"
+                                            aria-labelledby="headingOne" data-bs-parent="#accordionExample" style="">
+                                            <div class="accordion-body">
+                                                <div class="cmn-select-area">
+                                                    <select class="js-example-basic-single" name="state">
+                                                        <option value="AL">Bangledesh</option>
+                                                        ...
+                                                        <option value="WY">US</option>
+                                                        <option value="WY">UK</option>
+                                                        <option value="WY">Germany</option>
+                                                        <option value="WY">UAE</option>
+                                                        <option value="WY">Russia</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="tools-area">
+                                <div class="accordion" id="accordionExample">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingOne">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                                                aria-expanded="false" aria-controls="collapseOne">
+                                                <i class="fa-regular fa-screwdriver-wrench"></i>
+                                                <h6>Tools</h6>
+                                            </button>
+                                        </h2>
+                                        <div id="collapseFour" class="accordion-collapse collapse"
+                                            aria-labelledby="headingOne" data-bs-parent="#accordionExample" style="">
+                                            <div class="accordion-body">
+                                                <div class="cmn-select-area">
+                                                    <select class="js-example-basic-single" name="state">
+                                                        <option value="AL">Paint</option>
+                                                        ...
+                                                        <option value="WY">Tool</option>
+                                                        <option value="WY">SAI</option>
+                                                        <option value="WY">Painttool</option>
+                                                        <option value="WY">Sai</option>
+                                                        <option value="WY">Sand</option>
+                                                        <option value="WY">Paper</option>
+                                                        <option value="WY">SASS</option>
+                                                        <option value="WY">Table</option>
+                                                        <option value="WY">Saw</option>
+                                                        <option value="WY">Easy</option>
+                                                        <option value="WY">Paint</option>
+                                                        <option value="WY">Tool</option>
+                                                        <option value="WY">SAI</option>
+                                                        <option value="WY">Sand</option>
+                                                        <option value="WY">Pigma</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="schools-area">
+                                <div class="accordion" id="accordionExample">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingOne">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseFive"
+                                                aria-expanded="false" aria-controls="collapseFive">
+                                                <i class="fa-regular fa-school"></i>
+                                                <h6>Schools</h6>
+                                            </button>
+                                        </h2>
+                                        <div id="collapseFive" class="accordion-collapse collapse"
+                                            aria-labelledby="headingOne" data-bs-parent="#accordionExample" style="">
+                                            <div class="accordion-body">
+                                                <div class="cmn-select-area">
+                                                    <select class="js-example-basic-single" name="state">
+                                                        <option value="AL">Paint</option>
+                                                        ...
+                                                        <option value="WY">Tool</option>
+                                                        <option value="WY">SAI</option>
+                                                        <option value="WY">Painttool</option>
+                                                        <option value="WY">Sai</option>
+                                                        <option value="WY">Sand</option>
+                                                        <option value="WY">Paper</option>
+                                                        <option value="WY">SASS</option>
+                                                        <option value="WY">Table</option>
+                                                        <option value="WY">Saw</option>
+                                                        <option value="WY">Easy</option>
+                                                        <option value="WY">Paint</option>
+                                                        <option value="WY">Tool</option>
+                                                        <option value="WY">SAI</option>
+                                                        <option value="WY">Sand</option>
+                                                        <option value="WY">Pigma</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="col-lg-10"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Hire page end -->
+
+
+
+    <!-- Footer area start -->
+    <div class="footer-area fixed-bottom">
+        <div class="container-fluid">
+            <div class="row">
+                <ul class="footer-nav">
+                    <li class="footer-hover-item"><a href="" class="footer-item selector">More Shaowcase</a>
+                        <ul class="footer-hover-menu">
+                            <li><a href="" class="footer-item">Career at Shaowcase</a></li>
+                            <li><a href="" class="footer-item">Blog</a></li>
+                            <li><a href="" class="footer-item">Creative career tips</a></li>
+                        </ul>
+                    </li>
+                    <li class="footer-hover-item"><a href="" class="footer-item selector">English</a>
+                        <ul class="footer-hover-menu">
+                            <li><a href="" class="footer-item">Bangla</a></li>
+                            <li><a href="" class="footer-item">english</a></li>
+                            <li><a href="" class="footer-item">spanish</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" class="footer-item">privacy</a></li>
+                    <li><a href="" class="footer-item">community</a></li>
+                    <li><a href="" class="footer-item">help</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Footer area end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <a href="#" class="scroll-up">
+        <i class="fa-regular fa-arrow-up"></i>
+    </a>
+
+
+
+
+    <!-- Jquery_Js_link -->
+    <script src="assets/js/jquery-3.6.1.min.js"></script>
+    <!-- meanmenu_Js_link -->
+    <!-- <script src="assets/js/jquery.meanmenu.min.js"></script> -->
+    <!-- counterup_Js_link -->
+    <!-- <script src="assets/js/jquery.waypoints.min.js"></script> -->
+    <!-- <script src="assets/js/jquery.counterup.min.js"></script> -->
+    <!-- Bootstrap_Js_link -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Owl_carausel_Js_link -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- Swiper_Js_link -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!-- select2_Js_link -->
+    <script src="assets/js/select2.min.js"></script>
+    <!-- fancybox_Js_link -->
+    <!-- <script src="assets/js/fancybox.umd.js"></script> -->
+    <!-- skitter_Js_link -->
+    <!-- <script src="assets/js/jquery.skitter.min.js"></script> -->
+    <!-- easing_Js_link -->
+    <!-- <script src="assets/js/jquery.easing.1.3.js"></script> -->
+    <!-- rangSlider_Js_link -->
+    <!-- <script src="assets/js/ion.rangeSlider.min.js"></script> -->
+    <!-- exzoom_Js_link -->
+    <!-- <script src="assets/js/jquery.exzoom.js"></script> -->
+    <!-- countdown_Js_link -->
+    <!-- <script src="assets/js/jquery.countdown.min.js"></script> -->
+
+    <!-- Main_Js_link -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
