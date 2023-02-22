@@ -6,319 +6,439 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shaowcase</title>
-    <!-- Fontawesome_Js_link -->
-    <script src="assets/js/fontawesomepro.js"></script>
-    <!-- Bootstrap_Css_link -->
+    <!-- Fontawesome6_Js_link -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <!-- Bootstrap5_Css_link -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Owl_carousel_Css_link -->
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <!-- Swiper_Css_link -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <!-- select2_Css_link -->
+    <link rel="stylesheet" href="assets/css/select2.min.css">
     <!-- Fancybox_Css_link -->
-    <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
+    <!-- <link rel="stylesheet" href="assets/css/fancybox.css"> -->
+    <!-- meanmenu_Css_link -->
+    <!-- <link rel="stylesheet" href="assets/css/meanmenu.css"> -->
+    <!-- skitter_Css_link -->
+    <!-- <link rel="stylesheet" href="assets/css/skitter.css"> -->
+    <!-- ion_range_slider_link -->
+    <!-- <link rel="stylesheet" href="assets/css/ion.rangeSlider.min.css"> -->
+    <!-- exzoom_Css_link -->
+    <!-- <link rel="stylesheet" href="assets/css/jquery.exzoom.css"> -->
+
     <!-- Style_Css_link -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
 
 </head>
 
 <body onload="preloder_function()" class="">
-    <!-- preloader_area_start -->
+    <!-- Preloader area start -->
     <div id="preloader">
-        <div id="loader"></div>
+        <div class="preloader-container">
+            <div class="loader"><span></span></div>
+            <div class="loader"><span></span></div>
+
+            <div class="loader"><i></i></div>
+            <div class="loader"><i></i></div>
+        </div>
     </div>
-    <!-- preloader_area_end -->
+    <!-- Preloader area end -->
 
-
-    <!-- user_panel_start -->
-    <div class="dashboard-wrapper">
-        <!-- sidebar -->
-        <div id="sidebar" class="">
-            <div class="sidebar-top">
-                <a class="navbar-brand" href="index.html"> <img src="assets/images/logo/logo.png" alt="" /></a>
-                <button class="sidebar-toggler d-md-none" onclick="toggleSideMenu()">
-                    <i class="fal fa-times"></i>
-                </button>
-            </div>
-            <div class="search_area">
-                <input type="text" class="form-control" placeholder="Tracking number">
-                <div class="icon_area">
-                    <i class="far fa-search"></i>
+    <!-- Nav Area Start -->
+    <nav class="navbar transparent-nav bg-body-tertiary fixed-top navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand logo" href="#"><img src="assets/images/logo/download.webp" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
+                <div class="offcanvas-body align-items-center justify-content-between">
+                    <ul class="navbar-nav pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Your</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="discover.html">Discover</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="livestreams.html">Livestreams</a>
+                        </li>
 
-            </div>
-            <ul class="main">
-                <li>
-                    <a class="active" href="user_panel.html"><i class="fal fa-tachometer-alt-fastest"></i>Dashboard</a>
-                </li>
-                <li>
-                    <a href="edit_profile.html"><i class="fal fa-user-edit"></i>Edit Profile</a>
-                </li>
-                <li>
-                    <a href="coin-wallet.html"><i class="fal fa-wallet"></i>Coin wallet </a>
-                </li>
-                <li>
-                    <a href="property-market.html"><i class="fal fa-sync-alt"></i>Property Market</a>
-                </li>
-                <li>
-                    <a href=""><i class="fal fa-tags"></i>my offer</a>
-                </li>
-                <li>
-                    <a href=""><i class="fal fa-file-spreadsheet"></i>my trade list</a>
-                </li>
-                <li>
-                    <a href=""><i class="fal fa-share-square"></i>my referral</a>
-                </li>
-                <li>
-                    <a class="dropdown-toggle" data-bs-toggle="collapse" href="#dropdownCollapsible" role="button"
-                        aria-expanded="false" aria-controls="collapseExample">
-                        <i class="fal fa-sign-out-alt"></i>Dropdown
-                    </a>
-                    <div class="collapse" id="dropdownCollapsible">
-                        <ul class="">
+                        <li class="nav-item">
+                            <a class="nav-link" href="hire.html">Hire</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Jobs</a>
+                        </li>
+                    </ul>
+                    <form class="search-area">
+                        <input type="text" class="form-control" placeholder="Search" aria-label="Username"
+                            aria-describedby="basic-addon1">
+                        <button class="input-group-text"><i class="fa-regular fa-magnifying-glass"></i></button>
+                    </form>
+                    <form>
+                        <ul class="nav-right d-flex">
                             <li>
-                                <a href="#"><i class="fal fa-tachometer-alt-fastest"></i>Dropdown 1</a>
+                                <button class="login-btn" href="login.html">Login</button>
                             </li>
                             <li>
-                                <a href="#"><i class="fal fa-tachometer-alt-fastest"></i>Dropdown 2</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fal fa-tachometer-alt-fastest"></i>Dropdown 3</a>
+                                <button class="signup-btn" href="signup.html">Signup</button>
                             </li>
                         </ul>
-                    </div>
-                </li>
-                <li>
-                    <a href=""><i class="fal fa-sign-out-alt"></i>Sign Out</a>
-                </li>
-            </ul>
+                    </form>
+                </div>
+            </div>
         </div>
+    </nav>
+    <!-- Nav Area End -->
 
-        <!-- content -->
-        <div id="content">
-            <div class="overlay">
-                <!-- navbar -->
-                <nav class="navbar navbar-expand-lg">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="index.html"> <img src="./img/icon/logo.png" alt="" /></a>
+    <!-- Profile banner area start -->
+    <div class="profile-banner">
+        <div class="container-fluid">
+            <div class="row">
 
-                        <button class="sidebar-toggler" onclick="toggleSideMenu()">
-                            <i class="far fa-bars"></i>
-                        </button>
-                        <div class="search_area">
+            </div>
+        </div>
+    </div>
+    <!-- Profile banner area start -->
 
-                        </div>
-                        <!-- navbar text -->
-
-                        <span class="navbar-text">
-                            <!-- notification panel -->
-                            <div class="notification-panel">
-                                <button class="dropdown-toggle">
-                                    <i class="fal fa-bell"></i>
-                                    <span class="count">3</span>
+    <!-- Profile area start -->
+    <div class="profile-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="profile-box">
+                        <div class="profile-box-header">
+                            <div class="profile-icon">
+                                <img src="assets/images/profile/profile3.jpg" alt="">
+                            </div>
+                            <div class="profile-title">Anagrama Studio</div>
+                            <p class="mb-0">Anagrama</p>
+                            <p><a href="" class="user-website">www.anagrama.com</a></p>
+                            <p><a href=""><i class="fa-regular fa-location-dot"></i> Mexico City, Mexico</a></p>
+                            <div class="btn-area">
+                                <button class="cmn-btn">
+                                    <i class="fa-solid fa-circle-plus"></i>
+                                    follow
                                 </button>
-                                <ul class="notification-dropdown shadow3">
-                                    <div class="dropdown-box">
-                                        <li>
-                                            <a class="dropdown-item" href="#">
-                                                <i class="fal fa-bell"></i>
-                                                <div class="text">
-                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                                    <span class="time">4 Hours ago</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="#">
-                                                <i class="fal fa-bell"></i>
-                                                <div class="text">
-                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                                    <span class="time">6 Hours ago</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="#">
-                                                <i class="fal fa-bell"></i>
-                                                <div class="text">
-                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                                    <span class="time">1 Day ago</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="#">
-                                                <i class="fal fa-bell"></i>
-                                                <div class="text">
-                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                                    <span class="time">3 Days ago</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="#">
-                                                <i class="fal fa-bell"></i>
-                                                <div class="text">
-                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                                    <span class="time">4 Days ago</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                    </div>
-                                    <div class="clear-all fixed-bottom">
-                                        <a href="">Clear all</a>
-                                    </div>
-                                </ul>
+                                <button class="cmn-btn2">
+                                    <i class="fa-sharp fa-solid fa-envelope"></i>
+                                    Message
+                                </button>
                             </div>
-                            <!-- user panel -->
-                            <div class="user-panel">
-                                <span class="profile">
-                                    <img src="assets/images/user_panel/dashboard/profile.jpg" class="img-fluid"
-                                        alt="" />
-                                </span>
-                                <ul class="user-dropdown shadow3">
-                                    <li>
-                                        <a href=""> <i class="fal fa-user"></i> Profile </a>
-                                    </li>
-                                    <li>
-                                        <a href=""> <i class="fal fa-key"></i> Change Password </a>
-                                    </li>
-                                    <li>
-                                        <a href=""> <i class="fal fa-sign-out-alt"></i> Sign Out </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </span>
-                    </div>
-                </nav>
+                        </div>
+                        <ul class="profile-details-area">
+                            <li class="profile-cmn-item">
+                                <div class="profile-availability-info">
+                                    <h4 class="profile-availability-title">hire us</h4>
+                                    <a href="" class="availability-details">
+                                        <div class="icon icon1"><i class="fa-light fa-calendar-clock"></i></div>
+                                        <div class="availability-text">
+                                            <h6>freelance/project</h6>
+                                            <span>Availability: Within the next few weeks</span>
 
-                <!-- main -->
-                <div class="container-fluid">
-                    <div class="main row">
-                        <div class="col">
-                            <!-- profile setting -->
-                            <div class="profile-setting">
-                                <div class="row g-4 g-lg-5">
-                                    <div class="col-lg-4">
-                                        <div class="sidebar-wrapper">
-                                            <div class="profile">
-                                                <div class="img">
-                                                    <img id="profile" src="assets/images/user_panel/profile/profile.jpg"
-                                                        alt="" class="img-fluid" />
-                                                    <button class="upload-img">
-                                                        <i class="fal fa-camera"></i>
-                                                        <input class="form-control" accept="image/*" type="file"
-                                                            onchange="previewImage('profile')" />
-                                                    </button>
-                                                </div>
-                                                <div class="text">
-                                                    <h5 class="name">Trista Francis</h5>
-                                                    <span>@Kalla.ban</span>
-                                                </div>
-                                            </div>
-                                            <div class="profile-navigator">
-                                                <button tab-id="tab1" class="tab active">
-                                                    <i class="fal fa-user"></i> Profile information
-                                                </button>
-                                                <button tab-id="tab2" class="tab">
-                                                    <i class="fal fa-key"></i> Password setting
-                                                </button>
-                                                <button tab-id="tab3" class="tab">
-                                                    <i class="fal fa-id-card"></i> identity verification
-                                                </button>
-                                                <button tab-id="tab4" class="tab">
-                                                    <i class="fal fa-map-marked-alt"></i>
-                                                    address verification
-                                                </button>
-                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-8">
-                                        <div id="tab1" class="content active">
-                                            <form action="">
-                                                <div class="row g-4">
-                                                    <div class="input-box col-md-6">
-                                                        <label for="">First name</label>
-                                                        <input type="text" class="form-control"
-                                                            placeholder="Mr. John" />
+                                        <div class="icon icon2"><i class="fa-regular fa-angle-right"></i></div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="profile-cmn-item">
+                                <div class="profile-user-info">
+                                    <p class="user-info-row"><span>Project Views</span> <span>10,533,157</span></p>
+                                    <p class="user-info-row"><span>Appreciations</span> <span>10,533,15</span></p>
+                                    <p class="user-info-row"><span>Followers</span> <span>190,197</span></p>
+                                </div>
+                            </li>
+                            <li class="profile-cmn-item">
+                                <div class="profile-user-social">
+                                    <p class="profile-user-title">ON THE WEB</p>
+                                    <ul class="d-flex">
+                                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                                        <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="profile-cmn-item">
+                                <div class="profile-user-link-area">
+                                    <p class="profile-user-title">LINKS</p>
+                                    <a href="" class="profile-user-link"> Anagrama Website <i
+                                            class="fa-regular fa-arrow-up-right-from-square"></i></a>
+                                </div>
+                            </li>
+                            <li class="profile-cmn-item">
+
+                            </li>
+                            <li class="profile-cmn-item">
+                                <div class="profile-user-bio">
+                                    <p class="profile-user-title">PRESS</p>
+                                    <p>Ideas exchanged generate constant inspiration. Different points of view, opposite
+                                        focus conciliation and comprehension of our own views, complement our success.
+                                        That
+                                        is why we open our doors with the best attitude to continuously collaborate with
+                                        the
+                                        press and education. <br> <br>
+                                        Contact our archive supervi…
+                                    </p>
+                                    <a href="">Read more<i class="fa-regular fa-angle-right"></i></a>
+
+                                </div>
+
+                            </li>
+                            <li class="profile-cmn-item">
+                                <p class="profile-user-title">contact</p>
+                                <div class="profile-user-bio">
+                                    <span>Email Us</span><br>
+                                    <span>hello@anagrama.com</span><br>
+                                    <span>US 1 800 950 6660</span><br>
+                                    <span>MX +52 (81) 8336 6666</span>
+                                </div>
+                            </li>
+                            <li class="profile-cmn-item">
+                               <p>MEMBER SINCE: DECEMBER 24, 2008</p>
+                               <a href="" class="cmn-btn2">Report</a>
+                            </li>
+                            
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="profile-content-area">
+                        <div class="row g-4">
+                            <div class="col-lg-3">
+                                <div class="cmn-card4">
+                                    <a href="" class="card-link">
+                                        <div class="card-thum">
+                                            <img src="assets/images/filter-image/3.webp" alt="">
+                                            <div class="thum-text">
+                                                <div class="card-info">
+                                                    <h4>Recalab</h4>
+                                                    <small>Anagrama Studio</small>
+                                                </div>
+                                                <div class="shot-statistics">
+                                                    <div class="shot-statistics-item">
+                                                        <span><i class="fa-solid fa-heart"></i></span>
+                                                        <small>72</small>
                                                     </div>
-                                                    <div class="input-box col-md-6">
-                                                        <label for="">last name</label>
-                                                        <input type="text" class="form-control" placeholder="Doe" />
-                                                    </div>
-                                                    <div class="input-box col-md-6">
-                                                        <label for="">username</label>
-                                                        <input type="text" class="form-control" placeholder="johndoe" />
-                                                    </div>
-                                                    <div class="input-box col-md-6">
-                                                        <label for="">email address</label>
-                                                        <input type="email" class="form-control"
-                                                            placeholder="example@gmail.com" />
-                                                    </div>
-                                                    <div class="input-box col-md-6">
-                                                        <label for="">phone number</label>
-                                                        <input type="text" class="form-control"
-                                                            placeholder="01234567891" />
-                                                    </div>
-                                                    <div class="input-box col-md-6">
-                                                        <label for="">preferred language</label>
-                                                        <select class="form-select" aria-label="Default select example">
-                                                            <option selected>select language</option>
-                                                            <option value="1">English</option>
-                                                            <option value="2">spanish</option>
-                                                            <option value="3">french</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="input-box col-12">
-                                                        <label for="">select file</label>
-                                                        <div class="attach-file">
-                                                            <span class="prev"> choose file </span>
-                                                            <input class="form-control" accept="image/*" type="file" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="input-box col-12">
-                                                        <label for="">address</label>
-                                                        <textarea class="form-control" cols="30" rows="3"
-                                                            placeholder="457 MORNINGVIEW, NEW YORK USA"></textarea>
-                                                    </div>
-                                                    <div class="input-box col-12">
-                                                        <button class="cmn_btn">submit</button>
+                                                    <div class="shot-statistics-item">
+                                                        <span><i class="fa-solid fa-eye"></i></span>
+                                                        <small>16.5k</small>
                                                     </div>
                                                 </div>
-                                            </form>
+                                            </div>
                                         </div>
-                                        <div id="tab2" class="content">
-                                            <form action="">
-                                                <div class="row g-4">
-                                                    <div class="input-box col-md-6">
-                                                        <label for="">Current Password</label>
-                                                        <input type="password" class="form-control" placeholder="" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="cmn-card4">
+                                    <a href="" class="card-link">
+                                        <div class="card-thum">
+                                            <img src="assets/images/filter-image/2.webp" alt="">
+                                            <div class="thum-text">
+                                                <div class="card-info">
+                                                    <h4>Recalab</h4>
+                                                    <small>Anagrama Studio</small>
+                                                </div>
+                                                <div class="shot-statistics">
+                                                    <div class="shot-statistics-item">
+                                                        <span><i class="fa-solid fa-heart"></i></span>
+                                                        <small>72</small>
                                                     </div>
-                                                    <div class="input-box col-md-6">
-                                                        <label for="">New Password</label>
-                                                        <input type="password" class="form-control" placeholder="" />
-                                                    </div>
-                                                    <div class="input-box col-md-6">
-                                                        <label for="">Confirm Password</label>
-                                                        <input type="password" class="form-control" placeholder="" />
-                                                    </div>
-                                                    <div class="input-box col-12">
-                                                        <button class="btn-custom">change password</button>
+                                                    <div class="shot-statistics-item">
+                                                        <span><i class="fa-solid fa-eye"></i></span>
+                                                        <small>16.5k</small>
                                                     </div>
                                                 </div>
-                                            </form>
-                                        </div>
-                                        <div id="tab3" class="content">
-                                            <div class="alert mb-0">
-                                                <i class="fal fa-times-circle"></i>
-                                                <span>Your address is not verified</span>
                                             </div>
                                         </div>
-                                        <div id="tab4" class="content">
-                                            <div class="alert mb-0">
-                                                <i class="fal fa-check-circle"></i>
-                                                <span>Your identity already verified</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="cmn-card4">
+                                    <a href="" class="card-link">
+                                        <div class="card-thum">
+                                            <img src="assets/images/filter-image/4.webp" alt="">
+                                            <div class="thum-text">
+                                                <div class="card-info">
+                                                    <h4>Recalab</h4>
+                                                    <small>Anagrama Studio</small>
+                                                </div>
+                                                <div class="shot-statistics">
+                                                    <div class="shot-statistics-item">
+                                                        <span><i class="fa-solid fa-heart"></i></span>
+                                                        <small>72</small>
+                                                    </div>
+                                                    <div class="shot-statistics-item">
+                                                        <span><i class="fa-solid fa-eye"></i></span>
+                                                        <small>16.5k</small>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="cmn-card4">
+                                    <a href="" class="card-link">
+                                        <div class="card-thum">
+                                            <img src="assets/images/filter-image/5.webp" alt="">
+                                            <div class="thum-text">
+                                                <div class="card-info">
+                                                    <h4>Recalab</h4>
+                                                    <small>Anagrama Studio</small>
+                                                </div>
+                                                <div class="shot-statistics">
+                                                    <div class="shot-statistics-item">
+                                                        <span><i class="fa-solid fa-heart"></i></span>
+                                                        <small>72</small>
+                                                    </div>
+                                                    <div class="shot-statistics-item">
+                                                        <span><i class="fa-solid fa-eye"></i></span>
+                                                        <small>16.5k</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="cmn-card4">
+                                    <a href="" class="card-link">
+                                        <div class="card-thum">
+                                            <img src="assets/images/filter-image/6.webp" alt="">
+                                            <div class="thum-text">
+                                                <div class="card-info">
+                                                    <h4>Recalab</h4>
+                                                    <small>Anagrama Studio</small>
+                                                </div>
+                                                <div class="shot-statistics">
+                                                    <div class="shot-statistics-item">
+                                                        <span><i class="fa-solid fa-heart"></i></span>
+                                                        <small>72</small>
+                                                    </div>
+                                                    <div class="shot-statistics-item">
+                                                        <span><i class="fa-solid fa-eye"></i></span>
+                                                        <small>16.5k</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="cmn-card4">
+                                    <a href="" class="card-link">
+                                        <div class="card-thum">
+                                            <img src="assets/images/filter-image/3.jpg" alt="">
+                                            <div class="thum-text">
+                                                <div class="card-info">
+                                                    <h4>Recalab</h4>
+                                                    <small>Anagrama Studio</small>
+                                                </div>
+                                                <div class="shot-statistics">
+                                                    <div class="shot-statistics-item">
+                                                        <span><i class="fa-solid fa-heart"></i></span>
+                                                        <small>72</small>
+                                                    </div>
+                                                    <div class="shot-statistics-item">
+                                                        <span><i class="fa-solid fa-eye"></i></span>
+                                                        <small>16.5k</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="cmn-card4">
+                                    <a href="" class="card-link">
+                                        <div class="card-thum">
+                                            <img src="assets/images/filter-image/4.jpg" alt="">
+                                            <div class="thum-text">
+                                                <div class="card-info">
+                                                    <h4>Recalab</h4>
+                                                    <small>Anagrama Studio</small>
+                                                </div>
+                                                <div class="shot-statistics">
+                                                    <div class="shot-statistics-item">
+                                                        <span><i class="fa-solid fa-heart"></i></span>
+                                                        <small>72</small>
+                                                    </div>
+                                                    <div class="shot-statistics-item">
+                                                        <span><i class="fa-solid fa-eye"></i></span>
+                                                        <small>16.5k</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="cmn-card4">
+                                    <a href="" class="card-link">
+                                        <div class="card-thum">
+                                            <img src="assets/images/filter-image/1.webp" alt="">
+                                            <div class="thum-text">
+                                                <div class="card-info">
+                                                    <h4>Recalab</h4>
+                                                    <small>Anagrama Studio</small>
+                                                </div>
+                                                <div class="shot-statistics">
+                                                    <div class="shot-statistics-item">
+                                                        <span><i class="fa-solid fa-heart"></i></span>
+                                                        <small>72</small>
+                                                    </div>
+                                                    <div class="shot-statistics-item">
+                                                        <span><i class="fa-solid fa-eye"></i></span>
+                                                        <small>16.5k</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="cmn-card4">
+                                    <a href="" class="card-link">
+                                        <div class="card-thum">
+                                            <img src="assets/images/filter-image/5.jpg" alt="">
+                                            <div class="thum-text">
+                                                <div class="card-info">
+                                                    <h4>Recalab</h4>
+                                                    <small>Anagrama Studio</small>
+                                                </div>
+                                                <div class="shot-statistics">
+                                                    <div class="shot-statistics-item">
+                                                        <span><i class="fa-solid fa-heart"></i></span>
+                                                        <small>72</small>
+                                                    </div>
+                                                    <div class="shot-statistics-item">
+                                                        <span><i class="fa-solid fa-eye"></i></span>
+                                                        <small>16.5k</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -327,17 +447,39 @@
             </div>
         </div>
     </div>
-    <!-- user_panel_end -->
+    <!-- Profile area end -->
 
 
 
 
 
-
-
-
-
-
+    <!-- Footer area start -->
+    <div class="footer-area fixed-bottom">
+        <div class="container-fluid">
+            <div class="row">
+                <ul class="footer-nav">
+                    <li class="footer-hover-item"><a href="" class="footer-item selector">More Shaowcase</a>
+                        <ul class="footer-hover-menu">
+                            <li><a href="" class="footer-item">Career at Shaowcase</a></li>
+                            <li><a href="" class="footer-item">Blog</a></li>
+                            <li><a href="" class="footer-item">Creative career tips</a></li>
+                        </ul>
+                    </li>
+                    <li class="footer-hover-item"><a href="" class="footer-item selector">English</a>
+                        <ul class="footer-hover-menu">
+                            <li><a href="" class="footer-item">Bangla</a></li>
+                            <li><a href="" class="footer-item">english</a></li>
+                            <li><a href="" class="footer-item">spanish</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" class="footer-item">privacy</a></li>
+                    <li><a href="" class="footer-item">community</a></li>
+                    <li><a href="" class="footer-item">help</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Footer area end -->
 
 
 
@@ -353,7 +495,7 @@
 
 
     <a href="#" class="scroll-up">
-        <i class="fal fa-chevron-double-up"></i>
+        <i class="fa-regular fa-arrow-up"></i>
     </a>
 
 
@@ -361,19 +503,31 @@
 
     <!-- Jquery_Js_link -->
     <script src="assets/js/jquery-3.6.1.min.js"></script>
-
-    <!-- waypoints_Js_link -->
-    <script src="assets/js/jquery.waypoints.min.js"></script>
-    <!-- scrollUp_Js_link -->
-    <script src="assets/js/jquery.scrollUp.min.js"></script>
+    <!-- meanmenu_Js_link -->
+    <!-- <script src="assets/js/jquery.meanmenu.min.js"></script> -->
+    <!-- counterup_Js_link -->
+    <!-- <script src="assets/js/jquery.waypoints.min.js"></script> -->
+    <!-- <script src="assets/js/jquery.counterup.min.js"></script> -->
     <!-- Bootstrap_Js_link -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <!-- Owl_carausel_Js_link -->
     <script src="assets/js/owl.carousel.min.js"></script>
-    <!-- counterup_Js_link -->
-    <script src="assets/js/jquery.counterup.min.js"></script>
+    <!-- Swiper_Js_link -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!-- select2_Js_link -->
+    <script src="assets/js/select2.min.js"></script>
     <!-- fancybox_Js_link -->
-    <script src="assets/js/jquery.fancybox.min.js"></script>
+    <!-- <script src="assets/js/fancybox.umd.js"></script> -->
+    <!-- skitter_Js_link -->
+    <!-- <script src="assets/js/jquery.skitter.min.js"></script> -->
+    <!-- easing_Js_link -->
+    <!-- <script src="assets/js/jquery.easing.1.3.js"></script> -->
+    <!-- rangSlider_Js_link -->
+    <!-- <script src="assets/js/ion.rangeSlider.min.js"></script> -->
+    <!-- exzoom_Js_link -->
+    <!-- <script src="assets/js/jquery.exzoom.js"></script> -->
+    <!-- countdown_Js_link -->
+    <!-- <script src="assets/js/jquery.countdown.min.js"></script> -->
 
     <!-- Main_Js_link -->
     <script src="assets/js/main.js"></script>
