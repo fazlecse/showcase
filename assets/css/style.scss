@@ -20,6 +20,7 @@
     --border-color1: #f2f2f2;
     --border-color2: #e1e1e1;
     --border-color3: #e1f1ee;
+    --primary-color-opacity-low: rgba(5, 160, 129, .1);
     --shadow1: 0 0 0 0.25rem rgb(1 124 110 / 25%);
     --shadow2: 0px 3px 5px rgb(0 0 0 / 4%);
     --shadow3: 0 1px 5px rgb(25 25 25 / 15%);
@@ -196,13 +197,16 @@ body {
     font-size: 14px;
     overflow-x: hidden;
     background-color: var(--white);
+    padding-bottom: 30px;
 }
 
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
-
+textarea.form-control{
+    height: initial;
+}
 .form-control {
     color: var(--black) !important;
 }
@@ -216,6 +220,8 @@ html {
     border-radius: 4px;
     background-color: var(--secondary-color);
     border: 1px solid var(--secondary-color);
+    height: 35px;
+    font-size: 14px;
 }
 
 .form-control:focus,
@@ -516,7 +522,7 @@ body::-webkit-scrollbar-thumb {
 
 .cmn-btn {
     background: var(--primary-color);
-    border: 1px solid rgba(0, 0, 0, 0);
+    border: 1px solid var(--primary-color);
     padding: 5px 18px !important;
     border-radius: 100px;
     transition: all .3s ease-in-out;
@@ -539,7 +545,7 @@ body::-webkit-scrollbar-thumb {
 
 .cmn-btn2 {
     padding: 5px 18px !important;
-    border-radius: 100px;
+    border-radius: 8px;
     transition: all .3s ease-in-out;
     font-size: 14px;
     display: flex;
@@ -734,19 +740,19 @@ hr.divider:after {
     max-height: 30rem;
     min-width: 13rem;
     overflow-y: auto;
-    border-radius: 8px;
+    border-radius: 5px;
     padding: 8px;
     background: var(--white);
     border: 1px solid var(--border-color1);
     box-shadow: var(--shadow2);
 
     .dropdown-item {
-        border-radius: 100px;
-        padding: 0px 8px;
+        border-radius: 5px;
+        padding: 3px 8px;
         transition: none !important;
         font-size: 14px;
         font-family: 'Roboto', sans-serif;
-        line-height: 1.8;
+        margin-bottom: 5px;
 
         &:hover {
             background: var(--primary-color);
@@ -2062,7 +2068,9 @@ hr.divider:after {
 .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
     background: var(--primary-color);
 }
-
+.select2-container--default .select2-results>.select2-results__options{
+    text-transform: capitalize;
+}
 .hire-content-top {
     padding: 20px;
 }
@@ -2167,6 +2175,7 @@ hr.divider:after {
                 margin-right: 10px;
                 text-transform: capitalize;
                 font-size: 15px;
+                height: 32px;
             }
 
             .cmn-btn2 {
@@ -2174,7 +2183,9 @@ hr.divider:after {
                 text-transform: capitalize;
                 font-size: 15px;
                 color: var(--primary-color);
-                background: rgb(5 160 129 / 10%);
+                background: var(--primary-color-opacity-low);
+                height: 32px;
+                border-radius: 100px;
 
                 &:hover {
                     background: rgb(5 160 129 / 20%);
@@ -2528,7 +2539,7 @@ hr.divider:after {
             color: var(--body-color);
 
             &:hover {
-                color: var(--heading-color);
+                color: var(--heading-color) !important;
                 border-bottom: 2px solid var(--black2);
             }
 
@@ -2544,6 +2555,10 @@ hr.divider:after {
         .nav-link.active {
             color: var(--heading-color);
             border-bottom: 2px solid var(--black2);
+        }
+
+        .tab-href {
+            transition: initial !important;
         }
 
     }
@@ -2584,6 +2599,7 @@ hr.divider:after {
 .job-content {
     .job-content-top {
         display: flex;
+        align-items: center;
         justify-content: space-between;
         margin: 30px 0;
 
@@ -2600,20 +2616,24 @@ hr.divider:after {
     padding: 25px;
     position: relative;
     transition: var(--transition);
-    &:hover .card-action{
+
+    &:hover .card-action {
         visibility: visible;
         opacity: 1;
     }
-    &:hover{
+
+    &:hover {
         filter: var(--drop-shadow2);
     }
-    .card5-link{
-        width: 100%;   
+
+    .card5-link {
+        width: 100%;
         height: 100%;
         position: absolute;
         left: 0;
         top: 0;
     }
+
     .card5-header {
         display: flex;
 
@@ -2652,6 +2672,7 @@ hr.divider:after {
         // visibility: hidden;
         // opacity: 0;
         transition: var(--transition);
+
         i {
             font-size: 18px;
         }
@@ -2690,7 +2711,8 @@ hr.divider:after {
             overflow: hidden;
             margin-bottom: 20px;
         }
-        .time{
+
+        .time {
             font-size: 12px;
         }
     }
@@ -2698,8 +2720,166 @@ hr.divider:after {
 
 // Job page end
 
+// Modal area start
+
+// job-post-modal area start
+.job-post-modal {
+    .modal-content {
+        border-radius: 10px;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-y: auto;
+        padding: 20px 30px;
+        border: none;
+    }
+    .select2-container--default .select2-selection--single {
+        border: none;
+        .select2-selection__rendered{
+            background-color: var(--secondary-color);
+            border: 1px solid var(--secondary-color);
+            height: 35px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            border-radius: 5px;
+            text-transform: capitalize;
+        }
+    } 
+
+   
+}
+
+.job-post-modal-header {
+    display: flex;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--heading-color);
+
+    .job-post-modal-sl {
+        background: var(--secondary-color);
+        border: 1px solid var(--border-color3);
+        border-radius: 50%;
+        color: var(--primary-color);
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        justify-content: center;
+        margin-right: 20px;
+        min-height: 31px;
+        min-width: 31px;
+        height: 30px;
+        width: 30px;
+    }
+}
+
+.job-post-modal-item {
+    .job-post-modal-row {
+        margin: 15px 0 30px 54px;
+
+        .nav {
+            padding: 5px;
+            background: var(--primary-color-opacity-low);
+            border-radius: 100px;
+            display: inherit;
+
+            .nav-link {
+                font-weight: 500;
+                padding: 5px 18px !important;
+                border-radius: 100px;
+                transition: var(--transition);
+                font-size: 16px;
+                text-transform: capitalize;
+                color: var(--primary-color);
+                width: 100%;
+                height: 40px;
+
+                &:hover {
+                    background: var(--primary-color);
+                    color: var(--white);
+                }
+            }
+
+            .nav-link.active {
+                background: var(--primary-color);
+                color: var(--white);
+            }
+        }
+        label{
+            font-weight: 600;
+            color: var(--heading-color);
+            text-transform: capitalize;
+        }
+    }
+
+}
+.job-post-modal-row-inner{
+    margin-top: 10px;
+    display: flex;
+    .posting-content{
+        margin-left: 20px;
+        width: 100%;
+    }
+    .posting-logo-area {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        input[type=file] {
+            opacity: 0;
+            z-index: 1;
+            position: relative;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+        }
+    
+        .posting-logo {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 70px;
+            height: 70px;
+            background: white;
+            border: 1px solid var(--border-color1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            i{
+                width: 65px;
+                height: 65px;
+                background: var(--primary-color-opacity-low);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 18px;
+                color: var(--primary-color);
+            }
+        }
+    }
+}
 
 
+// job-post-modal area end
+
+// job-post-modal responsive area start
+@media (min-width: 576px) {
+    .job-post-modal {
+        .modal-dialog {
+            max-width: 636px;
+
+            .modal-header {
+                border: none;
+            }
+        }
+    }
+}
+
+// job-post-modal responsive area end
+
+// Modal area end
 
 
 

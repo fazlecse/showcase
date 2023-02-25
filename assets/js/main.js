@@ -116,7 +116,11 @@ $(document).ready(function () {
 
     });
     // select2 filter sidebar
-    $('.js-example-basic-single').select2();
+    $(".js-example-basic-single").select2({
+     });
+    $(".modal-select2").select2({
+        dropdownParent: $("#formModal"),
+     });
 
 
 
