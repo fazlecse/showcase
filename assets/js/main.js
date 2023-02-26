@@ -121,6 +121,9 @@ $(document).ready(function () {
     $(".modal-select2").select2({
         dropdownParent: $("#formModal"),
      });
+    $(".modal-select3").select2({
+        dropdownParent: $("#formModal2"),
+     });
 
 
 

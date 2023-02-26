@@ -13,6 +13,7 @@
     --white: #ffffff;
     --magenta: #b125c0;
     --blue: #0057ff;
+    --orange: #f97c00;
     --bg-color1: #191919a6;
     --bg-color2: #efefef;
     --bg-color3: #191919;
@@ -21,9 +22,12 @@
     --border-color2: #e1e1e1;
     --border-color3: #e1f1ee;
     --primary-color-opacity-low: rgba(5, 160, 129, .1);
+    --orange-opacity-low: rgb(234, 131, 49, 0.1);
     --shadow1: 0 0 0 0.25rem rgb(1 124 110 / 25%);
     --shadow2: 0px 3px 5px rgb(0 0 0 / 4%);
     --shadow3: 0 1px 5px rgb(25 25 25 / 15%);
+    --shadow4: 0 1px 10px rgb(25 25 25 / 20%);
+    --shadow5: 0 1px 10px rgba(0, 0, 0, 0.1);
     --drop-shadow1: drop-shadow(0 1px 2px rgba(0,
                 0, 0, 0.4));
     --drop-shadow2: drop-shadow(0 1px 10px rgba(0, 0, 0, 0.1));
@@ -204,9 +208,11 @@ html {
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
-textarea.form-control{
+
+textarea.form-control {
     height: initial;
 }
+
 .form-control {
     color: var(--black) !important;
 }
@@ -545,7 +551,7 @@ body::-webkit-scrollbar-thumb {
 
 .cmn-btn2 {
     padding: 5px 18px !important;
-    border-radius: 8px;
+    border-radius: 5px;
     transition: all .3s ease-in-out;
     font-size: 14px;
     display: flex;
@@ -1157,7 +1163,11 @@ hr.divider:after {
 
     .cmn-btn2 {
         margin-right: 8px;
+        height: 38px;
     }
+}
+.dropdown-toggle.show{
+    background: var(--secondary-color);
 }
 
 // filter bar area end
@@ -2068,9 +2078,11 @@ hr.divider:after {
 .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
     background: var(--primary-color);
 }
-.select2-container--default .select2-results>.select2-results__options{
+
+.select2-container--default .select2-results>.select2-results__options {
     text-transform: capitalize;
 }
+
 .hire-content-top {
     padding: 20px;
 }
@@ -2175,7 +2187,7 @@ hr.divider:after {
                 margin-right: 10px;
                 text-transform: capitalize;
                 font-size: 15px;
-                height: 32px;
+                height: 35px;
             }
 
             .cmn-btn2 {
@@ -2184,7 +2196,7 @@ hr.divider:after {
                 font-size: 15px;
                 color: var(--primary-color);
                 background: var(--primary-color-opacity-low);
-                height: 32px;
+                height: 35px;
                 border-radius: 100px;
 
                 &:hover {
@@ -2589,7 +2601,15 @@ hr.divider:after {
 
     .search-nav {
         display: flex;
-
+        .cmn-btn, .cmn-btn2{
+            height: 40px;
+            &:hover{
+                background: var(--secondary-color2);
+            }
+        }
+        .dropdown-toggle.show{
+            background: var(--secondary-color2);
+        }
         .dropdown-toggle i {
             margin-right: 5px;
         }
@@ -2617,13 +2637,10 @@ hr.divider:after {
     position: relative;
     transition: var(--transition);
 
+
     &:hover .card-action {
         visibility: visible;
         opacity: 1;
-    }
-
-    &:hover {
-        filter: var(--drop-shadow2);
     }
 
     .card5-link {
@@ -2632,6 +2649,12 @@ hr.divider:after {
         position: absolute;
         left: 0;
         top: 0;
+
+        &:hover {
+            box-shadow: var(--shadow5);
+        }
+
+
     }
 
     .card5-header {
@@ -2679,6 +2702,14 @@ hr.divider:after {
 
         .dropdown {
             margin-right: 10px;
+            .show{
+                i{
+                    color: var(--primary-color);
+                }
+            }
+            .dropdown-menu {
+                left: -185px !important;
+            }
         }
 
         .save {
@@ -2687,6 +2718,11 @@ hr.divider:after {
                 width: 38px;
                 height: 38px;
                 display: flex;
+            }
+            .cmn-btn2.active{
+                background: var(--orange-opacity-low);
+                color: var(--orange);
+                border: 1px solid var(--orange-opacity-low);
             }
         }
     }
@@ -2724,6 +2760,9 @@ hr.divider:after {
 
 // job-post-modal area start
 .job-post-modal {
+    background: rgb(0, 0, 0, 0.8);
+    z-index: 99999;
+
     .modal-content {
         border-radius: 10px;
         display: flex;
@@ -2731,10 +2770,19 @@ hr.divider:after {
         overflow-y: auto;
         padding: 20px 30px;
         border: none;
+        padding-bottom: 100px;
     }
+
+    .job-post-modal-inner {
+        max-height: 75vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
     .select2-container--default .select2-selection--single {
         border: none;
-        .select2-selection__rendered{
+
+        .select2-selection__rendered {
             background-color: var(--secondary-color);
             border: 1px solid var(--secondary-color);
             height: 35px;
@@ -2744,9 +2792,9 @@ hr.divider:after {
             border-radius: 5px;
             text-transform: capitalize;
         }
-    } 
+    }
 
-   
+
 }
 
 .job-post-modal-header {
@@ -2772,7 +2820,11 @@ hr.divider:after {
     }
 }
 
-.job-post-modal-item {
+.job-post-modal-body {
+    .job-post-modal-item:last-child .job-post-modal-row {
+        margin: 15px 0 0 54px;
+    }
+
     .job-post-modal-row {
         margin: 15px 0 30px 54px;
 
@@ -2804,27 +2856,100 @@ hr.divider:after {
                 color: var(--white);
             }
         }
-        label{
+
+        label {
             font-weight: 600;
             color: var(--heading-color);
             text-transform: capitalize;
         }
     }
 
+    .radio-row {
+        .nav {
+            padding: 0;
+            background: initial;
+            border-radius: initial;
+            display: flex;
+            flex-direction: column;
+
+            button {
+                width: 100%;
+            }
+
+            label {
+                width: 100%;
+                font-size: 13px;
+                font-weight: 500;
+                text-align: start;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 15px;
+                border: 1px solid var(--border-color2);
+
+                .title {
+                    font-weight: 600;
+                }
+
+                .description {
+                    color: var(--body-color);
+                }
+
+                .icon-area {
+                    border-left: 1px solid var(--border-color2);
+                    padding: 5px 0 5px 10px;
+                    transition: var(--transition);
+
+                    i {
+                        width: 10px;
+                        height: 10px;
+                        background: var(--black);
+                        padding: 11px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 3px;
+                        color: var(--white);
+                    }
+                }
+            }
+
+            .btn-check:checked+.btn {
+                i {
+                    background: var(--primary-color);
+                }
+            }
+
+            .btn-check:checked+.btn {
+                .text-area {
+                    color: var(--primary-color);
+                }
+            }
+
+            .btn-check:checked+.btn {
+                background: var(--primary-color-opacity-low);
+                border-color: var(--border-color3);
+            }
+        }
+    }
+
 }
-.job-post-modal-row-inner{
+
+.job-post-modal-row-inner {
     margin-top: 10px;
     display: flex;
-    .posting-content{
+
+    .posting-content {
         margin-left: 20px;
         width: 100%;
     }
+
     .posting-logo-area {
         position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
-    
+
         input[type=file] {
             opacity: 0;
             z-index: 1;
@@ -2833,7 +2958,7 @@ hr.divider:after {
             height: 70px;
             border-radius: 50%;
         }
-    
+
         .posting-logo {
             position: absolute;
             top: 50%;
@@ -2846,7 +2971,8 @@ hr.divider:after {
             display: flex;
             align-items: center;
             justify-content: center;
-            i{
+
+            i {
                 width: 65px;
                 height: 65px;
                 background: var(--primary-color-opacity-low);
@@ -2861,6 +2987,17 @@ hr.divider:after {
     }
 }
 
+.job-post-modal-bottom {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    box-shadow: var(--shadow4);
+    padding: 30px;
+    text-align: left;
+    width: 100%;
+    background: var(--white);
+    z-index: 999999;
+}
 
 // job-post-modal area end
 
