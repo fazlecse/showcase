@@ -119,7 +119,7 @@
     <!-- Tab nav area start -->
     <div class="job-page-area cmn-tab-area">
         <div class="cmn-tab">
-            <div class="container">
+            <div class="container-xxl">
                 <div class="row">
                     <div class="col">
                         <ul class="nav" id="pills-tab" role="tablist">
@@ -153,7 +153,7 @@
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="container-xxl">
             <div class="row">
                 <div class="col">
                     <div class="job-search-bar">
@@ -224,7 +224,7 @@
             </div>
         </div>
         <div class="job-content">
-            <div class="container">
+            <div class="container-xxl">
                 <div class="row">
                     <div class="tab-content" id="pills-tabContent">
                         <div class="tab-pane fade show active" id="freelance" role="tabpanel"
@@ -257,9 +257,11 @@
                                                     <i class="fa-regular fa-ellipsis-stroke"></i>
                                                 </a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                                    <li><a class="dropdown-item" href="#">Something else here</a>
+                                                    <li><a class="dropdown-item" href="#">save</a></li>
+                                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#apply-modal">apply</a></li>
+                                                    <li><a class="dropdown-item" href="#">copy link</a>
+                                                    <li><a class="dropdown-item" href="#">report</a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -300,9 +302,11 @@
                                                     <i class="fa-regular fa-ellipsis-stroke"></i>
                                                 </a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                                    <li><a class="dropdown-item" href="#">Something else here</a>
+                                                    <li><a class="dropdown-item" href="#">save</a></li>
+                                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#apply-modal">apply</a></li>
+                                                    <li><a class="dropdown-item" href="#">copy link</a>
+                                                    <li><a class="dropdown-item" href="#">report</a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -728,8 +732,8 @@
 
     <!-- Modal area start -->
 
-    <!-- Post job modal -->
-    <div class="modal job-post-modal fade" id="past-a-job" data-bs-backdrop="static" data-bs-keyboard="false"
+    <!-- Post job modal start-->
+    <div class="modal fade job-post-modal" id="past-a-job" data-bs-backdrop="static" data-bs-keyboard="false"
         tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <form action="">
@@ -969,7 +973,8 @@
                                         <div class="form-check">
                                             <input type="checkbox" class="form-check-input" id="exampleCheck1">
                                             <label class="form-check-label" for="exampleCheck1">
-                                                <small class="para-text">This post is advertising a creative job opportunity, and I
+                                                <small class="para-text">This post is advertising a creative job
+                                                    opportunity, and I
                                                     understand that off-topic posts will be removed. For more, please
                                                     see the Help Center article Best <a href=""
                                                         class="highlight">Practices When Posting a Job.</a></small>
@@ -1186,12 +1191,7 @@
                                         </div>
                                     </div>
                                 </div>
-
-
-
                             </div>
-
-
                         </div>
                     </div>
 
@@ -1203,6 +1203,100 @@
             </form>
         </div>
     </div>
+    <!-- Post job modal end-->
+
+    <!-- apply modal start -->
+    <div class="modal fade apply-modal" id="apply-modal" data-bs-backdrop="static" data-bs-keyboard="false"
+        tabindex="-1" aria-labelledby="apply-modalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header apply-modal-header">
+                    <div class="apply-modal-user-icon">
+                        <img src="assets/images/profile/3.jpg" alt="">
+                    </div>
+                    <h3 class="modal-title apply-modal-title" id="apply-modalLabel">Animation Model and Render 3D Artist
+                        - Hyperrealistic Architectural and Landscaping design - RENDERBOX Studios</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body apply-modal-body">
+                    <div class="content-descripton">
+                        <div class="content-header">
+                            <h3 class="title">Apply with your Showcase Profile</h3>
+                            <p class="para-text">Your application will be submitted along with a preview of your Behance
+                                Profile and most recent projects.</p>
+                        </div>
+                    </div>
+
+                    <form action="">
+                        <div class="content-footer">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="content-footer-left">
+                                        <div class="profile-card">
+                                            <div class="profile-card-banner">
+                                                <img src="assets/images/banner/profile-banner2.jpg" alt="">
+                                            </div>
+                                            <div class="profile-card-icon">
+                                                <img src="assets/images/profile/profile1.jpg" alt="">
+                                            </div>
+                                            <div class="profile-content">
+                                                <div class="hire-pro-title">Graphéine</div>
+                                                <p> <i class="fa-regular fa-location-dot"></i> Paris, France</p>
+                                                <div class="user-availability">
+                                                    <span class="freelance">freelance</span>
+                                                    <span class="fulltime">fulltime</span>
+                                                </div>
+                                                <div class="hire-content-button">
+                                                    <button class="cmn-btn">
+                                                        <i class="fa-solid fa-circle-plus"></i>
+                                                        follow
+                                                    </button>
+                                                    <button class="cmn-btn2">
+                                                        <i class="fa-sharp fa-solid fa-envelope"></i>
+                                                        hire me
+                                                    </button>
+                                                </div>
+                                                <ul class="hire-content-user-status">
+                                                    <li>
+                                                        <h4>35k</h4>
+                                                        <p>Appreciations</p>
+                                                    </li>
+                                                    <li>
+                                                        <h4>184.4k</h4>
+                                                        <p>Followers</p>
+                                                    </li>
+                                                    <li>
+                                                        <h4>751.2k</h4>
+                                                        <p>project views</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="content-footer-right h-100">
+                                        <div class="form-floating h-100">
+                                            <textarea class="form-control h-100" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                                            <label for="floatingTextarea">Your Message...</label>
+                                          </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn-area">
+                                <a type="button" class="cmn-btn">Submit Application</a>
+                            </div>
+                            
+                        </div>
+                    </form>
+
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- apply modal end -->
+
 
     <!-- Modal area end -->
 

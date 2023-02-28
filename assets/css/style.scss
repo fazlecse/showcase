@@ -17,10 +17,12 @@
     --bg-color1: #191919a6;
     --bg-color2: #efefef;
     --bg-color3: #191919;
+    --bg-color4: #4b4b4b;
     --body-color: #707070;
     --border-color1: #f2f2f2;
     --border-color2: #e1e1e1;
     --border-color3: #e1f1ee;
+    --border-color4: #ccc;
     --primary-color-opacity-low: rgba(5, 160, 129, .1);
     --orange-opacity-low: rgb(234, 131, 49, 0.1);
     --shadow1: 0 0 0 0.25rem rgb(1 124 110 / 25%);
@@ -173,7 +175,7 @@
 
 @media (min-width: 1400px) {
 
-    .container-fluid {
+    .container {
         max-width: 1758px;
     }
 }
@@ -338,7 +340,7 @@ h4 {
 h5 {
     font-size: 18px;
     margin-bottom: 0;
-    font-weight: 700;
+    font-weight: 500;
     color: var(--white);
     text-shadow: 0 1px 0 #191919;
 }
@@ -656,7 +658,7 @@ section {
     -webkit-line-clamp: 1;
     font-size: 16px;
     text-transform: capitalize;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 0;
 }
 
@@ -759,6 +761,8 @@ hr.divider:after {
         font-size: 14px;
         font-family: 'Roboto', sans-serif;
         margin-bottom: 5px;
+        text-transform: capitalize;
+        font-weight: 500;
 
         &:hover {
             background: var(--primary-color);
@@ -1166,7 +1170,8 @@ hr.divider:after {
         height: 38px;
     }
 }
-.dropdown-toggle.show{
+
+.dropdown-toggle.show {
     background: var(--secondary-color);
 }
 
@@ -1488,7 +1493,7 @@ hr.divider:after {
 
         .swiper-button-next,
         .swiper-button-prev {
-            background: #4B4B4B;
+            background: var(--bg-color4);
             width: 50px;
             height: 50px;
             border-radius: 50%;
@@ -2144,7 +2149,7 @@ hr.divider:after {
 
         .user-availability {
             font-size: 12px;
-            margin: 20px 0;
+            margin: 10px 0;
 
             .freelance {
                 color: var(--magenta);
@@ -2208,18 +2213,34 @@ hr.divider:after {
         .hire-content-user-status {
             display: flex;
             justify-content: space-between;
-            padding: 8px 15px;
             transition: var(--transition);
 
             li {
+                flex: 1 1 100%;
+                max-width: 33%;
                 padding: 10px;
+                position: relative;
+                text-align: center;
 
-                &:not(:last-child) {
-                    border-right: 1px solid var(--border-color2);
+                &::after {
+                    background-color: #ccc;
+                    content: "";
+                    display: block;
+                    height: calc(100% - 20px);
+                    position: absolute;
+                    right: 0;
+                    top: 10px;
+                    width: 1px;
+                }
+
+                &:last-child::after {
+                    width: 0px;
                 }
 
                 p {
                     font-size: 13px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
             }
 
@@ -2230,7 +2251,7 @@ hr.divider:after {
 
 // Hire page end
 
-// profile-banner-stat
+// profile-banner-start
 .profile-banner {
     background: url(../images/banner/profile-banner4);
     min-height: 270px;
@@ -2251,6 +2272,8 @@ hr.divider:after {
     box-shadow: 0 1px 3px rgb(25 25 25 / 10%);
     margin-top: -130px;
     margin-bottom: 50px;
+    z-index: 1;
+    position: relative;
 }
 
 .profile-box-header {
@@ -2303,7 +2326,8 @@ hr.divider:after {
 
         .cmn-btn2 {
             color: var(--primary-color);
-            background: rgb(5 160 129 / 10%);
+            background: var(--primary-color-opacity-low);
+            border-radius: 100px;
 
             &:hover {
                 background: rgb(5 160 129 / 20%);
@@ -2460,6 +2484,30 @@ hr.divider:after {
 
 }
 
+.profile-tab-area {
+    margin-top: 30px;
+
+    .nav-link {
+        color: var(--black);
+        text-transform: capitalize;
+        font-size: 15px;
+        font-weight: 600;
+        border-radius: 100px;
+        padding: 5px 15px;
+        margin: 0 5px;
+
+        &:hover {
+            background: var(--bg-color2);
+        }
+
+    }
+
+    .nav-link.active {
+        background: var(--black);
+        color: var(--white);
+    }
+}
+
 .profile-content-area {
     margin-top: 50px;
 }
@@ -2532,6 +2580,123 @@ hr.divider:after {
 }
 
 // Profile area end
+// Eidt profile banner start
+.edit-profile-banner {
+    background: var(--bg-color4);
+    min-height: 270px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: var(--transition);
+
+    &:hover {
+        background: #3c4e6e;
+    }
+
+    input[type=file] {
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .banner-content {
+        color: var(--white);
+        padding-top: 45px;
+
+        .banner-icon-area {
+            font-size: 50px;
+        }
+
+        .banner-header-area h3,
+        h6 {
+            color: var(--white);
+            font-weight: 400;
+
+        }
+    }
+}
+
+.project-area {
+    .profile-box-header {
+        .cmn-btn2 {
+            i {
+                width: 10px;
+                height: 10px;
+                background: var(--black);
+                padding: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 3px;
+                color: var(--white);
+                font-size: 13px;
+            }
+        }
+    }
+
+    .profile-availability-info {
+        .availability-details {
+            .availability-text span {
+                font-size: 13px;
+            }
+        }
+
+        .cmn-btn2 {
+            width: 100%;
+            border-radius: 100px;
+            padding: 6px !important;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            border-color: var(--border-color4);
+            i {
+                margin-right: 10px;
+                font-size: 18px;
+            }
+        }
+
+        .user-info-row {
+            font-weight: 500;
+        }
+    }
+
+}
+
+.cmn-card6 {
+    padding: 20px;
+    border: 1px dashed var(--border-color2);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .cmn-card6-inner{
+        .create-module-icon-area {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            background: var(--primary-color-opacity-low);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+    
+            i {
+                font-size: 25px;
+                color: var(--primary-color);
+    
+            }
+        }
+        .cmn-btn2{
+            border-radius: 100px;
+        
+        }
+    } 
+}
+
+// Eidt profile banner end
 
 // Job page start
 .job-page-area {
@@ -2601,15 +2766,20 @@ hr.divider:after {
 
     .search-nav {
         display: flex;
-        .cmn-btn, .cmn-btn2{
+
+        .cmn-btn,
+        .cmn-btn2 {
             height: 40px;
-            &:hover{
+
+            &:hover {
                 background: var(--secondary-color2);
             }
         }
-        .dropdown-toggle.show{
+
+        .dropdown-toggle.show {
             background: var(--secondary-color2);
         }
+
         .dropdown-toggle i {
             margin-right: 5px;
         }
@@ -2702,11 +2872,13 @@ hr.divider:after {
 
         .dropdown {
             margin-right: 10px;
-            .show{
-                i{
+
+            .show {
+                i {
                     color: var(--primary-color);
                 }
             }
+
             .dropdown-menu {
                 left: -185px !important;
             }
@@ -2719,7 +2891,8 @@ hr.divider:after {
                 height: 38px;
                 display: flex;
             }
-            .cmn-btn2.active{
+
+            .cmn-btn2.active {
                 background: var(--orange-opacity-low);
                 color: var(--orange);
                 border: 1px solid var(--orange-opacity-low);
@@ -3016,6 +3189,99 @@ hr.divider:after {
 
 // job-post-modal responsive area end
 
+// apply modal start
+.apply-modal {
+    .modal-content {
+        text-align: center;
+        padding: 20px;
+
+        .apply-modal-header {
+            padding: 0;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border-color1);
+
+            .apply-modal-user-icon img {
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                margin-right: 10px;
+            }
+
+            .apply-modal-title {
+                font-size: 14px;
+                color: var(--black);
+                font-weight: 500;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+            }
+        }
+
+        .apply-modal-body {
+            padding: 18px 50px;
+
+            .content-header {
+                .title {
+                    margin-bottom: 12px;
+                }
+            }
+
+            .content-footer {
+                margin-top: 30px;
+
+                .btn-area {
+                    margin-top: 50px;
+                    display: flex;
+                    justify-content: center;
+
+                    .cmn-btn {
+                        width: 50%;
+                        font-size: 16px;
+                        padding: 8px !important;
+
+                    }
+                }
+
+                .profile-card {
+                    &:hover {
+                        filter: initial;
+                        transform: initial;
+
+                        .hire-content-button {
+                            opacity: 0;
+                        }
+
+                        .hire-content-user-status {
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+
+                }
+            }
+
+            textarea.form-control {
+                background: var(--white);
+                border: 1px solid var(--border-color2);
+            }
+        }
+
+    }
+}
+
+// apply modal end
+// job-post-modal responsive area start
+@media (min-width: 576px) {
+    .apply-modal {
+        .modal-dialog {
+            max-width: 940px;
+        }
+    }
+}
+
+// job-post-modal responsive area end
 // Modal area end
 
 
