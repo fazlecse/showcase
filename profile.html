@@ -130,7 +130,7 @@
                                     <i class="fa-solid fa-circle-plus"></i>
                                     follow
                                 </button>
-                                <button class="cmn-btn2">
+                                <button class="cmn-btn2" data-bs-toggle="modal" data-bs-target="#profile-message">
                                     <i class="fa-sharp fa-solid fa-envelope"></i>
                                     Message
                                 </button>
@@ -224,716 +224,595 @@
                                 </li>
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link" id="moodboards-tab" data-bs-toggle="pill"
-                                        data-bs-target="#moodboards" type="button" role="tab"
-                                        aria-controls="moodboards" aria-selected="false">moodboards</button>
+                                        data-bs-target="#moodboards" type="button" role="tab" aria-controls="moodboards"
+                                        aria-selected="false">moodboards</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link" id="Appreciations-tab" data-bs-toggle="pill"
                                         data-bs-target="#Appreciations" type="button" role="tab"
                                         aria-controls="Appreciations" aria-selected="false">Appreciations</button>
                                 </li>
-                                
+
                             </ul>
-                            <div class="tab-content" id="pills-tabContent">
-                                <div class="tab-pane fade show active" id="work" role="tabpanel"
-                                    aria-labelledby="work-tab" tabindex="0">
-                                    <div class="profile-content-area">
-                                        <div class="row g-4">
-                                            <div class="col-lg-3">
-                                                <div class="cmn-card4">
-                                                    <a href="" class="card-link">
-                                                        <div class="card-thum">
-                                                            <img src="assets/images/filter-image/3.webp" alt="">
-                                                            <div class="thum-text">
-                                                                <div class="card-info">
-                                                                    <h4>Recalab</h4>
-                                                                    <small>Anagrama Studio</small>
-                                                                </div>
-                                                                <div class="shot-statistics">
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-heart"></i></span>
-                                                                        <small>72</small>
-                                                                    </div>
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-eye"></i></span>
-                                                                        <small>16.5k</small>
-                                                                    </div>
-                                                                </div>
+
+                        </div>
+                    </div>
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="work" role="tabpanel" aria-labelledby="work-tab"
+                            tabindex="0">
+                            <div class="profile-content-area">
+                                <div class="row g-4">
+                                    <div class="col-lg-3">
+                                        <div class="cmn-card4">
+                                            <a href="" class="card-link">
+                                                <div class="card-thum">
+                                                    <img src="assets/images/filter-image/3.webp" alt="">
+                                                    <div class="thum-text">
+                                                        <div class="card-info">
+                                                            <h4>Recalab</h4>
+                                                            <small>Anagrama Studio</small>
+                                                        </div>
+                                                        <div class="shot-statistics">
+                                                            <div class="shot-statistics-item">
+                                                                <span><i class="fa-solid fa-heart"></i></span>
+                                                                <small>72</small>
+                                                            </div>
+                                                            <div class="shot-statistics-item">
+                                                                <span><i class="fa-solid fa-eye"></i></span>
+                                                                <small>16.5k</small>
                                                             </div>
                                                         </div>
-                                                    </a>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-lg-3">
-                                                <div class="cmn-card4">
-                                                    <a href="" class="card-link">
-                                                        <div class="card-thum">
-                                                            <img src="assets/images/filter-image/2.webp" alt="">
-                                                            <div class="thum-text">
-                                                                <div class="card-info">
-                                                                    <h4>Recalab</h4>
-                                                                    <small>Anagrama Studio</small>
-                                                                </div>
-                                                                <div class="shot-statistics">
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-heart"></i></span>
-                                                                        <small>72</small>
-                                                                    </div>
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-eye"></i></span>
-                                                                        <small>16.5k</small>
-                                                                    </div>
-                                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="cmn-card4">
+                                            <a href="" class="card-link">
+                                                <div class="card-thum">
+                                                    <img src="assets/images/filter-image/2.webp" alt="">
+                                                    <div class="thum-text">
+                                                        <div class="card-info">
+                                                            <h4>Recalab</h4>
+                                                            <small>Anagrama Studio</small>
+                                                        </div>
+                                                        <div class="shot-statistics">
+                                                            <div class="shot-statistics-item">
+                                                                <span><i class="fa-solid fa-heart"></i></span>
+                                                                <small>72</small>
+                                                            </div>
+                                                            <div class="shot-statistics-item">
+                                                                <span><i class="fa-solid fa-eye"></i></span>
+                                                                <small>16.5k</small>
                                                             </div>
                                                         </div>
-                                                    </a>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-lg-3">
-                                                <div class="cmn-card4">
-                                                    <a href="" class="card-link">
-                                                        <div class="card-thum">
-                                                            <img src="assets/images/filter-image/4.webp" alt="">
-                                                            <div class="thum-text">
-                                                                <div class="card-info">
-                                                                    <h4>Recalab</h4>
-                                                                    <small>Anagrama Studio</small>
-                                                                </div>
-                                                                <div class="shot-statistics">
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-heart"></i></span>
-                                                                        <small>72</small>
-                                                                    </div>
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-eye"></i></span>
-                                                                        <small>16.5k</small>
-                                                                    </div>
-                                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="cmn-card4">
+                                            <a href="" class="card-link">
+                                                <div class="card-thum">
+                                                    <img src="assets/images/filter-image/4.webp" alt="">
+                                                    <div class="thum-text">
+                                                        <div class="card-info">
+                                                            <h4>Recalab</h4>
+                                                            <small>Anagrama Studio</small>
+                                                        </div>
+                                                        <div class="shot-statistics">
+                                                            <div class="shot-statistics-item">
+                                                                <span><i class="fa-solid fa-heart"></i></span>
+                                                                <small>72</small>
+                                                            </div>
+                                                            <div class="shot-statistics-item">
+                                                                <span><i class="fa-solid fa-eye"></i></span>
+                                                                <small>16.5k</small>
                                                             </div>
                                                         </div>
-                                                    </a>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-lg-3">
-                                                <div class="cmn-card4">
-                                                    <a href="" class="card-link">
-                                                        <div class="card-thum">
-                                                            <img src="assets/images/filter-image/5.webp" alt="">
-                                                            <div class="thum-text">
-                                                                <div class="card-info">
-                                                                    <h4>Recalab</h4>
-                                                                    <small>Anagrama Studio</small>
-                                                                </div>
-                                                                <div class="shot-statistics">
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-heart"></i></span>
-                                                                        <small>72</small>
-                                                                    </div>
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-eye"></i></span>
-                                                                        <small>16.5k</small>
-                                                                    </div>
-                                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="cmn-card4">
+                                            <a href="" class="card-link">
+                                                <div class="card-thum">
+                                                    <img src="assets/images/filter-image/5.webp" alt="">
+                                                    <div class="thum-text">
+                                                        <div class="card-info">
+                                                            <h4>Recalab</h4>
+                                                            <small>Anagrama Studio</small>
+                                                        </div>
+                                                        <div class="shot-statistics">
+                                                            <div class="shot-statistics-item">
+                                                                <span><i class="fa-solid fa-heart"></i></span>
+                                                                <small>72</small>
+                                                            </div>
+                                                            <div class="shot-statistics-item">
+                                                                <span><i class="fa-solid fa-eye"></i></span>
+                                                                <small>16.5k</small>
                                                             </div>
                                                         </div>
-                                                    </a>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-lg-3">
-                                                <div class="cmn-card4">
-                                                    <a href="" class="card-link">
-                                                        <div class="card-thum">
-                                                            <img src="assets/images/filter-image/6.webp" alt="">
-                                                            <div class="thum-text">
-                                                                <div class="card-info">
-                                                                    <h4>Recalab</h4>
-                                                                    <small>Anagrama Studio</small>
-                                                                </div>
-                                                                <div class="shot-statistics">
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-heart"></i></span>
-                                                                        <small>72</small>
-                                                                    </div>
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-eye"></i></span>
-                                                                        <small>16.5k</small>
-                                                                    </div>
-                                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="cmn-card4">
+                                            <a href="" class="card-link">
+                                                <div class="card-thum">
+                                                    <img src="assets/images/filter-image/6.webp" alt="">
+                                                    <div class="thum-text">
+                                                        <div class="card-info">
+                                                            <h4>Recalab</h4>
+                                                            <small>Anagrama Studio</small>
+                                                        </div>
+                                                        <div class="shot-statistics">
+                                                            <div class="shot-statistics-item">
+                                                                <span><i class="fa-solid fa-heart"></i></span>
+                                                                <small>72</small>
+                                                            </div>
+                                                            <div class="shot-statistics-item">
+                                                                <span><i class="fa-solid fa-eye"></i></span>
+                                                                <small>16.5k</small>
                                                             </div>
                                                         </div>
-                                                    </a>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-lg-3">
-                                                <div class="cmn-card4">
-                                                    <a href="" class="card-link">
-                                                        <div class="card-thum">
-                                                            <img src="assets/images/filter-image/3.jpg" alt="">
-                                                            <div class="thum-text">
-                                                                <div class="card-info">
-                                                                    <h4>Recalab</h4>
-                                                                    <small>Anagrama Studio</small>
-                                                                </div>
-                                                                <div class="shot-statistics">
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-heart"></i></span>
-                                                                        <small>72</small>
-                                                                    </div>
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-eye"></i></span>
-                                                                        <small>16.5k</small>
-                                                                    </div>
-                                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="cmn-card4">
+                                            <a href="" class="card-link">
+                                                <div class="card-thum">
+                                                    <img src="assets/images/filter-image/3.jpg" alt="">
+                                                    <div class="thum-text">
+                                                        <div class="card-info">
+                                                            <h4>Recalab</h4>
+                                                            <small>Anagrama Studio</small>
+                                                        </div>
+                                                        <div class="shot-statistics">
+                                                            <div class="shot-statistics-item">
+                                                                <span><i class="fa-solid fa-heart"></i></span>
+                                                                <small>72</small>
+                                                            </div>
+                                                            <div class="shot-statistics-item">
+                                                                <span><i class="fa-solid fa-eye"></i></span>
+                                                                <small>16.5k</small>
                                                             </div>
                                                         </div>
-                                                    </a>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-lg-3">
-                                                <div class="cmn-card4">
-                                                    <a href="" class="card-link">
-                                                        <div class="card-thum">
-                                                            <img src="assets/images/filter-image/4.jpg" alt="">
-                                                            <div class="thum-text">
-                                                                <div class="card-info">
-                                                                    <h4>Recalab</h4>
-                                                                    <small>Anagrama Studio</small>
-                                                                </div>
-                                                                <div class="shot-statistics">
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-heart"></i></span>
-                                                                        <small>72</small>
-                                                                    </div>
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-eye"></i></span>
-                                                                        <small>16.5k</small>
-                                                                    </div>
-                                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="cmn-card4">
+                                            <a href="" class="card-link">
+                                                <div class="card-thum">
+                                                    <img src="assets/images/filter-image/4.jpg" alt="">
+                                                    <div class="thum-text">
+                                                        <div class="card-info">
+                                                            <h4>Recalab</h4>
+                                                            <small>Anagrama Studio</small>
+                                                        </div>
+                                                        <div class="shot-statistics">
+                                                            <div class="shot-statistics-item">
+                                                                <span><i class="fa-solid fa-heart"></i></span>
+                                                                <small>72</small>
+                                                            </div>
+                                                            <div class="shot-statistics-item">
+                                                                <span><i class="fa-solid fa-eye"></i></span>
+                                                                <small>16.5k</small>
                                                             </div>
                                                         </div>
-                                                    </a>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-lg-3">
-                                                <div class="cmn-card4">
-                                                    <a href="" class="card-link">
-                                                        <div class="card-thum">
-                                                            <img src="assets/images/filter-image/1.webp" alt="">
-                                                            <div class="thum-text">
-                                                                <div class="card-info">
-                                                                    <h4>Recalab</h4>
-                                                                    <small>Anagrama Studio</small>
-                                                                </div>
-                                                                <div class="shot-statistics">
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-heart"></i></span>
-                                                                        <small>72</small>
-                                                                    </div>
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-eye"></i></span>
-                                                                        <small>16.5k</small>
-                                                                    </div>
-                                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="cmn-card4">
+                                            <a href="" class="card-link">
+                                                <div class="card-thum">
+                                                    <img src="assets/images/filter-image/1.webp" alt="">
+                                                    <div class="thum-text">
+                                                        <div class="card-info">
+                                                            <h4>Recalab</h4>
+                                                            <small>Anagrama Studio</small>
+                                                        </div>
+                                                        <div class="shot-statistics">
+                                                            <div class="shot-statistics-item">
+                                                                <span><i class="fa-solid fa-heart"></i></span>
+                                                                <small>72</small>
+                                                            </div>
+                                                            <div class="shot-statistics-item">
+                                                                <span><i class="fa-solid fa-eye"></i></span>
+                                                                <small>16.5k</small>
                                                             </div>
                                                         </div>
-                                                    </a>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-lg-3">
-                                                <div class="cmn-card4">
-                                                    <a href="" class="card-link">
-                                                        <div class="card-thum">
-                                                            <img src="assets/images/filter-image/5.jpg" alt="">
-                                                            <div class="thum-text">
-                                                                <div class="card-info">
-                                                                    <h4>Recalab</h4>
-                                                                    <small>Anagrama Studio</small>
-                                                                </div>
-                                                                <div class="shot-statistics">
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-heart"></i></span>
-                                                                        <small>72</small>
-                                                                    </div>
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-eye"></i></span>
-                                                                        <small>16.5k</small>
-                                                                    </div>
-                                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="cmn-card4">
+                                            <a href="" class="card-link">
+                                                <div class="card-thum">
+                                                    <img src="assets/images/filter-image/5.jpg" alt="">
+                                                    <div class="thum-text">
+                                                        <div class="card-info">
+                                                            <h4>Recalab</h4>
+                                                            <small>Anagrama Studio</small>
+                                                        </div>
+                                                        <div class="shot-statistics">
+                                                            <div class="shot-statistics-item">
+                                                                <span><i class="fa-solid fa-heart"></i></span>
+                                                                <small>72</small>
+                                                            </div>
+                                                            <div class="shot-statistics-item">
+                                                                <span><i class="fa-solid fa-eye"></i></span>
+                                                                <small>16.5k</small>
                                                             </div>
                                                         </div>
-                                                    </a>
+                                                    </div>
                                                 </div>
-                                            </div>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="tab-pane fade" id="moodboards" role="tabpanel"
-                                    aria-labelledby="moodboards-tab" tabindex="0">
-                                    <div class="profile-content-area">
-                                        <div class="row g-4">
-                                            <div class="col-lg-3">
-                                                <div class="cmn-card4">
-                                                    <a href="" class="card-link">
-                                                        <div class="card-thum">
-                                                            <img src="assets/images/filter-image/3.webp" alt="">
-                                                            <div class="thum-text">
-                                                                <div class="card-info">
-                                                                    <h4>Recalab</h4>
-                                                                    <small>Anagrama Studio</small>
-                                                                </div>
-                                                                <div class="shot-statistics">
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-heart"></i></span>
-                                                                        <small>72</small>
-                                                                    </div>
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-eye"></i></span>
-                                                                        <small>16.5k</small>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="moodboards" role="tabpanel" aria-labelledby="moodboards-tab"
+                            tabindex="0">
+                            <div class="row g-4">
+                                <div class="col-xxl-4 col-xl-4">
+                                    <div class="moodboard-tab-content">
+                                        <a href="" class="moodboard-card-link">
+                                            <div class="moodboard-card">
+                                                <div class="moodboard-image-gallery">
+                                                    <div class="image-area img1">
+                                                        <img src="assets/images/moodboard/1.jpg" alt="">
+                                                    </div>
+                                                    <div class="image-area img2">
+                                                        <img src="assets/images/moodboard/2.jpg" alt="">
+                                                    </div>
+                                                    <div class="image-area img3">
+                                                        <img src="assets/images/moodboard/3.jpg" alt="">
+                                                    </div>
+                                                    <div class="image-area img4">
+                                                        <img src="assets/images/moodboard/4.jpg" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="moodboard-content">
+                                                    <a href="" class="moodboard-title">signage</a>
+                                                    <a href="" class="owner-root">Graphéine</a>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-3">
-                                                <div class="cmn-card4">
-                                                    <a href="" class="card-link">
-                                                        <div class="card-thum">
-                                                            <img src="assets/images/filter-image/2.webp" alt="">
-                                                            <div class="thum-text">
-                                                                <div class="card-info">
-                                                                    <h4>Recalab</h4>
-                                                                    <small>Anagrama Studio</small>
-                                                                </div>
-                                                                <div class="shot-statistics">
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-heart"></i></span>
-                                                                        <small>72</small>
-                                                                    </div>
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-eye"></i></span>
-                                                                        <small>16.5k</small>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3">
-                                                <div class="cmn-card4">
-                                                    <a href="" class="card-link">
-                                                        <div class="card-thum">
-                                                            <img src="assets/images/filter-image/4.webp" alt="">
-                                                            <div class="thum-text">
-                                                                <div class="card-info">
-                                                                    <h4>Recalab</h4>
-                                                                    <small>Anagrama Studio</small>
-                                                                </div>
-                                                                <div class="shot-statistics">
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-heart"></i></span>
-                                                                        <small>72</small>
-                                                                    </div>
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-eye"></i></span>
-                                                                        <small>16.5k</small>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3">
-                                                <div class="cmn-card4">
-                                                    <a href="" class="card-link">
-                                                        <div class="card-thum">
-                                                            <img src="assets/images/filter-image/5.webp" alt="">
-                                                            <div class="thum-text">
-                                                                <div class="card-info">
-                                                                    <h4>Recalab</h4>
-                                                                    <small>Anagrama Studio</small>
-                                                                </div>
-                                                                <div class="shot-statistics">
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-heart"></i></span>
-                                                                        <small>72</small>
-                                                                    </div>
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-eye"></i></span>
-                                                                        <small>16.5k</small>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3">
-                                                <div class="cmn-card4">
-                                                    <a href="" class="card-link">
-                                                        <div class="card-thum">
-                                                            <img src="assets/images/filter-image/6.webp" alt="">
-                                                            <div class="thum-text">
-                                                                <div class="card-info">
-                                                                    <h4>Recalab</h4>
-                                                                    <small>Anagrama Studio</small>
-                                                                </div>
-                                                                <div class="shot-statistics">
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-heart"></i></span>
-                                                                        <small>72</small>
-                                                                    </div>
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-eye"></i></span>
-                                                                        <small>16.5k</small>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3">
-                                                <div class="cmn-card4">
-                                                    <a href="" class="card-link">
-                                                        <div class="card-thum">
-                                                            <img src="assets/images/filter-image/3.jpg" alt="">
-                                                            <div class="thum-text">
-                                                                <div class="card-info">
-                                                                    <h4>Recalab</h4>
-                                                                    <small>Anagrama Studio</small>
-                                                                </div>
-                                                                <div class="shot-statistics">
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-heart"></i></span>
-                                                                        <small>72</small>
-                                                                    </div>
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-eye"></i></span>
-                                                                        <small>16.5k</small>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3">
-                                                <div class="cmn-card4">
-                                                    <a href="" class="card-link">
-                                                        <div class="card-thum">
-                                                            <img src="assets/images/filter-image/4.jpg" alt="">
-                                                            <div class="thum-text">
-                                                                <div class="card-info">
-                                                                    <h4>Recalab</h4>
-                                                                    <small>Anagrama Studio</small>
-                                                                </div>
-                                                                <div class="shot-statistics">
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-heart"></i></span>
-                                                                        <small>72</small>
-                                                                    </div>
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-eye"></i></span>
-                                                                        <small>16.5k</small>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3">
-                                                <div class="cmn-card4">
-                                                    <a href="" class="card-link">
-                                                        <div class="card-thum">
-                                                            <img src="assets/images/filter-image/1.webp" alt="">
-                                                            <div class="thum-text">
-                                                                <div class="card-info">
-                                                                    <h4>Recalab</h4>
-                                                                    <small>Anagrama Studio</small>
-                                                                </div>
-                                                                <div class="shot-statistics">
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-heart"></i></span>
-                                                                        <small>72</small>
-                                                                    </div>
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-eye"></i></span>
-                                                                        <small>16.5k</small>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3">
-                                                <div class="cmn-card4">
-                                                    <a href="" class="card-link">
-                                                        <div class="card-thum">
-                                                            <img src="assets/images/filter-image/5.jpg" alt="">
-                                                            <div class="thum-text">
-                                                                <div class="card-info">
-                                                                    <h4>Recalab</h4>
-                                                                    <small>Anagrama Studio</small>
-                                                                </div>
-                                                                <div class="shot-statistics">
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-heart"></i></span>
-                                                                        <small>72</small>
-                                                                    </div>
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-eye"></i></span>
-                                                                        <small>16.5k</small>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        </a>
                                     </div>
                                 </div>
-                                <div class="tab-pane fade" id="Appreciations" role="tabpanel"
-                                    aria-labelledby="Appreciations-tab" tabindex="0">
-                                    <div class="profile-content-area">
-                                        <div class="row g-4">
-                                            <div class="col-lg-3">
-                                                <div class="cmn-card4">
-                                                    <a href="" class="card-link">
-                                                        <div class="card-thum">
-                                                            <img src="assets/images/filter-image/3.webp" alt="">
-                                                            <div class="thum-text">
-                                                                <div class="card-info">
-                                                                    <h4>Recalab</h4>
-                                                                    <small>Anagrama Studio</small>
-                                                                </div>
-                                                                <div class="shot-statistics">
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-heart"></i></span>
-                                                                        <small>72</small>
-                                                                    </div>
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-eye"></i></span>
-                                                                        <small>16.5k</small>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
+                                <div class="col-xxl-4 col-xl-4">
+                                    <div class="moodboard-tab-content">
+                                        <a href="" class="moodboard-card-link">
+                                            <div class="moodboard-card">
+                                                <div class="moodboard-image-gallery">
+                                                    <div class="image-area img1">
+                                                        <img src="assets/images/moodboard/1.jpg" alt="">
+                                                    </div>
+                                                    <div class="image-area img2">
+                                                        <img src="assets/images/moodboard/2.jpg" alt="">
+                                                    </div>
+                                                    <div class="image-area img3">
+                                                        <img src="assets/images/moodboard/3.jpg" alt="">
+                                                    </div>
+                                                    <div class="image-area img4">
+                                                        <img src="assets/images/moodboard/4.jpg" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="moodboard-content">
+                                                    <a href="" class="moodboard-title">signage</a>
+                                                    <a href="" class="owner-root">Graphéine</a>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-3">
-                                                <div class="cmn-card4">
-                                                    <a href="" class="card-link">
-                                                        <div class="card-thum">
-                                                            <img src="assets/images/filter-image/2.webp" alt="">
-                                                            <div class="thum-text">
-                                                                <div class="card-info">
-                                                                    <h4>Recalab</h4>
-                                                                    <small>Anagrama Studio</small>
-                                                                </div>
-                                                                <div class="shot-statistics">
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-heart"></i></span>
-                                                                        <small>72</small>
-                                                                    </div>
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-eye"></i></span>
-                                                                        <small>16.5k</small>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-4 col-xl-4">
+                                    <div class="moodboard-tab-content">
+                                        <a href="" class="moodboard-card-link">
+                                            <div class="moodboard-card">
+                                                <div class="moodboard-image-gallery">
+                                                    <div class="image-area img1">
+                                                        <img src="assets/images/moodboard/1.jpg" alt="">
+                                                    </div>
+                                                    <div class="image-area img2">
+                                                        <img src="assets/images/moodboard/2.jpg" alt="">
+                                                    </div>
+                                                    <div class="image-area img3">
+                                                        <img src="assets/images/moodboard/3.jpg" alt="">
+                                                    </div>
+                                                    <div class="image-area img4">
+                                                        <img src="assets/images/moodboard/4.jpg" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="moodboard-content">
+                                                    <a href="" class="moodboard-title">signage</a>
+                                                    <a href="" class="owner-root">Graphéine</a>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-3">
-                                                <div class="cmn-card4">
-                                                    <a href="" class="card-link">
-                                                        <div class="card-thum">
-                                                            <img src="assets/images/filter-image/4.webp" alt="">
-                                                            <div class="thum-text">
-                                                                <div class="card-info">
-                                                                    <h4>Recalab</h4>
-                                                                    <small>Anagrama Studio</small>
-                                                                </div>
-                                                                <div class="shot-statistics">
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-heart"></i></span>
-                                                                        <small>72</small>
-                                                                    </div>
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-eye"></i></span>
-                                                                        <small>16.5k</small>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-4 col-xl-4">
+                                    <div class="moodboard-tab-content">
+                                        <a href="" class="moodboard-card-link">
+                                            <div class="moodboard-card">
+                                                <div class="moodboard-image-gallery">
+                                                    <div class="image-area img1">
+                                                        <img src="assets/images/moodboard/1.jpg" alt="">
+                                                    </div>
+                                                    <div class="image-area img2">
+                                                        <img src="assets/images/moodboard/2.jpg" alt="">
+                                                    </div>
+                                                    <div class="image-area img3">
+                                                        <img src="assets/images/moodboard/3.jpg" alt="">
+                                                    </div>
+                                                    <div class="image-area img4">
+                                                        <img src="assets/images/moodboard/4.jpg" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="moodboard-content">
+                                                    <a href="" class="moodboard-title">signage</a>
+                                                    <a href="" class="owner-root">Graphéine</a>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-3">
-                                                <div class="cmn-card4">
-                                                    <a href="" class="card-link">
-                                                        <div class="card-thum">
-                                                            <img src="assets/images/filter-image/5.webp" alt="">
-                                                            <div class="thum-text">
-                                                                <div class="card-info">
-                                                                    <h4>Recalab</h4>
-                                                                    <small>Anagrama Studio</small>
-                                                                </div>
-                                                                <div class="shot-statistics">
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-heart"></i></span>
-                                                                        <small>72</small>
-                                                                    </div>
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-eye"></i></span>
-                                                                        <small>16.5k</small>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3">
-                                                <div class="cmn-card4">
-                                                    <a href="" class="card-link">
-                                                        <div class="card-thum">
-                                                            <img src="assets/images/filter-image/6.webp" alt="">
-                                                            <div class="thum-text">
-                                                                <div class="card-info">
-                                                                    <h4>Recalab</h4>
-                                                                    <small>Anagrama Studio</small>
-                                                                </div>
-                                                                <div class="shot-statistics">
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-heart"></i></span>
-                                                                        <small>72</small>
-                                                                    </div>
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-eye"></i></span>
-                                                                        <small>16.5k</small>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3">
-                                                <div class="cmn-card4">
-                                                    <a href="" class="card-link">
-                                                        <div class="card-thum">
-                                                            <img src="assets/images/filter-image/3.jpg" alt="">
-                                                            <div class="thum-text">
-                                                                <div class="card-info">
-                                                                    <h4>Recalab</h4>
-                                                                    <small>Anagrama Studio</small>
-                                                                </div>
-                                                                <div class="shot-statistics">
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-heart"></i></span>
-                                                                        <small>72</small>
-                                                                    </div>
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-eye"></i></span>
-                                                                        <small>16.5k</small>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3">
-                                                <div class="cmn-card4">
-                                                    <a href="" class="card-link">
-                                                        <div class="card-thum">
-                                                            <img src="assets/images/filter-image/4.jpg" alt="">
-                                                            <div class="thum-text">
-                                                                <div class="card-info">
-                                                                    <h4>Recalab</h4>
-                                                                    <small>Anagrama Studio</small>
-                                                                </div>
-                                                                <div class="shot-statistics">
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-heart"></i></span>
-                                                                        <small>72</small>
-                                                                    </div>
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-eye"></i></span>
-                                                                        <small>16.5k</small>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3">
-                                                <div class="cmn-card4">
-                                                    <a href="" class="card-link">
-                                                        <div class="card-thum">
-                                                            <img src="assets/images/filter-image/1.webp" alt="">
-                                                            <div class="thum-text">
-                                                                <div class="card-info">
-                                                                    <h4>Recalab</h4>
-                                                                    <small>Anagrama Studio</small>
-                                                                </div>
-                                                                <div class="shot-statistics">
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-heart"></i></span>
-                                                                        <small>72</small>
-                                                                    </div>
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-eye"></i></span>
-                                                                        <small>16.5k</small>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3">
-                                                <div class="cmn-card4">
-                                                    <a href="" class="card-link">
-                                                        <div class="card-thum">
-                                                            <img src="assets/images/filter-image/5.jpg" alt="">
-                                                            <div class="thum-text">
-                                                                <div class="card-info">
-                                                                    <h4>Recalab</h4>
-                                                                    <small>Anagrama Studio</small>
-                                                                </div>
-                                                                <div class="shot-statistics">
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-heart"></i></span>
-                                                                        <small>72</small>
-                                                                    </div>
-                                                                    <div class="shot-statistics-item">
-                                                                        <span><i class="fa-solid fa-eye"></i></span>
-                                                                        <small>16.5k</small>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        </a>
                                     </div>
                                 </div>
 
                             </div>
                         </div>
+                        <div class="tab-pane fade" id="Appreciations" role="tabpanel"
+                            aria-labelledby="Appreciations-tab" tabindex="0">
+                            <div class="profile-content-area">
+                                <div class="row g-4">
+                                    <div class="col-lg-3">
+                                        <div class="cmn-card4">
+                                            <a href="" class="card-link">
+                                                <div class="card-thum">
+                                                    <img src="assets/images/filter-image/3.webp" alt="">
+                                                    <div class="thum-text">
+                                                        <div class="card-info">
+                                                            <h4>Recalab</h4>
+                                                            <small>Anagrama Studio</small>
+                                                        </div>
+                                                        <div class="shot-statistics">
+                                                            <div class="shot-statistics-item">
+                                                                <span><i class="fa-solid fa-heart"></i></span>
+                                                                <small>72</small>
+                                                            </div>
+                                                            <div class="shot-statistics-item">
+                                                                <span><i class="fa-solid fa-eye"></i></span>
+                                                                <small>16.5k</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="cmn-card4">
+                                            <a href="" class="card-link">
+                                                <div class="card-thum">
+                                                    <img src="assets/images/filter-image/2.webp" alt="">
+                                                    <div class="thum-text">
+                                                        <div class="card-info">
+                                                            <h4>Recalab</h4>
+                                                            <small>Anagrama Studio</small>
+                                                        </div>
+                                                        <div class="shot-statistics">
+                                                            <div class="shot-statistics-item">
+                                                                <span><i class="fa-solid fa-heart"></i></span>
+                                                                <small>72</small>
+                                                            </div>
+                                                            <div class="shot-statistics-item">
+                                                                <span><i class="fa-solid fa-eye"></i></span>
+                                                                <small>16.5k</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="cmn-card4">
+                                            <a href="" class="card-link">
+                                                <div class="card-thum">
+                                                    <img src="assets/images/filter-image/4.webp" alt="">
+                                                    <div class="thum-text">
+                                                        <div class="card-info">
+                                                            <h4>Recalab</h4>
+                                                            <small>Anagrama Studio</small>
+                                                        </div>
+                                                        <div class="shot-statistics">
+                                                            <div class="shot-statistics-item">
+                                                                <span><i class="fa-solid fa-heart"></i></span>
+                                                                <small>72</small>
+                                                            </div>
+                                                            <div class="shot-statistics-item">
+                                                                <span><i class="fa-solid fa-eye"></i></span>
+                                                                <small>16.5k</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="cmn-card4">
+                                            <a href="" class="card-link">
+                                                <div class="card-thum">
+                                                    <img src="assets/images/filter-image/5.webp" alt="">
+                                                    <div class="thum-text">
+                                                        <div class="card-info">
+                                                            <h4>Recalab</h4>
+                                                            <small>Anagrama Studio</small>
+                                                        </div>
+                                                        <div class="shot-statistics">
+                                                            <div class="shot-statistics-item">
+                                                                <span><i class="fa-solid fa-heart"></i></span>
+                                                                <small>72</small>
+                                                            </div>
+                                                            <div class="shot-statistics-item">
+                                                                <span><i class="fa-solid fa-eye"></i></span>
+                                                                <small>16.5k</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="cmn-card4">
+                                            <a href="" class="card-link">
+                                                <div class="card-thum">
+                                                    <img src="assets/images/filter-image/6.webp" alt="">
+                                                    <div class="thum-text">
+                                                        <div class="card-info">
+                                                            <h4>Recalab</h4>
+                                                            <small>Anagrama Studio</small>
+                                                        </div>
+                                                        <div class="shot-statistics">
+                                                            <div class="shot-statistics-item">
+                                                                <span><i class="fa-solid fa-heart"></i></span>
+                                                                <small>72</small>
+                                                            </div>
+                                                            <div class="shot-statistics-item">
+                                                                <span><i class="fa-solid fa-eye"></i></span>
+                                                                <small>16.5k</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="cmn-card4">
+                                            <a href="" class="card-link">
+                                                <div class="card-thum">
+                                                    <img src="assets/images/filter-image/3.jpg" alt="">
+                                                    <div class="thum-text">
+                                                        <div class="card-info">
+                                                            <h4>Recalab</h4>
+                                                            <small>Anagrama Studio</small>
+                                                        </div>
+                                                        <div class="shot-statistics">
+                                                            <div class="shot-statistics-item">
+                                                                <span><i class="fa-solid fa-heart"></i></span>
+                                                                <small>72</small>
+                                                            </div>
+                                                            <div class="shot-statistics-item">
+                                                                <span><i class="fa-solid fa-eye"></i></span>
+                                                                <small>16.5k</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="cmn-card4">
+                                            <a href="" class="card-link">
+                                                <div class="card-thum">
+                                                    <img src="assets/images/filter-image/4.jpg" alt="">
+                                                    <div class="thum-text">
+                                                        <div class="card-info">
+                                                            <h4>Recalab</h4>
+                                                            <small>Anagrama Studio</small>
+                                                        </div>
+                                                        <div class="shot-statistics">
+                                                            <div class="shot-statistics-item">
+                                                                <span><i class="fa-solid fa-heart"></i></span>
+                                                                <small>72</small>
+                                                            </div>
+                                                            <div class="shot-statistics-item">
+                                                                <span><i class="fa-solid fa-eye"></i></span>
+                                                                <small>16.5k</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="cmn-card4">
+                                            <a href="" class="card-link">
+                                                <div class="card-thum">
+                                                    <img src="assets/images/filter-image/1.webp" alt="">
+                                                    <div class="thum-text">
+                                                        <div class="card-info">
+                                                            <h4>Recalab</h4>
+                                                            <small>Anagrama Studio</small>
+                                                        </div>
+                                                        <div class="shot-statistics">
+                                                            <div class="shot-statistics-item">
+                                                                <span><i class="fa-solid fa-heart"></i></span>
+                                                                <small>72</small>
+                                                            </div>
+                                                            <div class="shot-statistics-item">
+                                                                <span><i class="fa-solid fa-eye"></i></span>
+                                                                <small>16.5k</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="cmn-card4">
+                                            <a href="" class="card-link">
+                                                <div class="card-thum">
+                                                    <img src="assets/images/filter-image/5.jpg" alt="">
+                                                    <div class="thum-text">
+                                                        <div class="card-info">
+                                                            <h4>Recalab</h4>
+                                                            <small>Anagrama Studio</small>
+                                                        </div>
+                                                        <div class="shot-statistics">
+                                                            <div class="shot-statistics-item">
+                                                                <span><i class="fa-solid fa-heart"></i></span>
+                                                                <small>72</small>
+                                                            </div>
+                                                            <div class="shot-statistics-item">
+                                                                <span><i class="fa-solid fa-eye"></i></span>
+                                                                <small>16.5k</small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -941,7 +820,98 @@
     </div>
     <!-- Profile area end -->
 
-
+    <!-- Profile massage modal start -->
+    <div class="modal fade profile-message-modal" id="profile-message" data-bs-backdrop="static" tabindex="-1"
+        aria-labelledby="profile-messageLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <h1 class="modal-title fs-5" id="profile-messageLabel">Modal title</h1> -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="profile-message-header">
+                        <div class="profile-message-icon">
+                            <img src="assets/images/profile/profile1.jpg" alt="">
+                        </div>
+                        <div class="profile-message-title">
+                            Message
+                        </div>
+                        <div class="profile-message-title title2">
+                            Graphéine
+                        </div>
+                    </div>
+                    <div class="profile-message-tab-area">
+                        <ul class="nav" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                              <button class="nav-link active" id="pills-Freelance-tab" data-bs-toggle="pill" data-bs-target="#pills-Freelance" type="button" role="tab" aria-controls="pills-Freelance" aria-selected="true"><i class="fa-regular fa-calendar-clock"></i>Freelance</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                              <button class="nav-link" id="pills-Message-tab" data-bs-toggle="pill" data-bs-target="#pills-Message" type="button" role="tab" aria-controls="pills-Message" aria-selected="false"><i class="fa-regular fa-messages"></i>Message</button>
+                            </li>
+                          </ul>
+                          
+                    </div>
+                    <div class="profile-message-content-area">
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-Freelance" role="tabpanel" aria-labelledby="pills-Freelance-tab" tabindex="0">
+                                <div class="freelance-content">
+                                    <form action="">
+                                        <div class="freelance-availability-info">
+                                            <span>Availability:</span> Within the next few weeks 
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 mb-3">
+                                              <input type="text" class="form-control" placeholder="Your Company" aria-label="First name">
+                                            </div>
+                                            <div class="col-12 mb-3">
+                                              <div class="row">
+                                                <div class="col-9">
+                                                    <input type="text" class="form-control" placeholder="Your Budget" aria-label="Last name">
+                                                </div>
+                                                <div class="col-3">
+                                                    <div id="formModal" class="cmn-select-area">
+                                                        <select class="modal-select2" name="state">
+                                                            <option value="AL">Paint</option>
+                                                            ...
+                                                            <option value="WY">Tool</option>
+                                                            <option value="WY">SAI</option>
+                                                            <option value="WY">Painttool</option>
+                                                            <option value="WY">Sai</option>
+                                                            <option value="WY">Sand</option>
+                                                            <option value="WY">Paper</option>
+                                                            <option value="WY">SASS</option>
+                                                            <option value="WY">Table</option>
+                                                            <option value="WY">Saw</option>
+                                                            <option value="WY">Easy</option>
+                                                            <option value="WY">Paint</option>
+                                                            <option value="WY">Tool</option>
+                                                            <option value="WY">SAI</option>
+                                                            <option value="WY">Sand</option>
+                                                            <option value="WY">Pigma</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-Message" role="tabpanel" aria-labelledby="pills-Message-tab" tabindex="0">
+                                b
+                            </div>
+                          </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Profile massage modal end -->
 
 
 

@@ -18,6 +18,7 @@
     --bg-color2: #efefef;
     --bg-color3: #191919;
     --bg-color4: #4b4b4b;
+    --bg-color5: #F9F9F9;
     --body-color: #707070;
     --border-color1: #f2f2f2;
     --border-color2: #e1e1e1;
@@ -2265,6 +2266,10 @@ hr.divider:after {
 // profile-banner-end
 
 // Profile area start
+.profile-area {
+    background: var(--bg-color5);
+}
+
 .profile-box {
     padding: 25px 30px 16px;
     background: var(--white);
@@ -2485,7 +2490,7 @@ hr.divider:after {
 }
 
 .profile-tab-area {
-    margin-top: 30px;
+    margin: 30px 0;
 
     .nav-link {
         color: var(--black);
@@ -2508,9 +2513,6 @@ hr.divider:after {
     }
 }
 
-.profile-content-area {
-    margin-top: 50px;
-}
 
 .cmn-card4 {
     &:hover .card-thum .thum-text {
@@ -2580,8 +2582,8 @@ hr.divider:after {
 }
 
 // Profile area end
-// Eidt profile banner start
-.edit-profile-banner {
+// project banner start
+.project-profile-banner {
     background: var(--bg-color4);
     min-height: 270px;
     display: flex;
@@ -2620,6 +2622,8 @@ hr.divider:after {
     }
 }
 
+// project banner end
+// Project area start
 .project-area {
     .profile-box-header {
         .cmn-btn2 {
@@ -2651,7 +2655,7 @@ hr.divider:after {
             padding: 6px !important;
             color: var(--primary-color);
             margin-bottom: 10px;
-            border-color: var(--border-color4);
+
             i {
                 margin-right: 10px;
                 font-size: 18px;
@@ -2666,13 +2670,12 @@ hr.divider:after {
 }
 
 .cmn-card6 {
-    padding: 20px;
     border: 1px dashed var(--border-color2);
     border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    .cmn-card6-inner{
+
+    .cmn-card6-inner {
+        padding: 30px 10px;
+
         .create-module-icon-area {
             width: 75px;
             height: 75px;
@@ -2682,26 +2685,149 @@ hr.divider:after {
             align-items: center;
             justify-content: center;
             margin: 0 auto;
-    
+
             i {
                 font-size: 25px;
                 color: var(--primary-color);
-    
+
             }
         }
-        .cmn-btn2{
-            border-radius: 100px;
-        
+
+        .btn-area {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .cmn-btn2 {
+                border-radius: 100px;
+            }
         }
-    } 
+    }
+
+    .description-area {
+        padding: 0 15px 15px 15px;
+        text-align: center;
+    }
 }
 
-// Eidt profile banner end
+.nfts-tab-content {
+    padding: 45px;
+    margin-top: 40px;
+    background: var(--white);
+    border-radius: 5px;
+    text-align: center;
+
+    .title {
+        margin-bottom: 15px;
+    }
+
+    .para-text {
+        margin-bottom: 20px;
+        font-size: 15px;
+    }
+
+    .nfts-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 15px 0;
+
+        .number {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            font-weight: 600;
+            color: var(--white);
+            background: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+        }
+    }
+
+    .btn-area {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .link-area {
+        a {
+            position: relative;
+            padding-top: 25px;
+            margin-top: 25px;
+            justify-content: center;
+            display: flex;
+
+            &::before {
+                content: "";
+                border-top: 1px solid var(--primary-color-opacity-low);
+                margin: 0 auto;
+                position: absolute;
+                top: 0;
+                width: 30px;
+            }
+        }
+    }
+}
+
+.moodboard-card-link {
+    position: relative;
+
+    &::after {
+        position: absolute;
+        content: "";
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 30%);
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.moodboard-card {
+    position: relative;
+
+    .moodboard-image-gallery {
+        display: grid;
+        grid-template-columns: auto auto;
+
+        .image-area img {
+            height: 160px;
+            width: 100%;
+        }
+    }
+
+    .moodboard-content {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+
+        a {
+            display: block;
+            color: var(--white);
+            text-shadow: 1px 1px 3px rgb(0 0 0 / 50%)
+        }
+
+        .moodboard-title {
+            font-size: 16px;
+            font-weight: 600;
+        }
+    }
+}
+
+
+
+// Project area start
+
+
 
 // Job page start
 .job-page-area {
     padding: 20px 0;
-    background: #F9F9F9;
+    background: var(--bg-color5);
 }
 
 .cmn-tab {
@@ -2929,13 +3055,17 @@ hr.divider:after {
 
 // Job page end
 
+
+
 // Modal area start
 
 // job-post-modal area start
-.job-post-modal {
+.modal {
     background: rgb(0, 0, 0, 0.8);
     z-index: 99999;
+}
 
+.job-post-modal {
     .modal-content {
         border-radius: 10px;
         display: flex;
@@ -3282,6 +3412,93 @@ hr.divider:after {
 }
 
 // job-post-modal responsive area end
+
+// Profile massage modal start
+.profile-message-modal {
+    .modal-header {
+        border: none;
+        // padding: 0;
+    }
+    .modal-body{
+        padding: 0 35px;
+    }
+    .profile-message-header {
+        // margin-top: -30px;
+        text-align: center;
+        padding-bottom: 20px;
+
+        .profile-message-icon {
+            margin-bottom: 10px;
+
+            img {
+                width: 65px;
+                height: 65px;
+                border-radius: 50%;
+            }
+        }
+
+        .profile-message-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--black);
+        }
+
+        .title2 {
+            color: var(--primary-color);
+        }
+    }
+}
+
+.profile-message-tab-area {
+    .nav {
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid var(--border-color2);
+
+        .nav-link {
+            font-size: 16px;
+            color: var(--body-color);
+            font-weight: 400;
+            margin: 0 5px;
+
+            &:hover {
+                border-bottom: 2px solid var(--black);
+                color: var(--black);
+            }
+
+            i {
+                margin-right: 5px;
+            }
+        }
+
+        .nav-link.active {
+            border-bottom: 2px solid var(--black);
+            color: var(--black);
+        }
+    }
+
+}
+.profile-message-content-area{
+    .freelance-content{
+        .freelance-availability-info{
+            color: var(--primary-color);
+            margin: 20px 0;
+            text-align: center;
+            background: var(--primary-color-opacity-low);
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            font-size: 13px;
+            span{
+                font-weight: 600;
+                margin-right: 5px;
+            }
+        }
+    }
+}
+// Profile massage modal end
 // Modal area end
 
 
