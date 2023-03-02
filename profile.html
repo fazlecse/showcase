@@ -77,7 +77,7 @@
                             <a class="nav-link" href="hire.html">Hire</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Jobs</a>
+                            <a class="nav-link" href="jobs.html">Jobs</a>
                         </li>
                     </ul>
                     <form class="search-area">
@@ -140,7 +140,7 @@
                             <li class="profile-cmn-item">
                                 <div class="profile-availability-info">
                                     <h4 class="profile-availability-title">hire us</h4>
-                                    <a href="" class="availability-details">
+                                    <a href="" class="availability-details" data-bs-toggle="modal" data-bs-target="#profile-freelance">
                                         <div class="icon icon1"><i class="fa-light fa-calendar-clock"></i></div>
                                         <div class="availability-text">
                                             <h6>freelance/project</h6>
@@ -821,12 +821,11 @@
     <!-- Profile area end -->
 
     <!-- Profile massage modal start -->
-    <div class="modal fade profile-message-modal" id="profile-message" data-bs-backdrop="static" tabindex="-1"
+    <div class="modal fade profile-message-freelance-modal" id="profile-message" data-bs-backdrop="static" tabindex="-1"
         aria-labelledby="profile-messageLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <!-- <h1 class="modal-title fs-5" id="profile-messageLabel">Modal title</h1> -->
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -844,75 +843,228 @@
                     <div class="profile-message-tab-area">
                         <ul class="nav" id="pills-tab" role="tablist">
                             <li class="nav-item" role="presentation">
-                              <button class="nav-link active" id="pills-Freelance-tab" data-bs-toggle="pill" data-bs-target="#pills-Freelance" type="button" role="tab" aria-controls="pills-Freelance" aria-selected="true"><i class="fa-regular fa-calendar-clock"></i>Freelance</button>
+                                <button class="nav-link" id="pills-Freelance-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-Freelance" type="button" role="tab"
+                                    aria-controls="pills-Freelance" aria-selected="true"><i
+                                        class="fa-regular fa-calendar-clock"></i>Freelance</button>
                             </li>
                             <li class="nav-item" role="presentation">
-                              <button class="nav-link" id="pills-Message-tab" data-bs-toggle="pill" data-bs-target="#pills-Message" type="button" role="tab" aria-controls="pills-Message" aria-selected="false"><i class="fa-regular fa-messages"></i>Message</button>
+                                <button class="nav-link active" id="pills-Message-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-Message" type="button" role="tab"
+                                    aria-controls="pills-Message" aria-selected="false"><i
+                                        class="fa-regular fa-messages"></i>Message</button>
                             </li>
-                          </ul>
-                          
+                        </ul>
+
                     </div>
                     <div class="profile-message-content-area">
                         <div class="tab-content" id="pills-tabContent">
-                            <div class="tab-pane fade show active" id="pills-Freelance" role="tabpanel" aria-labelledby="pills-Freelance-tab" tabindex="0">
-                                <div class="freelance-content">
+                            <div class="tab-pane fade " id="pills-Freelance" role="tabpanel"
+                                aria-labelledby="pills-Freelance-tab" tabindex="0">
+                                <div id="formModal" class="freelance-content">
                                     <form action="">
                                         <div class="freelance-availability-info">
-                                            <span>Availability:</span> Within the next few weeks 
+                                            <span>Availability:</span> Within the next few weeks
                                         </div>
                                         <div class="row">
                                             <div class="col-12 mb-3">
-                                              <input type="text" class="form-control" placeholder="Your Company" aria-label="First name">
+                                                <input type="text" class="form-control" placeholder="Your Company"
+                                                    aria-label="First name">
                                             </div>
                                             <div class="col-12 mb-3">
-                                              <div class="row">
-                                                <div class="col-9">
-                                                    <input type="text" class="form-control" placeholder="Your Budget" aria-label="Last name">
-                                                </div>
-                                                <div class="col-3">
-                                                    <div id="formModal" class="cmn-select-area">
+                                                <div class="row">
+                                                    <div class="col-8">
+                                                        <input type="text" class="form-control"
+                                                            placeholder="Your Budget" aria-label="Last name">
+                                                    </div>
+                                                    <div class="col-4">
                                                         <select class="modal-select2" name="state">
-                                                            <option value="AL">Paint</option>
+                                                            <option value="AL">USD - $</option>
                                                             ...
-                                                            <option value="WY">Tool</option>
-                                                            <option value="WY">SAI</option>
-                                                            <option value="WY">Painttool</option>
-                                                            <option value="WY">Sai</option>
-                                                            <option value="WY">Sand</option>
-                                                            <option value="WY">Paper</option>
-                                                            <option value="WY">SASS</option>
-                                                            <option value="WY">Table</option>
-                                                            <option value="WY">Saw</option>
-                                                            <option value="WY">Easy</option>
-                                                            <option value="WY">Paint</option>
-                                                            <option value="WY">Tool</option>
-                                                            <option value="WY">SAI</option>
-                                                            <option value="WY">Sand</option>
-                                                            <option value="WY">Pigma</option>
+                                                            <option value="WY">EUR - €</option>
+                                                            <option value="WY">GBP - £</option>
+                                                            <option value="WY">BDT - ৳</option>
+                                                            <option value="WY">BBD - $</option>
+                                                            <option value="WY">AMD - ֏</option>
                                                         </select>
                                                     </div>
+                                                    <span class="freelance-subtext">Graphéine’s minimum budget is <span
+                                                            class="freelance-subtext-emphasized-value">10000.00
+                                                            EUR</span></span>
                                                 </div>
-                                              </div>
                                             </div>
-                                          </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col mb-3">
+                                                <select class="modal-select2" name="state">
+                                                    <option value="AL">Timeline</option>
+                                                    ...
+                                                    <option value="WY">Within the next few weeks</option>
+                                                    <option value="WY">Whthin the next 3 months</option>
+                                                    <option value="WY">In 3 to 6 months</option>
+                                                    <option value="WY">Over 3 to 6 month</option>
+                                                    <option value="WY">Over 6 months</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-floating h-100 mb-3">
+                                            <textarea class="form-control" placeholder="Leave a comment here"
+                                                id="floatingTextarea"></textarea>
+                                            <label for="floatingTextarea">Your Message...</label>
+                                        </div>
+                                        <div class="btn-area">
+                                            <a href="" class="cmn-btn">Send Inquery</a>
+                                        </div>
                                     </form>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="pills-Message" role="tabpanel" aria-labelledby="pills-Message-tab" tabindex="0">
-                                b
+                            <div class="tab-pane fade show active" id="pills-Message" role="tabpanel"
+                                aria-labelledby="pills-Message-tab" tabindex="0">
+                                <form action="">
+                                    <div class="message-content">
+                                        <div class="form-floating h-100 mb-3">
+                                            <textarea class="form-control" placeholder="Leave a comment here"
+                                                id="floatingTextarea"></textarea>
+                                            <label for="floatingTextarea">Your Message...</label>
+                                        </div>
+                                        <div class="btn-area">
+                                            <a href="" class="cmn-btn">Send message</a>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
-                          </div>
+                        </div>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
+
             </div>
         </div>
     </div>
     <!-- Profile massage modal end -->
 
+
+
+    <!-- Profile freelance modal start -->
+    <div class="modal fade profile-message-freelance-modal" id="profile-freelance" data-bs-backdrop="static" tabindex="-1"
+        aria-labelledby="profile-freelanceLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="profile-message-header">
+                        <div class="profile-message-icon">
+                            <img src="assets/images/profile/profile1.jpg" alt="">
+                        </div>
+                        <div class="profile-message-title">
+                            Message
+                        </div>
+                        <div class="profile-message-title title2">
+                            Graphéine
+                        </div>
+                    </div>
+                    <div class="profile-message-tab-area">
+                        <ul class="nav" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="Freelance-tab" data-bs-toggle="pill"
+                                    data-bs-target="#Freelance" type="button" role="tab"
+                                    aria-controls="Freelance" aria-selected="true"><i
+                                        class="fa-regular fa-calendar-clock"></i>Freelance</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="Message-tab" data-bs-toggle="pill"
+                                    data-bs-target="#Message" type="button" role="tab"
+                                    aria-controls="Message" aria-selected="false"><i
+                                        class="fa-regular fa-messages"></i>Message</button>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="profile-message-content-area">
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="Freelance" role="tabpanel"
+                                aria-labelledby="Freelance-tab" tabindex="0">
+                                <div id="formModal2" class="freelance-content">
+                                    <form action="">
+                                        <div class="freelance-availability-info">
+                                            <span>Availability:</span> Within the next few weeks
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 mb-3">
+                                                <input type="text" class="form-control" placeholder="Your Company"
+                                                    aria-label="First name">
+                                            </div>
+                                            <div class="col-12 mb-3">
+                                                <div class="row">
+                                                    <div class="col-8">
+                                                        <input type="text" class="form-control"
+                                                            placeholder="Your Budget" aria-label="Last name">
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <select class="modal-select3" name="state">
+                                                            <option value="AL">USD - $</option>
+                                                            ...
+                                                            <option value="WY">EUR - €</option>
+                                                            <option value="WY">GBP - £</option>
+                                                            <option value="WY">BDT - ৳</option>
+                                                            <option value="WY">BBD - $</option>
+                                                            <option value="WY">AMD - ֏</option>
+                                                        </select>
+                                                    </div>
+                                                    <span class="freelance-subtext">Graphéine’s minimum budget is <span
+                                                            class="freelance-subtext-emphasized-value">10000.00
+                                                            EUR</span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col mb-3">
+                                                <select class="modal-select3" name="state">
+                                                    <option value="AL">Timeline</option>
+                                                    ...
+                                                    <option value="WY">Within the next few weeks</option>
+                                                    <option value="WY">Whthin the next 3 months</option>
+                                                    <option value="WY">In 3 to 6 months</option>
+                                                    <option value="WY">Over 3 to 6 month</option>
+                                                    <option value="WY">Over 6 months</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-floating h-100 mb-3">
+                                            <textarea class="form-control" placeholder="Leave a comment here"
+                                                id="floatingTextarea"></textarea>
+                                            <label for="floatingTextarea">Your Message...</label>
+                                        </div>
+                                        <div class="btn-area">
+                                            <a href="" class="cmn-btn">Send Inquery</a>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="Message" role="tabpanel"
+                                aria-labelledby="Message-tab" tabindex="0">
+                                <form action="">
+                                    <div class="message-content">
+                                        <div class="form-floating h-100 mb-3">
+                                            <textarea class="form-control" placeholder="Leave a comment here"
+                                                id="floatingTextarea"></textarea>
+                                            <label for="floatingTextarea">Your Message...</label>
+                                        </div>
+                                        <div class="btn-area">
+                                            <a href="" class="cmn-btn">Send message</a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Profile freelance modal end -->
 
 
     <!-- Footer area start -->

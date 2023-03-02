@@ -2,6 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500&display=swap');
 
 :root {
+    --body-font: 'Poppins', sans-serif;
+    --heading-font: 'Roboto', sans-serif;
+    --nav-font: 'Jost', sans-serif;
     --primary-color: #05a081;
     --primary-color2: #016d61;
     --secondary-color: #f2f2f2;
@@ -198,7 +201,7 @@ ol {
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--body-font);
     line-height: 1.5;
     color: var(--body-color);
     font-size: 14px;
@@ -301,7 +304,7 @@ h2,
 h3,
 h4,
 h5 {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--heading-font);
     font-weight: 500;
     line-height: 1.3;
     color: var(--heading-color);
@@ -321,7 +324,6 @@ h2 {
     margin-bottom: 10px;
     font-weight: 600;
     color: var(--heading-color);
-    font-family: 'Roboto', sans-serif;
 
 }
 
@@ -380,33 +382,11 @@ figure {
     padding-top: 10px;
 }
 
-// .cmn-scroll::-webkit-scrollbar {
-//     width: 3px;
-//     height: 6px;
-//     // background-color: var(--primary-color);
-//     // background-color: transparent;
-// }
-
-// .cmn-scroll::-webkit-scrollbar-thumb {
-//     border-radius: 10px;
-//     background: var(--primary-color);
-//     visibility: hidden;
-//     opacity: 0;
-// }
-
-// .cmn-scroll:hover::-webkit-scrollbar-thumb {
-//     visibility: visible;
-//     opacity: 1;
-// }
-// .cmn-scroll
 ::-webkit-scrollbar {
     width: 3px;
     height: 6px;
-    // background-color: var(--primary-color);
-    // background-color: transparent;
 }
 
-// .cmn-scroll
 ::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background: var(--primary-color);
@@ -415,7 +395,6 @@ figure {
 
 }
 
-// .cmn-scroll
 :hover::-webkit-scrollbar-thumb {
     visibility: visible;
     opacity: 1;
@@ -661,6 +640,7 @@ section {
     text-transform: capitalize;
     font-weight: 500;
     margin-bottom: 0;
+    font-family: var(--heading-font);
 }
 
 .para-text {
@@ -1041,7 +1021,7 @@ hr.divider:after {
     z-index: 9999;
 
     .nav-link {
-        font-family: 'Jost', sans-serif;
+        font-family: var(--nav-font);
         font-size: 18px;
         font-weight: 500;
         margin-left: 30px;
@@ -2146,6 +2126,7 @@ hr.divider:after {
             font-size: 18px;
             color: var(--heading-color);
             font-weight: 500;
+            font-family: var(--heading-font);
         }
 
         .user-availability {
@@ -2304,6 +2285,7 @@ hr.divider:after {
         text-overflow: ellipsis;
         white-space: nowrap;
         color: var(--heading-color);
+        font-family: var(--heading-font);
 
     }
 
@@ -2373,6 +2355,7 @@ hr.divider:after {
     .profile-availability-title {
         padding-bottom: 10px;
         border-bottom: 1px solid var(--border-color3);
+        font-weight: 500;
     }
 
     .availability-details {
@@ -2919,6 +2902,10 @@ hr.divider:after {
         justify-content: space-between;
         margin: 30px 0;
 
+        h4 {
+            font-family: var(--body-font);
+        }
+
         .cmn-btn i {
             margin-right: 5px;
         }
@@ -2970,6 +2957,7 @@ hr.divider:after {
                 font-size: 15px;
                 text-transform: capitalize;
                 color: var(--heading-color);
+                font-family: var(--heading-font);
             }
 
             .location {
@@ -3034,6 +3022,7 @@ hr.divider:after {
             font-weight: 500;
             color: var(--heading-color);
             text-transform: capitalize;
+            font-family: var(--heading-font);
         }
 
         .card5-description {
@@ -3054,6 +3043,130 @@ hr.divider:after {
 }
 
 // Job page end
+// Job details area start
+.job-details-area {
+    background: var(--bg-color5);
+
+    .job-details-inner {
+        background: var(--white);
+        position: relative;
+        margin-top: 30px;
+        border-radius: 5px;
+        box-shadow: var(--shadow2);
+
+        .btn-area {
+            margin-top: 30px;
+            display: flex;
+
+            .cmn-btn {
+                margin-right: 15px;
+            }
+
+            .cmn-btn2 {
+                border-radius: 100px;
+
+                i {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+    .job-details-header {
+        padding: 80px 0 40px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        border-bottom: 1px solid var(--border-color2);
+        margin: 0 45px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        .job-details-profile-icon {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            background: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow5);
+            position: absolute;
+            top: -52px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            img {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+            }
+        }
+
+        .job-details-title {
+            font-size: 42px;
+            color: var(--heading-color);
+            max-width: 690px;
+            text-align: center;
+            font-family: var(--heading-font);
+            line-height: 1.2;
+        }
+
+        .job-details-company {
+            margin-top: 15px;
+            font-weight: 500;
+            font-size: 18px;
+
+            .company-link {
+                color: var(--black2);
+                font-weight: 600;
+            }
+        }
+
+    }
+
+    .job-details-body {
+        margin: 0 45px;
+        padding: 40px 0 60px;
+
+        p {
+            font-size: 15px;
+        }
+    }
+}
+.job-details-summery-area {
+    
+    .cmn-btn2{
+        margin-top: 20px;
+    }
+    .job-details-summery-list{
+        padding: 20px;
+        border: 1px solid var(--border-color2);
+        border-radius: 5px;
+        .job-details-summery-list-item {
+            &:not(:last-child){
+                margin-bottom: 20px;
+            }
+            .sub-title {
+                font-size: 11px;
+                font-weight: 600;
+                text-transform: uppercase;
+                margin-bottom: 5px;
+            }
+            .title{
+                font-weight: 600;
+                color: var(--heading-color);
+                font-size: 15px;
+            }
+        }
+    }
+    
+}
+
+// Job details area end
 
 
 
@@ -3105,6 +3218,7 @@ hr.divider:after {
     font-size: 18px;
     font-weight: 500;
     color: var(--heading-color);
+    font-family: var(--heading-font);
 
     .job-post-modal-sl {
         background: var(--secondary-color);
@@ -3300,6 +3414,11 @@ hr.divider:after {
     width: 100%;
     background: var(--white);
     z-index: 999999;
+
+    .cmn-btn {
+        padding: 8px !important;
+        font-size: 16px;
+    }
 }
 
 // job-post-modal area end
@@ -3414,14 +3533,16 @@ hr.divider:after {
 // job-post-modal responsive area end
 
 // Profile massage modal start
-.profile-message-modal {
+.profile-message-freelance-modal {
     .modal-header {
         border: none;
         // padding: 0;
     }
-    .modal-body{
-        padding: 0 35px;
+
+    .modal-body {
+        padding: 0 35px 40px;
     }
+
     .profile-message-header {
         // margin-top: -30px;
         text-align: center;
@@ -3478,9 +3599,10 @@ hr.divider:after {
     }
 
 }
-.profile-message-content-area{
-    .freelance-content{
-        .freelance-availability-info{
+
+.profile-message-content-area {
+    .freelance-content {
+        .freelance-availability-info {
             color: var(--primary-color);
             margin: 20px 0;
             text-align: center;
@@ -3491,13 +3613,53 @@ hr.divider:after {
             justify-content: center;
             border-radius: 5px;
             font-size: 13px;
-            span{
+
+            span {
                 font-weight: 600;
                 margin-right: 5px;
             }
         }
+
+        .select2-container {
+
+            .select2-selection--single {
+                height: 35px;
+                background: var(--secondary-color);
+            }
+        }
+
+        .freelance-subtext {
+            margin-top: 7px;
+            font-size: 12px;
+
+            .freelance-subtext-emphasized-value {
+                font-weight: 600;
+            }
+        }
+
+        .form-floating>.form-control {
+            height: 160px;
+        }
+    }
+
+    .btn-area {
+        margin-top: 20px;
+
+        .cmn-btn {
+            padding: 8px !important;
+            font-size: 16px;
+        }
+    }
+
+    .message-content {
+        margin-top: 20px;
+
+        .form-floating>.form-control {
+            height: 250px;
+        }
     }
 }
+
 // Profile massage modal end
 // Modal area end
 
