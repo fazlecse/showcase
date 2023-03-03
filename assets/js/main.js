@@ -93,6 +93,32 @@ $(document).ready(function () {
             },
         }
     });
+    // Stream channel What's New carousel
+    $('.carousel-area3').owlCarousel({
+        loop: true,
+        autoplay: false,
+        margin: 20,
+        nav: true,
+        dots: false,
+        // rtl:true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            400: {
+                items: 2
+            },
+            600: {
+                items: 3
+            },
+            800: {
+                items: 4
+            },
+            1000: {
+                items: 4
+            }
+        }
+    });
 
     // Swiper-slider
     var swiper = new Swiper(".mySwiper", {
@@ -117,13 +143,14 @@ $(document).ready(function () {
     });
     // select2 filter sidebar
     $(".js-example-basic-single").select2({
-     });
+        maximumSelectionLength: 2
+    });
     $(".modal-select2").select2({
         dropdownParent: $("#formModal"),
-     });
+    });
     $(".modal-select3").select2({
         dropdownParent: $("#formModal2"),
-     });
+    });
 
 
 

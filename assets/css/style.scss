@@ -54,88 +54,13 @@
 }
 
 /* preloader-start */
-#preloader {
+#preloader{
     position: fixed;
     width: 100%;
     height: 100vh;
-    z-index: 999999;
-    background-color: #000000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.preloader-container {
-    position: relative;
-    display: flex;
-    height: 200px;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    -webkit-box-reflect: below 0 linear-gradient(transparent, transparent, #0005);
-}
-
-.loader {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    animation: animate 2s linear infinite;
-}
-
-.loader:nth-child(2),
-.loader:nth-child(4) {
-    filter: hue-rotate(290deg);
-    animation-delay: -1s;
-}
-
-@keyframes animate {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-.loader:nth-child(1)::before,
-.loader:nth-child(2)::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(to top, transparent, #dbad6a);
-    background-size: 100px 180px;
-    background-repeat: no-repeat;
-    border-top-left-radius: 100px;
-    border-bottom-left-radius: 100px;
-}
-
-.loader i {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%);
-    width: 20px;
-    height: 20px;
-    background: #dbad6a;
-    border-radius: 50%;
-    z-index: 10;
-    box-shadow: 0 0 100px #dbad6a, 0 0 100px #dbad6a, 0 0 30px #dbad6a, 0 0 40px #dbad6a, 0 0 50px #dbad6a, 0 0 60px #dbad6a, 0 0 70px #dbad6a, 0 0 80px #dbad6a, 0 0 90px #dbad6a, 0 0 100px #dbad6a;
-}
-
-.loader span {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    right: 20px;
-    bottom: 20px;
-    background-color: #000;
-    border-radius: 50%;
-    z-index: 1;
+    background: #ffffff url(../images/preloader/my-loader2.svg) no-repeat center;
+    z-index: 99999;
+    background-size: 20%;
 }
 
 /* preloader-end */
@@ -238,7 +163,7 @@ textarea.form-control {
 
 .form-control:focus,
 .form-select:focus {
-    box-shadow: none;
+    box-shadow: 0 0 0 4px rgb(5 160 129 / 10%);
     border: 1px solid var(--primary-color) !important;
     background-color: var(--secondary-color);
 }
@@ -546,6 +471,25 @@ body::-webkit-scrollbar-thumb {
     &:hover {
         background: var(--secondary-color);
         border: 1px solid var(--secondary-color);
+    }
+}
+
+.cmn-btn3 {
+    padding: 7px 18px !important;
+    border-radius: 100px;
+    transition: all .3s ease-in-out;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    border: 1px solid var(--primary-color-opacity-low);
+    text-transform: capitalize;
+    color: var(--primary-color);
+    background: var(--primary-color-opacity-low);
+
+    &:hover {
+        background: rgba(5, 160, 129, .2);
     }
 }
 
@@ -1877,11 +1821,7 @@ hr.divider:after {
     }
 
     .search-area .form-control {
-        border: 1px solid transparent;
-
-        &:focus {
-            border: 1px solid transparent !important;
-        }
+        background: var(--white);
     }
 }
 
@@ -2037,9 +1977,14 @@ hr.divider:after {
 .select2-container {
     width: 100% !important;
 
-    .select2-selection--single {
+    .select2-selection--single, .select2-selection--multiple {
         border: 1px solid var(--border-color2);
+        &:focus{
+            border: 1px solid var(--primary-color);
+        }
     }
+  
+
 
     .select2-dropdown {
         border: 1px solid var(--border-color2);
@@ -2067,6 +2012,10 @@ hr.divider:after {
 
 .select2-container--default .select2-results>.select2-results__options {
     text-transform: capitalize;
+}
+.select2-container--default.select2-container--focus .select2-selection--multiple{
+    border: 1px solid var(--primary-color);
+    box-shadow: 0 0 0 4px rgb(5 160 129 / 10%);
 }
 
 .hire-content-top {
@@ -3137,33 +3086,38 @@ hr.divider:after {
         }
     }
 }
+
 .job-details-summery-area {
-    
-    .cmn-btn2{
+
+    .cmn-btn2 {
         margin-top: 20px;
     }
-    .job-details-summery-list{
+
+    .job-details-summery-list {
         padding: 20px;
         border: 1px solid var(--border-color2);
         border-radius: 5px;
+
         .job-details-summery-list-item {
-            &:not(:last-child){
+            &:not(:last-child) {
                 margin-bottom: 20px;
             }
+
             .sub-title {
                 font-size: 11px;
                 font-weight: 600;
                 text-transform: uppercase;
                 margin-bottom: 5px;
             }
-            .title{
+
+            .title {
                 font-weight: 600;
                 color: var(--heading-color);
                 font-size: 15px;
             }
         }
     }
-    
+
 }
 
 // Job details area end
@@ -3664,7 +3618,199 @@ hr.divider:after {
 // Modal area end
 
 
+// Stream channel start
+.stream-channel-area {
+    background: var(--bg-color5);
+    padding-top: 75px;
+    .stream-channel-container{
+        height: calc(100vh - 105px);
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
 
+    .stream-video {
+        height: 40vw;
+        width: 100%;
+
+        .video-iframe {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .stream-content {
+        padding: 30px 0;
+
+        .stream-header {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border-color2);
+            padding-bottom: 25px;
+
+            .stream-title-container {
+                .stream-views {
+                    font-size: 15px;
+                    font-weight: 500;
+                    margin: 10px 0 20px;
+                    color: var(--body-color);
+                }
+
+                .stream-title {
+                    font-size: 20px;
+                    color: var(--heading-color);
+                    font-weight: 500;
+                    font-family: var(--heading-font);
+                }
+
+                .stream-publish-date {
+                    font-weight: 600;
+                }
+            }
+
+            .stream-controls {
+                display: flex;
+
+                .stream-action {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    margin: 0 12px;
+
+                    .action-name {
+                        font-size: 11px;
+                        font-weight: 500;
+                        margin-top: 10px;
+                    }
+                }
+
+                .cmn-btn2 {
+                    width: 44px;
+                    height: 44px;
+                    border-radius: 50%;
+                    background: var(--white);
+                }
+
+                .cmn-btn2.active {
+                    background: var(--primary-color);
+                    color: var(--white);
+                }
+            }
+        }
+
+        .stream-description {
+            padding-top: 30px;
+
+            .stream-description-title {
+                font-weight: 600;
+                text-transform: uppercase;
+                font-size: 12px;
+                margin: 10px 0;
+            }
+
+            .stream-descriptin-info {
+                p {
+                    margin-bottom: 0;
+                }
+
+                max-width: 600px;
+
+                a {
+                    color: var(--primary-color);
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    .coverdcardlist1 {
+        .container-fluid {
+            padding: 0;
+        }
+
+    }
+
+    .stream-sidebar {
+        .viwer-user-container {
+            padding: 20px;
+            border-bottom: 1px solid var(--border-color2);
+
+            .viwer-user-container-inner {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 20px;
+
+                .profile {
+                    display: flex;
+
+                    .profile-icon img {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        margin-right: 10px;
+                    }
+
+                    .profile-content {
+                        .profile-title {
+                            font-size: 15px;
+                            font-weight: 600;
+                            color: var(--heading-color);
+                            font-family: var(--heading-font);
+                        }
+
+                        .location i {
+                            margin-right: 5px;
+                        }
+                    }
+                }
+
+                .cmn-btn {
+                    height: 35px;
+                }
+            }
+
+            .cmn-btn3 {
+                margin: 0 auto;
+                width: 100%;
+            }
+        }
+
+        .viewer-sidebar {
+            height: calc(100vh - 260px);
+            overflow: auto;
+            .viewer-siderbar-item{
+                margin: 15px 0;
+            }
+            .cmn-card2 {
+                .card-link {
+                    display: flex;
+
+                    .card-thum {
+                        width: 120px;
+                        height: 80px;
+                        border-radius: 5px;
+                        margin-right: 10px;
+
+                        .video-iframe {
+                            width: 120px;
+                            height: 80px;
+                            border-radius: 5px;
+                        }
+                        // &::after{
+                        //     border-radius: 10px;
+                        // }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+// Stream channel end
 
 
 
