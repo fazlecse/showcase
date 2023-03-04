@@ -183,11 +183,6 @@ $(document).ready(function () {
     // });
 
 
-    // Initialise Carousel
-    const cardSlider = new Carousel(document.querySelector("#cardSlider"), {
-        Dots: false,
-    });
-
 
 });
 

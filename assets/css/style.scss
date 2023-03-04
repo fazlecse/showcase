@@ -54,7 +54,7 @@
 }
 
 /* preloader-start */
-#preloader{
+#preloader {
     position: fixed;
     width: 100%;
     height: 100vh;
@@ -154,7 +154,7 @@ textarea.form-control {
 
 .form-control,
 .form-select {
-    border-radius: 4px;
+    border-radius: 5px;
     background-color: var(--secondary-color);
     border: 1px solid var(--secondary-color);
     height: 35px;
@@ -654,19 +654,20 @@ hr.divider {
     padding: 0;
     overflow: visible;
     border: none;
-    border-top: 1px solid #e0e0e0;
+    border-top: 1px solid var(--border-color2);
     color: #6e6d7a;
     text-align: center;
+    opacity: .75;
 }
 
 hr.divider:after {
     content: 'Or';
     display: inline-block;
     position: relative;
-    top: -15px;
+    top: -12px;
     padding: 0 16px;
-    background: var(--bg_color2);
-    color: var(--white);
+    background: var(--white);
+    color: var(--heading-color);
 }
 
 .dropdown-menu {
@@ -1023,7 +1024,7 @@ hr.divider:after {
     .search-bar {
         display: flex;
         align-items: center;
-        border: 1px solid var(--secondary-color2);
+        border: 1px solid var(--border-color2);
         border-radius: 100px;
 
         .search-nav {
@@ -1072,7 +1073,7 @@ hr.divider:after {
                 border-top-left-radius: 100px;
                 border-bottom-left-radius: 100px;
                 padding: 5px 10px 5px 50px;
-                border-right: 1px solid var(--secondary-color2);
+                border-right: 1px solid var(--border-color2);
 
                 &::placeholder {
                     font-weight: 600;
@@ -1977,13 +1978,15 @@ hr.divider:after {
 .select2-container {
     width: 100% !important;
 
-    .select2-selection--single, .select2-selection--multiple {
+    .select2-selection--single,
+    .select2-selection--multiple {
         border: 1px solid var(--border-color2);
-        &:focus{
+
+        &:focus {
             border: 1px solid var(--primary-color);
         }
     }
-  
+
 
 
     .select2-dropdown {
@@ -2013,7 +2016,8 @@ hr.divider:after {
 .select2-container--default .select2-results>.select2-results__options {
     text-transform: capitalize;
 }
-.select2-container--default.select2-container--focus .select2-selection--multiple{
+
+.select2-container--default.select2-container--focus .select2-selection--multiple {
     border: 1px solid var(--primary-color);
     box-shadow: 0 0 0 4px rgb(5 160 129 / 10%);
 }
@@ -2765,7 +2769,7 @@ hr.divider:after {
 .cmn-tab {
     .nav {
         margin: 15px 0 25px;
-        border-bottom: 1px solid var(--border-color1);
+        border-bottom: 1px solid var(--border-color2);
 
         .nav-link {
             font-size: 18px;
@@ -3574,13 +3578,6 @@ hr.divider:after {
             }
         }
 
-        .select2-container {
-
-            .select2-selection--single {
-                height: 35px;
-                background: var(--secondary-color);
-            }
-        }
 
         .freelance-subtext {
             margin-top: 7px;
@@ -3614,6 +3611,18 @@ hr.divider:after {
     }
 }
 
+.select2-container {
+    .select2-selection--single {
+        border-radius: 5px !important;
+        height: 35px;
+        background: var(--secondary-color);
+
+        .select2-selection__rendered {
+            height: 100%;
+        }
+    }
+}
+
 // Profile massage modal end
 // Modal area end
 
@@ -3622,7 +3631,8 @@ hr.divider:after {
 .stream-channel-area {
     background: var(--bg-color5);
     padding-top: 75px;
-    .stream-channel-container{
+
+    .stream-channel-container {
         height: calc(100vh - 105px);
         overflow-y: auto;
         overflow-x: hidden;
@@ -3725,13 +3735,6 @@ hr.divider:after {
         }
     }
 
-    .coverdcardlist1 {
-        .container-fluid {
-            padding: 0;
-        }
-
-    }
-
     .stream-sidebar {
         .viwer-user-container {
             padding: 20px;
@@ -3781,9 +3784,11 @@ hr.divider:after {
         .viewer-sidebar {
             height: calc(100vh - 260px);
             overflow: auto;
-            .viewer-siderbar-item{
+
+            .viewer-siderbar-item {
                 margin: 15px 0;
             }
+
             .cmn-card2 {
                 .card-link {
                     display: flex;
@@ -3799,6 +3804,7 @@ hr.divider:after {
                             height: 80px;
                             border-radius: 5px;
                         }
+
                         // &::after{
                         //     border-radius: 10px;
                         // }
@@ -3812,6 +3818,204 @@ hr.divider:after {
 
 // Stream channel end
 
+// Edit profile page start
+.edit-profile {
+    padding-top: 100px;
+    background: var(--bg-color5);
+    min-height: calc(100vh - 30px);
+
+    h5 {
+        color: var(--heading-color);
+        text-shadow: none;
+    }
+
+    .sidebar-wrapper {
+        .upload-img {
+            padding: 3px 9px;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 10px;
+            right: -7px;
+            background: var(--primary-color);
+            transition: 0.4s;
+            color: var(--white);
+
+            i {
+                font-size: 16px;
+            }
+        }
+
+        .profile {
+            background: var(--white);
+            box-shadow: var(--shadow2);
+            border-radius: 5px;
+            padding: 20px;
+            text-align: center;
+
+            .img {
+                position: relative;
+                margin-bottom: 20px;
+                height: 100px;
+                width: 100px;
+
+                .form-control {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    opacity: 0;
+                }
+
+                img {
+                    border-radius: 120px;
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+
+            .btn-area {
+                .cmn-btn {
+                    margin-top: 10px;
+                    display: inline-flex;
+                }
+            }
+        }
+
+        .profile-portfolio {
+            background: var(--white);
+            box-shadow: var(--shadow2);
+            border-radius: 5px;
+            padding: 20px;
+            text-align: center;
+
+            .avatar-xs {
+                width: 32px;
+                height: 32px;
+
+                .avatar-title {
+                    align-items: center;
+                    background-color: #6691e7;
+                    color: #fff;
+                    display: flex;
+                    font-weight: 400;
+                    height: 100%;
+                    justify-content: center;
+                    width: 100%;
+                }
+            }
+
+            .add-btn-area {
+                .cmn-btn {
+                    height: 25px;
+                }
+            }
+        }
+    }
+
+    .card-title {
+        font-size: 13px;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: var(--heading-color);
+    }
+
+    .profile-content {
+        background: var(--white);
+        border-radius: 5px;
+        padding: 16px;
+        box-shadow: var(--shadow2);
+
+        .profile-navigator {
+            border-bottom: 1px solid var(--border-color2);
+        }
+
+        button.tab {
+            text-transform: capitalize;
+            font-size: 16px;
+            padding: 15px 0;
+            margin-right: 20px;
+            color: var(--body-color);
+            font-weight: 500;
+        }
+
+        button.tab.active {
+            border-bottom: 2px solid var(--black);
+            color: var(--heading-color);
+        }
+
+        .content {
+            padding: 15px;
+            opacity: 0;
+            visibility: hidden;
+            display: none;
+        }
+
+        .content.active {
+            opacity: 1;
+            visibility: visible;
+            display: block;
+        }
+
+        .input-box {
+            label {
+                font-size: 13px;
+                font-weight: 600;
+                text-transform: uppercase;
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+
+// Edit profile page end
+
+// login signup area start
+.login-signup-page {
+    background: url(../images/background/sl_030720_28740_16.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: calc(100vh - 30px);
+    display: flex;
+    align-items: center;
+
+    .login-signup-form {
+        padding: 40px;
+        background: var(--white);
+        border-radius: 30px;
+        .form-title{
+            .description{
+                font-size: 16px;
+                max-width: 300px;
+                margin: 0 auto;
+                padding-top: 20px;
+                font-weight: 500;
+                color: var(--black2);
+            }
+        }
+        .form-control{
+            height: 45px;
+            background: transparent;
+            border: 1px solid var(--border-color2)
+        }
+        .cmn-btn{
+            height: 45px;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .cmn-btn2{
+            height: 45px;
+        }
+        .cmn-btn-group{
+            .btn img{
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+// login signup area end
 
 
 
@@ -3870,6 +4074,7 @@ hr.divider:after {
 
 .footer-nav {
     display: flex;
+    justify-content: center;
 
     .footer-hover-item {
         position: relative;
