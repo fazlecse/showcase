@@ -232,8 +232,10 @@
                             <div class="row">
                                 <div class="job-content-top">
                                     <h4>173 Freelance Jobs</h4>
-                                    <button class="cmn-btn" data-bs-toggle="modal" data-bs-target="#past-a-job"><i
-                                            class="fa-solid fa-circle-plus"></i> post a job</button>
+                                    <button class="cmn-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                                        aria-controls="offcanvasRight"><i class="fa-solid fa-circle-plus"></i>
+                                        post a job
+                                    </button>
                                 </div>
                             </div>
                             <div class="row g-4">
@@ -732,479 +734,6 @@
 
     <!-- Modal area start -->
 
-    <!-- Post job modal start-->
-    <div class="modal fade job-post-modal" id="past-a-job" data-bs-backdrop="static" data-bs-keyboard="false"
-        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <form action="">
-                <div class="modal-content">
-                    <div class="job-post-modal-inner">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="staticBackdropLabel">
-                                <h3 class="mb-0">Post a Job</h3>
-                            </h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body job-post-modal-body">
-
-                            <div class="job-post-modal-header">
-                                <div class="job-post-modal-sl">1</div>
-                                <div class="job-post-modal-title">Are you posting for a company, or as an individual?
-                                </div>
-
-                            </div>
-                            <div class="job-post-modal-row">
-                                <div class="nav" id="pills-tab" role="tablist">
-                                    <div class="row g-2">
-                                        <div class="col-sm-6">
-                                            <button class="nav-link active" id="company-tab" data-bs-toggle="pill"
-                                                data-bs-target="#company" type="button" role="tab"
-                                                aria-controls="company" aria-selected="true">
-                                                company
-                                            </button>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <button class="nav-link" id="indivisual-tab" data-bs-toggle="pill"
-                                                data-bs-target="#indivisual" type="button" role="tab"
-                                                aria-controls="indivisual" aria-selected="false">
-                                                indivisual
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="tab-content" id="pills-tabContent">
-
-                                <div class="tab-pane fade show active" id="company" role="tabpanel" aria-labell
-                                    edby="company-tab" tabindex="0">
-                                    <div class="job-post-modal-row">
-                                        <h6>Company</h6>
-                                        <div class="job-post-modal-row-inner">
-                                            <div class="posting-logo-area">
-                                                <input class="form-control" type="file">
-                                                <span class="posting-logo"><i class="fa-regular fa-cloud-arrow-up"></i>
-                                                </span>
-                                            </div>
-                                            <div class="posting-content">
-                                                <div class="mb-3">
-                                                    <input type="text" class="form-control"
-                                                        id="exampleFormControlInput1" placeholder="Your company name">
-                                                </div>
-                                                <div class="mb-3">
-                                                    <input type="url" class="form-control" id="exampleFormControlInput1"
-                                                        placeholder="https://">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="job-post-modal-item">
-                                        <div class="job-post-modal-header">
-                                            <div class="job-post-modal-sl">2</div>
-                                            <div class="job-post-modal-title">Job Details</div>
-                                        </div>
-                                        <div id="formModal" class="job-post-modal-row">
-                                            <div class="mb-3">
-                                                <label for="title" class="form-label">Title</label>
-                                                <input type="email" class="form-control" id="title"
-                                                    placeholder="Ex: Graphic Designer, UI/UX Designer">
-                                            </div>
-                                            <div class="mb-3">
-                                                <div class="cmn-select-area">
-                                                    <label class="form-label">type</label>
-                                                    <select class="modal-select2" name="state">
-                                                        <option value="freelance">Freelance</option>
-                                                        <option value="fulltime">Fulltime</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="mb-3">
-                                                <div class="cmn-select-area">
-                                                    <label class="form-label">Creative Fields <small>(Up to
-                                                            3)</small></label>
-                                                    <select class="modal-select2" name="state">
-                                                        <option value="Creative Field">Creative Field</option>
-                                                        <option value="Costume Design">Costume Design</option>
-                                                        <option value="Crafts">Crafts</option>
-                                                        <option value="Creative Direction">Creative Direction</option>
-                                                        <option value="Something else here">Something else here</option>
-                                                        <option value="Culinary Arts">Culinary Arts</option>
-                                                        <option value="CGI">CGI</option>
-                                                        <option value="Character Design">Character Design</option>
-                                                        <option value="Coloring">Coloring</option>
-                                                        <option value="Concept Art">Concept Art</option>
-
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="mb-3">
-                                                <div class="cmn-select-area">
-                                                    <label class="form-label">Location</label>
-                                                    <div class="row">
-                                                        <div class="col-sm-6">
-                                                            <select class="modal-select2" name="state">
-                                                                <option value="Creative Field">Select a Country/Region
-                                                                </option>
-                                                                <option value="Costume Design">Costume Design</option>
-                                                                <option value="Crafts">Crafts</option>
-                                                                <option value="Creative Direction">Creative Direction
-                                                                </option>
-                                                                <option value="Something else here">Something else here
-                                                                </option>
-                                                                <option value="Culinary Arts">Culinary Arts</option>
-                                                                <option value="CGI">CGI</option>
-                                                                <option value="Character Design">Character Design
-                                                                </option>
-                                                                <option value="Coloring">Coloring</option>
-                                                                <option value="Concept Art">Concept Art</option>
-
-                                                            </select>
-                                                        </div>
-                                                        <div class="col-sm-6">
-                                                            <select class="modal-select2" name="state">
-                                                                <option value="Creative Field">City</option>
-                                                                <option value="Costume Design">Costume Design</option>
-                                                                <option value="Crafts">Crafts</option>
-                                                                <option value="Creative Direction">Creative Direction
-                                                                </option>
-                                                                <option value="Something else here">Something else here
-                                                                </option>
-                                                                <option value="Culinary Arts">Culinary Arts</option>
-                                                                <option value="CGI">CGI</option>
-                                                                <option value="Character Design">Character Design
-                                                                </option>
-                                                                <option value="Coloring">Coloring</option>
-                                                                <option value="Concept Art">Concept Art</option>
-
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="job-post-modal-item">
-                                        <div class="job-post-modal-header">
-                                            <div class="job-post-modal-sl">3</div>
-                                            <div class="job-post-modal-title">Public Post</div>
-                                        </div>
-                                        <div id="formModal" class="job-post-modal-row">
-                                            <div class="mb-3">
-                                                <div class="cmn-select-area">
-                                                    <label for="type" class="form-label">Employment Type</label>
-                                                    <select class="modal-select2" id="type" name="state">
-                                                        <option value="onsite">onsite</option>
-                                                        <option value="remote">remote</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="Short-Description" class="form-label">Short Description
-
-                                                </label>
-                                                <input type="email" class="form-control" id="Short-Description"
-                                                    placeholder="Ex: We are looking for a graphic designer proficient in Adobe Illustrator">
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="exampleFormControlTextarea1" class="form-label">Example
-                                                    textarea</label>
-                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"
-                                                    placeholder="Write here"></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="job-post-modal-item">
-                                        <div class="job-post-modal-header">
-                                            <div class="job-post-modal-sl">4</div>
-                                            <div class="job-post-modal-title">Applicants should apply via</div>
-                                        </div>
-                                        <div class="job-post-modal-row radio-row">
-                                            <div class="nav" id="pills-tab" role="tablist">
-                                                <button class="" id="Behance-tab" data-bs-toggle="pill"
-                                                    data-bs-target="#Behance" type="button" role="tab"
-                                                    aria-controls="Behance" aria-selected="true">
-                                                    <input type="radio" class="btn-check" name="options-outlined"
-                                                        id="success-outlined" autocomplete="off" checked="">
-                                                    <label class="btn" for="success-outlined">
-                                                        <div class="text-area">
-                                                            <div class="title">Shaowcase</div>
-                                                            <span class="description">Manage your search in one
-                                                                place</span>
-                                                        </div>
-                                                        <div class="icon-area">
-                                                            <i class="fa-brands fa-behance"></i>
-                                                        </div>
-                                                    </label>
-                                                </button>
-                                                <button class="" id="External-tab" data-bs-toggle="pill"
-                                                    data-bs-target="#External" type="button" role="tab"
-                                                    aria-controls="External" aria-selected="false">
-                                                    <input type="radio" class="btn-check" name="options-outlined"
-                                                        id="danger-outlined" autocomplete="off">
-                                                    <label class="btn" for="danger-outlined">
-                                                        <div class="text-area">
-                                                            <div class="title"> External</div>
-                                                            <span class="description">Redirect applicants to a link of
-                                                                your choice
-                                                            </span>
-                                                        </div>
-                                                        <div class="icon-area">
-                                                            <i class="fa-regular fa-link"></i>
-                                                        </div>
-                                                    </label>
-                                                </button>
-                                            </div>
-                                            <div class="tab-content" id="pills-tabContent">
-
-                                                <div class="tab-pane fade" id="External" role="tabpanel"
-                                                    aria-labelledby="External-tab" tabindex="0">
-                                                    <div class="mb-3">
-                                                        <label for="url" class="form-label">URL</label>
-                                                        <input type="email" class="form-control" id="url"
-                                                            placeholder="https://">
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    <div class="job-post-modal-item">
-                                        <div class="form-check">
-                                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                            <label class="form-check-label" for="exampleCheck1">
-                                                <small class="para-text">This post is advertising a creative job
-                                                    opportunity, and I
-                                                    understand that off-topic posts will be removed. For more, please
-                                                    see the Help Center article Best <a href=""
-                                                        class="highlight">Practices When Posting a Job.</a></small>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="tab-pane fade" id="indivisual" role="tabpanel"
-                                    aria-labelledby="indivisual-tab" tabindex="0">
-                                    <div class="job-post-modal-row">
-                                        <h6>Posting As</h6>
-                                        <div class="job-post-modal-row-inner">
-                                            <div class="posting-logo-area">
-                                                <input class="form-control" type="file">
-                                                <span class="posting-logo"><i class="fa-regular fa-cloud-arrow-up"></i>
-                                                </span>
-                                            </div>
-                                            <div class="posting-content">
-                                                <div class="mb-3">
-                                                    <input type="text" class="form-control"
-                                                        id="exampleFormControlInput1" placeholder="Your company name">
-                                                </div>
-                                                <div class="mb-3">
-                                                    <input type="url" class="form-control" id="exampleFormControlInput1"
-                                                        placeholder="https://">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="job-post-modal-item">
-                                        <div class="job-post-modal-header">
-                                            <div class="job-post-modal-sl">2</div>
-                                            <div class="job-post-modal-title">Job Details</div>
-                                        </div>
-                                        <div id="formModal2" class="job-post-modal-row">
-                                            <div class="mb-3">
-                                                <label for="title" class="form-label">Title</label>
-                                                <input type="email" class="form-control" id="title"
-                                                    placeholder="Ex: Graphic Designer, UI/UX Designer">
-                                            </div>
-                                            <div class="mb-3">
-                                                <div class="cmn-select-area">
-                                                    <label class="form-label">type</label>
-                                                    <select class="modal-select3" name="state">
-                                                        <option value="freelance">Freelance</option>
-                                                        <option value="fulltime">Fulltime</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="mb-3">
-                                                <div class="cmn-select-area">
-                                                    <label class="form-label">Creative Fields <small>(Up to
-                                                            3)</small></label>
-                                                    <select class="modal-select3" name="state">
-                                                        <option value="Creative Field">Creative Field</option>
-                                                        <option value="Costume Design">Costume Design</option>
-                                                        <option value="Crafts">Crafts</option>
-                                                        <option value="Creative Direction">Creative Direction</option>
-                                                        <option value="Something else here">Something else here</option>
-                                                        <option value="Culinary Arts">Culinary Arts</option>
-                                                        <option value="CGI">CGI</option>
-                                                        <option value="Character Design">Character Design</option>
-                                                        <option value="Coloring">Coloring</option>
-                                                        <option value="Concept Art">Concept Art</option>
-
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="mb-3">
-                                                <div class="cmn-select-area">
-                                                    <label class="form-label">Location</label>
-                                                    <div class="row">
-                                                        <div class="col-sm-6">
-                                                            <select class="modal-select3" name="state">
-                                                                <option value="Creative Field">Select a Country/Region
-                                                                </option>
-                                                                <option value="Costume Design">Costume Design</option>
-                                                                <option value="Crafts">Crafts</option>
-                                                                <option value="Creative Direction">Creative Direction
-                                                                </option>
-                                                                <option value="Something else here">Something else here
-                                                                </option>
-                                                                <option value="Culinary Arts">Culinary Arts</option>
-                                                                <option value="CGI">CGI</option>
-                                                                <option value="Character Design">Character Design
-                                                                </option>
-                                                                <option value="Coloring">Coloring</option>
-                                                                <option value="Concept Art">Concept Art</option>
-
-                                                            </select>
-                                                        </div>
-                                                        <div class="col-sm-6">
-                                                            <select class="modal-select3" name="state">
-                                                                <option value="Creative Field">City</option>
-                                                                <option value="Costume Design">Costume Design</option>
-                                                                <option value="Crafts">Crafts</option>
-                                                                <option value="Creative Direction">Creative Direction
-                                                                </option>
-                                                                <option value="Something else here">Something else here
-                                                                </option>
-                                                                <option value="Culinary Arts">Culinary Arts</option>
-                                                                <option value="CGI">CGI</option>
-                                                                <option value="Character Design">Character Design
-                                                                </option>
-                                                                <option value="Coloring">Coloring</option>
-                                                                <option value="Concept Art">Concept Art</option>
-
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="job-post-modal-item">
-                                        <div class="job-post-modal-header">
-                                            <div class="job-post-modal-sl">3</div>
-                                            <div class="job-post-modal-title">Public Post</div>
-                                        </div>
-                                        <div id="formModal" class="job-post-modal-row">
-                                            <div class="mb-3">
-                                                <div class="cmn-select-area">
-                                                    <label for="Employment-type" class="form-label">Employment
-                                                        Type</label>
-                                                    <select class="modal-select3" id="Employment-type" name="state">
-                                                        <option value="onsite">onsite</option>
-                                                        <option value="remote">remote</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="Short-Description" class="form-label">Short Description
-
-                                                </label>
-                                                <input type="email" class="form-control" id="Short-Description"
-                                                    placeholder="Ex: We are looking for a graphic designer proficient in Adobe Illustrator">
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="exampleFormControlTextarea1" class="form-label">Example
-                                                    textarea</label>
-                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"
-                                                    placeholder="Write here"></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="job-post-modal-item">
-                                        <div class="job-post-modal-header">
-                                            <div class="job-post-modal-sl">4</div>
-                                            <div class="job-post-modal-title">Applicants should apply via</div>
-                                        </div>
-                                        <div class="job-post-modal-row radio-row">
-                                            <div class="nav" id="pills-tab" role="tablist">
-                                                <button class="" id="individualexternal-tab" data-bs-toggle="pill"
-                                                    data-bs-target="#individualexternal" type="button" role="tab"
-                                                    aria-controls="individualexternal" aria-selected="true">
-                                                    <input type="radio" class="btn-check" name="options-outlined"
-                                                        id="success-outlined2" autocomplete="off" checked="">
-                                                    <label class="btn" for="success-outlined2">
-                                                        <div class="text-area">
-                                                            <div class="title">Shaowcase</div>
-                                                            <span class="description">Manage your search in one
-                                                                place</span>
-                                                        </div>
-                                                        <div class="icon-area">
-                                                            <i class="fa-brands fa-behance"></i>
-                                                        </div>
-                                                    </label>
-                                                </button>
-                                                <button class="" id="individual-showcase-url-tab" data-bs-toggle="pill"
-                                                    data-bs-target="#individual-showcase-url" type="button" role="tab"
-                                                    aria-controls="individual-showcase-url" aria-selected="false">
-                                                    <input type="radio" class="btn-check" name="options-outlined"
-                                                        id="danger-outlined2" autocomplete="off">
-                                                    <label class="btn" for="danger-outlined2">
-                                                        <div class="text-area">
-                                                            <div class="title">External</div>
-                                                            <span class="description">Redirect applicants to a link of
-                                                                your choice
-                                                            </span>
-                                                        </div>
-                                                        <div class="icon-area">
-                                                            <i class="fa-regular fa-link"></i>
-                                                        </div>
-                                                    </label>
-                                                </button>
-                                            </div>
-                                            <div class="tab-content" id="pills-tabContent">
-
-                                                <div class="tab-pane fade" id="individual-showcase-url" role="tabpanel"
-                                                    aria-labelledby="individual-showcase-url-tab" tabindex="0">
-                                                    <div class="mb-3">
-                                                        <label for="url" class="form-label">URL</label>
-                                                        <input type="email" class="form-control" id="url"
-                                                            placeholder="https://">
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    <div class="job-post-modal-item">
-                                        <div class="form-check">
-                                            <input type="checkbox" class="form-check-input" id="exampleCheck2">
-                                            <label class="form-check-label" for="exampleCheck2">
-                                                <small>This post is advertising a creative job opportunity, and I
-                                                    understand
-                                                    that off-topic posts will be removed. For more, please see the Help
-                                                    Center article Best <a href="" class="highlight">Practices When
-                                                        Posting
-                                                        a Job.</a></small>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="job-post-modal-bottom">
-                        <a href="" type="button" class="cmn-btn">post job</a>
-                    </div>
-                </div>
-
-            </form>
-        </div>
-    </div>
-    <!-- Post job modal end-->
-
     <!-- apply modal start -->
     <div class="modal fade apply-modal" id="apply-modal" data-bs-backdrop="static" data-bs-keyboard="false"
         tabindex="-1" aria-labelledby="apply-modalLabel" aria-hidden="true">
@@ -1277,21 +806,22 @@
                                 <div class="col-md-6">
                                     <div class="content-footer-right h-100">
                                         <div class="form-floating h-100">
-                                            <textarea class="form-control h-100" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                                            <textarea class="form-control h-100" placeholder="Leave a comment here"
+                                                id="floatingTextarea"></textarea>
                                             <label for="floatingTextarea">Your Message...</label>
-                                          </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="btn-area">
                                 <a type="button" class="cmn-btn">Submit Application</a>
                             </div>
-                            
+
                         </div>
                     </form>
 
                 </div>
-                
+
             </div>
         </div>
     </div>
@@ -1299,6 +829,464 @@
 
 
     <!-- Modal area end -->
+
+    <!-- Offcanvas area start -->
+    <div class="offcanvas offcanvas-end job-post-offcanvas" data-bs-backdrop="static" tabindex="-1" id="offcanvasRight"
+        aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h3 class="offcanvas-title" id="offcanvasRightLabel">Post a Job</h3>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body job-post-offcanvas-body">
+            <div class="job-post-offcanvas-header">
+                <div class="job-post-offcanvas-sl">1</div>
+                <div class="job-post-offcanvas-title">Are you posting for a company, or as an individual?
+                </div>
+
+            </div>
+            <div class="job-post-offcanvas-row">
+                <div class="nav" id="pills-tab" role="tablist">
+                    <div class="row g-2">
+                        <div class="col-sm-6">
+                            <button class="nav-link active" id="company-tab" data-bs-toggle="pill"
+                                data-bs-target="#company" type="button" role="tab" aria-controls="company"
+                                aria-selected="true">
+                                company
+                            </button>
+                        </div>
+                        <div class="col-sm-6">
+                            <button class="nav-link" id="indivisual-tab" data-bs-toggle="pill"
+                                data-bs-target="#indivisual" type="button" role="tab" aria-controls="indivisual"
+                                aria-selected="false">
+                                indivisual
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="pills-tabContent">
+
+                <div class="tab-pane fade show active" id="company" role="tabpanel" aria-labell edby="company-tab"
+                    tabindex="0">
+                    <div class="job-post-offcanvas-row">
+                        <h6>Company</h6>
+                        <div class="job-post-offcanvas-row-inner">
+                            <div class="posting-logo-area">
+                                <input class="form-control" type="file">
+                                <span class="posting-logo"><i class="fa-regular fa-cloud-arrow-up"></i>
+                                </span>
+                            </div>
+                            <div class="posting-content">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="exampleFormControlInput1"
+                                        placeholder="Your company name">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="url" class="form-control" id="exampleFormControlInput1"
+                                        placeholder="https://">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="job-post-offcanvas-item">
+                        <div class="job-post-offcanvas-header">
+                            <div class="job-post-offcanvas-sl">2</div>
+                            <div class="job-post-offcanvas-title">Job Details</div>
+                        </div>
+                        <div id="formModal" class="job-post-offcanvas-row">
+                            <div class="mb-3">
+                                <label for="title" class="form-label">Title</label>
+                                <input type="email" class="form-control" id="title"
+                                    placeholder="Ex: Graphic Designer, UI/UX Designer">
+                            </div>
+                            <div class="mb-3">
+                                <div class="cmn-select-area">
+                                    <label class="form-label">type</label>
+                                    <select class="modal-select2" name="state">
+                                        <option value="freelance">Freelance</option>
+                                        <option value="fulltime">Fulltime</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="cmn-select-area">
+                                    <label class="form-label">Creative Fields <small>(Up to
+                                            3)</small></label>
+                                    <select class="modal-select2" name="state">
+                                        <option value="Creative Field">Creative Field</option>
+                                        <option value="Costume Design">Costume Design</option>
+                                        <option value="Crafts">Crafts</option>
+                                        <option value="Creative Direction">Creative Direction</option>
+                                        <option value="Something else here">Something else here</option>
+                                        <option value="Culinary Arts">Culinary Arts</option>
+                                        <option value="CGI">CGI</option>
+                                        <option value="Character Design">Character Design</option>
+                                        <option value="Coloring">Coloring</option>
+                                        <option value="Concept Art">Concept Art</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="cmn-select-area">
+                                    <label class="form-label">Location</label>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <select class="modal-select2" name="state">
+                                                <option value="Creative Field">Select a Country/Region
+                                                </option>
+                                                <option value="Costume Design">Costume Design</option>
+                                                <option value="Crafts">Crafts</option>
+                                                <option value="Creative Direction">Creative Direction
+                                                </option>
+                                                <option value="Something else here">Something else here
+                                                </option>
+                                                <option value="Culinary Arts">Culinary Arts</option>
+                                                <option value="CGI">CGI</option>
+                                                <option value="Character Design">Character Design
+                                                </option>
+                                                <option value="Coloring">Coloring</option>
+                                                <option value="Concept Art">Concept Art</option>
+
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <select class="modal-select2" name="state">
+                                                <option value="Creative Field">City</option>
+                                                <option value="Costume Design">Costume Design</option>
+                                                <option value="Crafts">Crafts</option>
+                                                <option value="Creative Direction">Creative Direction
+                                                </option>
+                                                <option value="Something else here">Something else here
+                                                </option>
+                                                <option value="Culinary Arts">Culinary Arts</option>
+                                                <option value="CGI">CGI</option>
+                                                <option value="Character Design">Character Design
+                                                </option>
+                                                <option value="Coloring">Coloring</option>
+                                                <option value="Concept Art">Concept Art</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="job-post-offcanvas-item">
+                        <div class="job-post-offcanvas-header">
+                            <div class="job-post-offcanvas-sl">3</div>
+                            <div class="job-post-offcanvas-title">Public Post</div>
+                        </div>
+                        <div id="formModal" class="job-post-offcanvas-row">
+                            <div class="mb-3">
+                                <div class="cmn-select-area">
+                                    <label for="type" class="form-label">Employment Type</label>
+                                    <select class="modal-select2" id="type" name="state">
+                                        <option value="onsite">onsite</option>
+                                        <option value="remote">remote</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="Short-Description" class="form-label">Short Description
+
+                                </label>
+                                <input type="email" class="form-control" id="Short-Description"
+                                    placeholder="Ex: We are looking for a graphic designer proficient in Adobe Illustrator">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">Example
+                                    textarea</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"
+                                    placeholder="Write here"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="job-post-offcanvas-item">
+                        <div class="job-post-offcanvas-header">
+                            <div class="job-post-offcanvas-sl">4</div>
+                            <div class="job-post-offcanvas-title">Applicants should apply via</div>
+                        </div>
+                        <div class="job-post-offcanvas-row radio-row">
+                            <div class="nav" id="pills-tab" role="tablist">
+                                <button class="" id="Behance-tab" data-bs-toggle="pill" data-bs-target="#Behance"
+                                    type="button" role="tab" aria-controls="Behance" aria-selected="true">
+                                    <input type="radio" class="btn-check" name="options-outlined" id="success-outlined"
+                                        autocomplete="off" checked="">
+                                    <label class="btn" for="success-outlined">
+                                        <div class="text-area">
+                                            <div class="title">Shaowcase</div>
+                                            <span class="description">Manage your search in one
+                                                place</span>
+                                        </div>
+                                        <div class="icon-area">
+                                            <i class="fa-brands fa-behance"></i>
+                                        </div>
+                                    </label>
+                                </button>
+                                <button class="" id="External-tab" data-bs-toggle="pill" data-bs-target="#External"
+                                    type="button" role="tab" aria-controls="External" aria-selected="false">
+                                    <input type="radio" class="btn-check" name="options-outlined" id="danger-outlined"
+                                        autocomplete="off">
+                                    <label class="btn" for="danger-outlined">
+                                        <div class="text-area">
+                                            <div class="title"> External</div>
+                                            <span class="description">Redirect applicants to a link of
+                                                your choice
+                                            </span>
+                                        </div>
+                                        <div class="icon-area">
+                                            <i class="fa-regular fa-link"></i>
+                                        </div>
+                                    </label>
+                                </button>
+                            </div>
+                            <div class="tab-content" id="pills-tabContent">
+
+                                <div class="tab-pane fade" id="External" role="tabpanel" aria-labelledby="External-tab"
+                                    tabindex="0">
+                                    <div class="mb-3">
+                                        <label for="url" class="form-label">URL</label>
+                                        <input type="email" class="form-control" id="url" placeholder="https://">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="job-post-offcanvas-item">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">
+                                <small class="para-text">This post is advertising a creative job
+                                    opportunity, and I
+                                    understand that off-topic posts will be removed. For more, please
+                                    see the Help Center article Best <a href="" class="highlight">Practices When Posting
+                                        a Job.</a></small>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="indivisual" role="tabpanel" aria-labelledby="indivisual-tab"
+                    tabindex="0">
+                    <div class="job-post-offcanvas-row">
+                        <h6>Posting As</h6>
+                        <div class="job-post-offcanvas-row-inner">
+                            <div class="posting-logo-area">
+                                <input class="form-control" type="file">
+                                <span class="posting-logo"><i class="fa-regular fa-cloud-arrow-up"></i>
+                                </span>
+                            </div>
+                            <div class="posting-content">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="exampleFormControlInput1"
+                                        placeholder="Your company name">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="url" class="form-control" id="exampleFormControlInput1"
+                                        placeholder="https://">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="job-post-offcanvas-item">
+                        <div class="job-post-offcanvas-header">
+                            <div class="job-post-offcanvas-sl">2</div>
+                            <div class="job-post-offcanvas-title">Job Details</div>
+                        </div>
+                        <div id="formModal2" class="job-post-offcanvas-row">
+                            <div class="mb-3">
+                                <label for="title" class="form-label">Title</label>
+                                <input type="email" class="form-control" id="title"
+                                    placeholder="Ex: Graphic Designer, UI/UX Designer">
+                            </div>
+                            <div class="mb-3">
+                                <div class="cmn-select-area">
+                                    <label class="form-label">type</label>
+                                    <select class="modal-select3" name="state">
+                                        <option value="freelance">Freelance</option>
+                                        <option value="fulltime">Fulltime</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="cmn-select-area">
+                                    <label class="form-label">Creative Fields <small>(Up to
+                                            3)</small></label>
+                                    <select class="modal-select3" name="state">
+                                        <option value="Creative Field">Creative Field</option>
+                                        <option value="Costume Design">Costume Design</option>
+                                        <option value="Crafts">Crafts</option>
+                                        <option value="Creative Direction">Creative Direction</option>
+                                        <option value="Something else here">Something else here</option>
+                                        <option value="Culinary Arts">Culinary Arts</option>
+                                        <option value="CGI">CGI</option>
+                                        <option value="Character Design">Character Design</option>
+                                        <option value="Coloring">Coloring</option>
+                                        <option value="Concept Art">Concept Art</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="cmn-select-area">
+                                    <label class="form-label">Location</label>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <select class="modal-select3" name="state">
+                                                <option value="Creative Field">Select a Country/Region
+                                                </option>
+                                                <option value="Costume Design">Costume Design</option>
+                                                <option value="Crafts">Crafts</option>
+                                                <option value="Creative Direction">Creative Direction
+                                                </option>
+                                                <option value="Something else here">Something else here
+                                                </option>
+                                                <option value="Culinary Arts">Culinary Arts</option>
+                                                <option value="CGI">CGI</option>
+                                                <option value="Character Design">Character Design
+                                                </option>
+                                                <option value="Coloring">Coloring</option>
+                                                <option value="Concept Art">Concept Art</option>
+
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <select class="modal-select3" name="state">
+                                                <option value="Creative Field">City</option>
+                                                <option value="Costume Design">Costume Design</option>
+                                                <option value="Crafts">Crafts</option>
+                                                <option value="Creative Direction">Creative Direction
+                                                </option>
+                                                <option value="Something else here">Something else here
+                                                </option>
+                                                <option value="Culinary Arts">Culinary Arts</option>
+                                                <option value="CGI">CGI</option>
+                                                <option value="Character Design">Character Design
+                                                </option>
+                                                <option value="Coloring">Coloring</option>
+                                                <option value="Concept Art">Concept Art</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="job-post-offcanvas-item">
+                        <div class="job-post-offcanvas-header">
+                            <div class="job-post-offcanvas-sl">3</div>
+                            <div class="job-post-offcanvas-title">Public Post</div>
+                        </div>
+                        <div id="formModal" class="job-post-offcanvas-row">
+                            <div class="mb-3">
+                                <div class="cmn-select-area">
+                                    <label for="Employment-type" class="form-label">Employment
+                                        Type</label>
+                                    <select class="modal-select3" id="Employment-type" name="state">
+                                        <option value="onsite">onsite</option>
+                                        <option value="remote">remote</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="Short-Description" class="form-label">Short Description
+
+                                </label>
+                                <input type="email" class="form-control" id="Short-Description"
+                                    placeholder="Ex: We are looking for a graphic designer proficient in Adobe Illustrator">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">Example
+                                    textarea</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"
+                                    placeholder="Write here"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="job-post-offcanvas-item">
+                        <div class="job-post-offcanvas-header">
+                            <div class="job-post-offcanvas-sl">4</div>
+                            <div class="job-post-offcanvas-title">Applicants should apply via</div>
+                        </div>
+                        <div class="job-post-offcanvas-row radio-row">
+                            <div class="nav" id="pills-tab" role="tablist">
+                                <button class="" id="individualexternal-tab" data-bs-toggle="pill"
+                                    data-bs-target="#individualexternal" type="button" role="tab"
+                                    aria-controls="individualexternal" aria-selected="true">
+                                    <input type="radio" class="btn-check" name="options-outlined" id="success-outlined2"
+                                        autocomplete="off" checked="">
+                                    <label class="btn" for="success-outlined2">
+                                        <div class="text-area">
+                                            <div class="title">Shaowcase</div>
+                                            <span class="description">Manage your search in one
+                                                place</span>
+                                        </div>
+                                        <div class="icon-area">
+                                            <i class="fa-brands fa-behance"></i>
+                                        </div>
+                                    </label>
+                                </button>
+                                <button class="" id="individual-showcase-url-tab" data-bs-toggle="pill"
+                                    data-bs-target="#individual-showcase-url" type="button" role="tab"
+                                    aria-controls="individual-showcase-url" aria-selected="false">
+                                    <input type="radio" class="btn-check" name="options-outlined" id="danger-outlined2"
+                                        autocomplete="off">
+                                    <label class="btn" for="danger-outlined2">
+                                        <div class="text-area">
+                                            <div class="title">External</div>
+                                            <span class="description">Redirect applicants to a link of
+                                                your choice
+                                            </span>
+                                        </div>
+                                        <div class="icon-area">
+                                            <i class="fa-regular fa-link"></i>
+                                        </div>
+                                    </label>
+                                </button>
+                            </div>
+                            <div class="tab-content" id="pills-tabContent">
+
+                                <div class="tab-pane fade" id="individual-showcase-url" role="tabpanel"
+                                    aria-labelledby="individual-showcase-url-tab" tabindex="0">
+                                    <div class="mb-3">
+                                        <label for="url" class="form-label">URL</label>
+                                        <input type="email" class="form-control" id="url" placeholder="https://">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="job-post-offcanvas-item">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck2">
+                            <label class="form-check-label" for="exampleCheck2">
+                                <small>This post is advertising a creative job opportunity, and I
+                                    understand
+                                    that off-topic posts will be removed. For more, please see the Help
+                                    Center article Best <a href="" class="highlight">Practices When
+                                        Posting
+                                        a Job.</a></small>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="job-post-modal-bottom">
+                <a href="" type="button" class="cmn-btn">post job</a>
+            </div>
+        </div>
+
+    </div>
+    <!-- Offcanvas area end -->
 
 
 

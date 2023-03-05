@@ -158,7 +158,8 @@
                                         </div>
                                     </div>
                                     <div class="btn-area">
-                                        <button class="cmn-btn2">
+                                        <button class="cmn-btn2" data-bs-toggle="modal"
+                                            data-bs-target="#eidt-availibility">
                                             <i class="fa-sharp fa-solid fa-envelope"></i>
                                             Edit Availability
                                         </button>
@@ -203,9 +204,9 @@
                                         aria-selected="false">NFTs</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="NFTs-tab" data-bs-toggle="pill" data-bs-target="#livestreams"
-                                        type="button" role="tab" aria-controls="livestreams"
-                                        aria-selected="false">Livestreams</button>
+                                    <button class="nav-link" id="NFTs-tab" data-bs-toggle="pill"
+                                        data-bs-target="#livestreams" type="button" role="tab"
+                                        aria-controls="livestreams" aria-selected="false">Livestreams</button>
                                 </li>
 
                             </ul>
@@ -347,18 +348,19 @@
                                             </a>
                                         </div>
                                     </div>
-                                    
+
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="Appreciations" role="tabpanel"
                                 aria-labelledby="Appreciations-tab" tabindex="0">
-                                
+
                             </div>
                             <div class="tab-pane fade" id="NFTs" role="tabpanel" aria-labelledby="NFTs-tab"
                                 tabindex="0">
                                 <div class="nfts-tab-content">
                                     <h3 class="title">Display your NFTs on your profile</h3>
-                                    <p class="para-text">Connect your wallets with your Adobe account, then add your NFTs to your profile.</p>
+                                    <p class="para-text">Connect your wallets with your Adobe account, then add your
+                                        NFTs to your profile.</p>
                                     <div class="nfts-row">
                                         <div class="number">1</div>
                                         <h4>Add your wallets to your <a href="" class="highlight">Add Account</a></h4>
@@ -373,11 +375,11 @@
                                     <div class="link-area">
                                         <a href="">Have questions? Visit our NFT FAQ to learn more.</a>
                                     </div>
-                                                                          
+
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="livestreams" role="tabpanel" aria-labelledby="livestreams-tab"
-                                tabindex="0">
+                            <div class="tab-pane fade" id="livestreams" role="tabpanel"
+                                aria-labelledby="livestreams-tab" tabindex="0">
                                 <div class="row">
                                     <div class="col-xxl-4 col-xl-4">
                                         <div class="cmn-card6">
@@ -390,7 +392,7 @@
                                                 </div>
 
                                             </div>
-                                            
+
                                         </div>
                                     </div>
 
@@ -440,6 +442,70 @@
 
 
 
+
+    <!-- Edit availability modal start -->
+    <div class="modal fade availability-modal" id="eidt-availibility" tabindex="-1"
+        aria-labelledby="eidt-availibilityLabel" aria-hidden="true" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="eidt-availibilityLabel">Edit Availability</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="availability-description">Add our new "Hire Me" button to let visitors know that you're
+                        looking for new opportunities
+                    </div>
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#full-time-job" aria-expanded="true" aria-controls="full-time-job">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" role="switch"
+                                            id="full-time-job-checkbox">
+                                        <label class="form-check-label" for="full-time-job-checkbox">Checked switch
+                                            checkbox input</label>
+                                    </div>
+                                </button>
+                            </h2>
+                            <div id="full-time-job" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    A
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#freelance-project" aria-expanded="false"
+                                    aria-controls="freelance-project">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" role="switch"
+                                            id="freelance-project-checkbox">
+                                        <label class="form-check-label" for="freelance-project-checkbox">Checked switch
+                                            checkbox input</label>
+                                    </div>
+                                </button>
+                            </h2>
+                            <div id="freelance-project" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    B
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Edit availability modal end-->
 
 
 
