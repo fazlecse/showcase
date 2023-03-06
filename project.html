@@ -461,18 +461,47 @@
                             <h2 class="accordion-header" id="headingOne">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#full-time-job" aria-expanded="true" aria-controls="full-time-job">
-                                    <div class="form-check form-switch">
-                                        <input class="form-check-input" type="checkbox" role="switch"
-                                            id="full-time-job-checkbox">
-                                        <label class="form-check-label" for="full-time-job-checkbox">Checked switch
-                                            checkbox input</label>
-                                    </div>
+                                    Full Time Job
                                 </button>
                             </h2>
                             <div id="full-time-job" class="accordion-collapse collapse" aria-labelledby="headingOne"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    A
+                                    <div class="availabililty-checkbox">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckChecked">
+                                            <label class="form-check-label" for="flexCheckChecked">
+                                                I'm willing to relocate
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckChecked2">
+                                            <label class="form-check-label" for="flexCheckChecked2">
+                                                I'm looking for remote opportunities
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="call-to-action">
+                                        <p class="title">Call to action</p>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <input type="radio" class="btn-check" name="options-outlined"
+                                                    id="success-outlined" autocomplete="off" checked>
+                                                <label class="btn " for="success-outlined">Hire
+                                                    Me</label>
+                                            </div>
+
+                                            <div class="col-sm-6">
+                                                <input type="radio" class="btn-check" name="options-outlined"
+                                                    id="danger-outlined4" autocomplete="off">
+                                                <label class="btn " for="danger-outlined4">Hire
+                                                    Us</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -481,26 +510,75 @@
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#freelance-project" aria-expanded="false"
                                     aria-controls="freelance-project">
-                                    <div class="form-check form-switch">
-                                        <input class="form-check-input" type="checkbox" role="switch"
-                                            id="freelance-project-checkbox">
-                                        <label class="form-check-label" for="freelance-project-checkbox">Checked switch
-                                            checkbox input</label>
-                                    </div>
+                                    Freelance & Project Commission
                                 </button>
                             </h2>
                             <div id="freelance-project" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    B
+                                    <div id="formModal" class="availability-budget">
+                                        <p class="title">Min. Budget</p>
+                                        <div class="col-12 mb-3">
+
+                                            <div class="row g-2">
+                                                <div class="col-8">
+                                                    <input type="text" class="form-control" placeholder="Ex: 5,000"
+                                                        aria-label="Last name">
+                                                </div>
+                                                <div class="col-4">
+                                                    <select class="modal-select2" name="state">
+                                                        <option value="AL">USD - $</option>
+                                                        ...
+                                                        <option value="WY">EUR - €</option>
+                                                        <option value="WY">GBP - £</option>
+                                                        <option value="WY">BDT - ৳</option>
+                                                        <option value="WY">BBD - $</option>
+                                                        <option value="WY">AMD - ֏</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="title">When are you available?</p>
+                                        <div class="col mb-3">
+                                            <select class="modal-select2" name="state">
+                                                <option value="AL">Select your availability
+                                                </option>
+                                                ...
+                                                <option value="WY">Within the next few weeks</option>
+                                                <option value="WY">Whthin the next 3 months</option>
+                                                <option value="WY">In 3 to 6 months</option>
+                                                <option value="WY">Over 3 to 6 month</option>
+                                                <option value="WY">Over 6 months</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="call-to-action">
+                                        <p class="title">Call to action</p>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <input type="radio" class="btn-check" name="options-outlined"
+                                                    id="success-outlined3" autocomplete="off" checked>
+                                                <label class="btn " for="success-outlined3">Hire
+                                                    Me</label>
+                                            </div>
+
+                                            <div class="col-sm-6">
+                                                <input type="radio" class="btn-check" name="options-outlined"
+                                                    id="danger-outlined" autocomplete="off">
+                                                <label class="btn " for="danger-outlined">Hire
+                                                    Us</label>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="cmn-btn">Done</button>
+                    <button type="button" class="cmn-btn2">cancel</button>
                 </div>
             </div>
         </div>

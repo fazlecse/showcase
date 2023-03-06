@@ -28,6 +28,7 @@
     --border-color3: #e1f1ee;
     --border-color4: #ccc;
     --primary-color-opacity-low: rgba(5, 160, 129, .1);
+    --primary-color-opacity-low2: rgba(5, 160, 129, .3);
     --orange-opacity-low: rgb(234, 131, 49, 0.1);
     --shadow1: 0 0 0 0.25rem rgb(1 124 110 / 25%);
     --shadow2: 0px 3px 5px rgb(0 0 0 / 4%);
@@ -1095,6 +1096,46 @@ hr.divider:after {
     background: var(--secondary-color);
 }
 
+// Filter bar responsive start
+@media (min-width: 1200px){
+    .filter-bar .search-bar .filter-search-dropdown .cmn-btn2{
+        display: none;
+    }
+}
+@media (max-width: 1199px) {
+    .filter-bar {
+        .search-bar {
+            .search-nav {
+                display: none;
+            }
+
+            .filter-search-dropdown {
+                .cmn-btn2{
+                    height: 50px;
+                    border-top-right-radius: 100px;
+                    border-bottom-right-radius: 100px;
+                    width: 100%;
+                    border: none;
+                    padding: 0 30px !important;
+                    &:hover{
+                        background: initial;
+                    }
+                }
+
+                .dropdown-toggle.show{
+                    background: initial;
+                }
+
+            }
+        }
+    }
+}
+.dropdown-toggle::after{
+    margin-left: 0.6em !important;
+}
+
+// Filter bar responsive end
+
 // filter bar area end
 
 // filter content start
@@ -1160,9 +1201,10 @@ hr.divider:after {
     }
 
     img {
-        height: 300px;
-        width: 100%;
         border-radius: 8px;
+        width: 100%;
+        height: 18vw;
+        object-fit: cover;
     }
 
     .thum-btn {
@@ -1210,8 +1252,8 @@ hr.divider:after {
     .profile-thum img {
         border-radius: 50%;
         min-width: 24px;
-        width: 30px;
-        height: 30px;
+        width: 25px;
+        height: 25px;
         margin-right: 8px;
     }
 }
@@ -1224,10 +1266,12 @@ hr.divider:after {
 
     .shot-statistics-item {
         margin-left: 8px;
+        display: flex;
 
         i {
             color: var(--secondary-color2);
             cursor: pointer;
+            margin-right: 5px;
 
             &:hover {
                 color: var(--primary-color);
@@ -1235,6 +1279,28 @@ hr.divider:after {
         }
     }
 }
+
+// Filter content responsive start
+@media (max-width: 1399px) {
+    .single-thum img {
+        height: 22vw;
+    }
+}
+
+@media (max-width: 991px) {
+    .single-thum img {
+        height: 28vw;
+    }
+}
+
+@media (max-width: 575px) {
+    .single-thum img {
+        height: 65vw;
+    }
+}
+
+// Filter content responsive end
+
 
 // filter content end
 
@@ -1985,7 +2051,7 @@ hr.divider:after {
 
     .select2-selection--single,
     .select2-selection--multiple {
-        border: 1px solid var(--border-color2);
+        border: 1px solid transparent;
 
         &:focus {
             border: 1px solid var(--primary-color);
@@ -2769,40 +2835,114 @@ hr.divider:after {
 
         .modal-title {
             font-size: 22px;
-            font-weight: 700;
+            font-weight: 500;
             color: var(--black);
         }
     }
 
     .modal-body {
-        padding: 0 30px 45px;
+        padding: 0 30px 30px;
 
         .availability-description {
             font-size: 15px;
             color: var(--heading-color);
             margin-bottom: 25px;
         }
-        .accordion{
-            .accordion-item{
-                border: 1px solid var(--primary-color-opacity-low);
-                &:first-child{
+
+        .accordion {
+            .accordion-item {
+                border: 1px solid var(--primary-color-opacity-low2);
+                border-radius: 5px;
+
+                &:first-child {
                     margin-bottom: 10px;
-                }
-                .accordion-button{
-                    padding: 0;
                     background: var(--primary-color-opacity-low);
-                    &:focus{
-                        box-shadow: none;
+                }
+
+                .accordion-header {
+                    .accordion-button {
+                        background: var(--primary-color-opacity-low);
+                        padding: 15px;
+                        font-weight: 500;
+                        font-size: 16px;
+
+                        &:focus {
+                            box-shadow: none;
+                        }
+
+                        &::after {
+                            background: none;
+                        }
                     }
-                    &::after{
-                        background: none;
+
+                    .accordion-button:not(.collapsed) {
+                        color: var(--primary-color);
                     }
                 }
+
+                .accordion-body {
+                    background-color: var(--primary-color-opacity-low);
+                    border-bottom-right-radius: 5px;
+                    border-bottom-left-radius: 5px;
+
+                    .availabililty-checkbox,
+                    .availability-budget {
+                        background: var(--white);
+                        border-radius: 5px;
+                        box-shadow: var(--shadow2);
+                        padding: 20px;
+
+                        .title {
+                            color: var(--heading-color);
+                            font-weight: 500;
+                        }
+                    }
+
+                    .call-to-action {
+                        padding: 20px;
+                        background: var(--white);
+                        border-radius: 5px;
+                        margin-top: 15px;
+
+                        .title {
+                            font-size: 16px;
+                            color: var(--heading-color);
+                            font-weight: 500;
+                        }
+
+                        .btn {
+                            width: 100%;
+                            border: 1px solid var(--border-color2);
+                            height: 40px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+
+                        .btn-check:checked+.btn {
+                            background: var(--primary-color);
+                            border: 1px solid var(--primary-color) !important;
+                            color: var(--white);
+                        }
+                    }
+                }
+
             }
         }
     }
 
+    .modal-footer {
+        justify-content: flex-start;
+        padding: 0 30px 20px;
+        border-top: none;
+
+        .cmn-btn2 {
+            border-radius: 100px;
+        }
+    }
+
 }
+
 
 // Project area start
 
@@ -4108,6 +4248,7 @@ hr.divider:after {
                 font-weight: 500;
                 margin-bottom: 5px;
                 font-family: var(--heading-font);
+                padding: 0 5px;
             }
         }
 
@@ -4141,7 +4282,7 @@ hr.divider:after {
 .blog-details-area {
 
     .blog-details-hero {
-        background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 45%, rgba(5, 160, 129, .1) 45%, rgba(5, 160, 129, .1) 45%);
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 40%, rgba(5, 160, 129, 0.1) 40%, rgba(5, 160, 129, 0.1) 40%);
         padding-top: 65px;
     }
 
