@@ -120,8 +120,8 @@ $(document).ready(function () {
         }
     });
 
-    // Swiper-slider
-    var swiper = new Swiper(".mySwiper", {
+    // Swiper-slider livestream-swiper
+    var swiper = new Swiper(".livestream-swiper", {
         effect: "coverflow",
         grabCursor: true,
         centeredSlides: true,
@@ -141,6 +141,8 @@ $(document).ready(function () {
         loop: true,
 
     });
+
+
     // select2 filter sidebar
     $(".js-example-basic-single").select2({
         maximumSelectionLength: 2

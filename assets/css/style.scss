@@ -133,7 +133,7 @@ body {
     font-size: 14px;
     overflow-x: hidden;
     background-color: var(--white);
-    padding-bottom: 30px;
+    padding-bottom: 50px;
 }
 
 html {
@@ -453,7 +453,7 @@ body::-webkit-scrollbar-thumb {
 
 .cmn-btn2 {
     padding: 5px 18px !important;
-    border-radius: 5px;
+    border-radius: 100px;
     transition: all .3s ease-in-out;
     font-size: 14px;
     display: flex;
@@ -969,6 +969,7 @@ hr.divider:after {
         color: var(--black) !important;
         font-weight: 500;
         border: 2px solid transparent;
+        text-transform: capitalize;
 
         &.active {
             color: var(--primary-color) !important;
@@ -1005,6 +1006,91 @@ hr.divider:after {
     }
 }
 
+// Responsive nav area start
+@media (min-width: 992px) {
+    .navbar-nav.footer-nav {
+        display: none;
+    }
+}
+
+@media (max-width: 991px) {
+    .offcanvas.offcanvas-end {
+        border-left: 0;
+    }
+
+    .navbar {
+        padding: 15px 0;
+        border-bottom: none;
+
+        .nav-link {
+            padding: 0 !important;
+            margin: 10px;
+        }
+
+        .nav-link.active {
+            border-bottom: none;
+        }
+    }
+    .navbar.active{
+        box-shadow: none;
+    }
+
+    .navbar-toggler {
+        background: var(--primary-color);
+        padding: 7px 10px;
+        border-radius: 5px;
+        border: none;
+
+        &:focus {
+            box-shadow: none;
+        }
+
+        i {
+            color: var(--white);
+        }
+    }
+
+    .nav-right {
+        margin-top: 20px;
+    }
+
+    .footer-nav {
+        margin-top: 50px;
+
+        .nav-link {
+            font-family: var(--body-font);
+            font-size: 12px;
+            font-weight: 600;
+            margin: 5px 10px;
+        }
+
+        .cmn-btn2 {
+            border: none;
+            background: initial;
+            padding: 0 !important;
+            margin: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .dropdown-menu {
+            min-width: 150px;
+            width: 150px;
+
+            .dropdown-item {
+                font-family: var(--body-font);
+                font-size: 11px;
+                font-weight: 600;
+            }
+        }
+
+        .dropdown-toggle.show {
+            background: initial;
+        }
+    }
+}
+
+// Responsive nav area end
 
 
 // Nav area end
@@ -1089,6 +1175,7 @@ hr.divider:after {
     .cmn-btn2 {
         margin-right: 8px;
         height: 38px;
+        border-radius: 5px;
     }
 }
 
@@ -1097,11 +1184,12 @@ hr.divider:after {
 }
 
 // Filter bar responsive start
-@media (min-width: 1200px){
-    .filter-bar .search-bar .filter-search-dropdown .cmn-btn2{
+@media (min-width: 1200px) {
+    .filter-bar .search-bar .filter-search-dropdown .cmn-btn2 {
         display: none;
     }
 }
+
 @media (max-width: 1199px) {
     .filter-bar {
         .search-bar {
@@ -1110,19 +1198,20 @@ hr.divider:after {
             }
 
             .filter-search-dropdown {
-                .cmn-btn2{
+                .cmn-btn2 {
                     height: 50px;
                     border-top-right-radius: 100px;
                     border-bottom-right-radius: 100px;
                     width: 100%;
                     border: none;
                     padding: 0 30px !important;
-                    &:hover{
+
+                    &:hover {
                         background: initial;
                     }
                 }
 
-                .dropdown-toggle.show{
+                .dropdown-toggle.show {
                     background: initial;
                 }
 
@@ -1130,7 +1219,8 @@ hr.divider:after {
         }
     }
 }
-.dropdown-toggle::after{
+
+.dropdown-toggle::after {
     margin-left: 0.6em !important;
 }
 
@@ -1139,10 +1229,9 @@ hr.divider:after {
 // filter bar area end
 
 // filter content start
-.filter-content {
-    padding: 30px 0;
+.filter-content{
+    padding-top: 30px;
 }
-
 .single-box {
     &:hover .overlay-title {
         opacity: 1;
@@ -4514,5 +4603,35 @@ hr.divider:after {
         }
     }
 }
+
+// Responsive footer area start
+@media (max-width: 991px) {
+    .footer-area {
+        display: none;
+    }
+}
+
+@media (max-width: 575px) {
+    .filter-bar {
+        .search-bar {
+            .search-area {
+                .form-control {
+                    height: 40px;
+                }
+            }
+            .filter-search-dropdown {
+                .cmn-btn2 {
+                    height: 40px;
+                    padding: 0 10px !important;
+                }
+            }
+        }
+
+
+    }
+}
+
+// Responsive footer area end
+
 
 // Footer area end
