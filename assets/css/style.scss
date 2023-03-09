@@ -110,6 +110,14 @@
     }
 }
 
+@media (max-width: 991px) {
+
+    .container-fluid {
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * .5);
+    }
+}
+
 
 *,
 *::after,
@@ -863,6 +871,10 @@ hr.divider:after {
     padding-top: 75px;
 }
 
+.pt-60 {
+    padding-top: 60px;
+}
+
 .pt-80 {
     padding-top: 80px;
 }
@@ -1031,7 +1043,8 @@ hr.divider:after {
             border-bottom: none;
         }
     }
-    .navbar.active{
+
+    .navbar.active {
         box-shadow: none;
     }
 
@@ -1229,9 +1242,10 @@ hr.divider:after {
 // filter bar area end
 
 // filter content start
-.filter-content{
+.filter-content {
     padding-top: 30px;
 }
+
 .single-box {
     &:hover .overlay-title {
         opacity: 1;
@@ -1398,7 +1412,11 @@ hr.divider:after {
 
     .nav {
         flex-wrap: nowrap;
-        // overflow-x: scroll;
+
+        .nav-item {
+            display: flex;
+            justify-content: center;
+        }
 
         .nav-link {
             position: relative;
@@ -1545,15 +1563,25 @@ hr.divider:after {
     margin: 0 -25px;
 
     .swiper {
-        width: 100%;
+
+        // width: 100%;
+        .single-box {
+            height: 30vw;
+        }
 
         .swiper-slide {
             background-position: center;
             background-size: cover;
             max-width: 1024px;
-            max-height: 576px;
+            // max-height: 576px;
+            height: 30vw;
 
             .single-thum {
+                iframe {
+                    width: 100%;
+                    height: 100%;
+                }
+
                 .overlay-title {
                     top: 60px;
                     left: 40px;
@@ -1574,7 +1602,7 @@ hr.divider:after {
 
         .swiper-slide-active {
             max-width: 1024px;
-            max-height: 576px;
+            // max-height: 576px;
         }
 
         .swiper-button-next,
@@ -1597,6 +1625,47 @@ hr.divider:after {
         }
     }
 }
+
+// Responsive livestreams carousel area start
+@media (max-width: 991px) {
+    h2 {
+        font-size: 22px;
+    }
+
+    .livestreams-carousel-area {
+        padding: 20px 40px;
+    }
+}
+
+@media (max-width: 575px) {
+    .livestreams-carousel-area {
+        padding: 0px 25px;
+
+        .swiper {
+            .swiper-slide {
+                height: 40vw;
+
+                .single-box {
+                    height: 40vw;
+                }
+            }
+
+            .swiper-button-next,
+            .swiper-button-prev {
+                width: 35px;
+                height: 35px;
+
+                &::after {
+                    font-size: 15px;
+                }
+            }
+
+        }
+    }
+}
+
+
+// Responsive livestreams carousel area end
 
 // Livestreams-carousel-area-end
 // Whats new area start
@@ -1890,13 +1959,31 @@ hr.divider:after {
     }
 }
 
+// Responsive whats new start
+@media (max-width: 575px) {
+    .coverdcardlist1 {
+        padding: 20px 0;
+    }
+}
+
+// Responsive whats new end
+
 // Whats new area end
+
 // live schedule area start
 .coverdcardlist2 {
     padding: 30px 0;
     background: var(--bg-color2);
 }
 
+// Responsive live schedule start
+@media (max-width: 575px) {
+    .coverdcardlist2 {
+        padding: 20px 0;
+    }
+}
+
+// Responsive live schedule end
 // live schedule area start
 
 // Live hero area start
@@ -1909,8 +1996,11 @@ hr.divider:after {
     max-height: 100%;
 
     .live-content {
+        // position: relative;
         width: 35vw;
         padding: 30px 40px;
+        display: flex;
+        flex-direction: column;
 
         .cmn-btn {
             display: inline-block;
@@ -1934,20 +2024,27 @@ hr.divider:after {
             color: var(--white);
             font-weight: 500;
             margin: 25px 0px;
+            line-height: 1.2;
+            font-family: var(--heading-font);
+            max-width: 600px;
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            overflow: hidden;
         }
     }
 
     .live-hero-profile {
         display: flex;
         align-items: center;
-        position: absolute;
+        // position: absolute;
         color: var(--white);
-        bottom: 30px;
-        left: 40px;
+        margin-top: auto;
+        padding-top: 30px;
 
         .user-icon img {
-            width: 45px;
-            height: 45px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
         }
 
@@ -1969,7 +2066,74 @@ hr.divider:after {
     }
 }
 
+// Responsive live hero start
+@media (max-width: 1399px) {
+    .live-hero-area {
+        .live-content {
+            .live-title {
+                font-size: 29px;
+            }
+
+            .cmn-btn {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .live-hero-area {
+        flex-direction: column-reverse;
+        height: initial;
+
+        .live-content {
+            width: 100%;
+
+            .cmn-btn {
+                padding: 5px 15px !important;
+            }
+        }
+
+        .live-hero-profile {
+            .user-icon img {
+                width: 25px;
+                height: 25px;
+            }
+
+            .user-name {
+                font-size: 14px;
+            }
+        }
+
+        .youtube-wrapper {
+            max-width: initial;
+            width: 100%;
+            height: 45vw;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .live-hero-area {
+        .live-content {
+            padding: 20px;
+
+            .live-title {
+                font-size: 24px;
+            }
+        }
+
+        .youtube-wrapper {
+            height: 80vw;
+        }
+    }
+}
+
+// Responsive live hero end
+
 // Live hero area end
+
+
 
 // Hire hero area start
 .transparent-nav {
@@ -2014,6 +2178,7 @@ hr.divider:after {
 }
 
 // Hire hero area end
+
 // Hire page start
 .hire-page-area {
     margin-top: 15px;
@@ -2343,6 +2508,26 @@ hr.divider:after {
 
     }
 }
+
+// Responsive hire page start
+@media (max-width: 1651px) {
+    .profile-card {
+        .profile-content {
+            .hire-content-button {
+                padding: 0 5px;
+                i{
+                    margin-right: 5px;
+                }
+
+                .cmn-btn {
+                    margin-right: 7px;
+                }
+            }
+        }
+    }
+}
+
+// Responsive hire page end
 
 // Hire page end
 
@@ -4619,6 +4804,7 @@ hr.divider:after {
                     height: 40px;
                 }
             }
+
             .filter-search-dropdown {
                 .cmn-btn2 {
                     height: 40px;

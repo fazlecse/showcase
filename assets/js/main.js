@@ -70,23 +70,14 @@ $(document).ready(function () {
             0: {
                 items: 1
             },
-            400: {
-                items: 2
-            },
-            600: {
+            575: {
                 items: 3
             },
-            800: {
+            1000: {
                 items: 4
             },
-            1000: {
+            1400: {
                 items: 5
-            },
-            1220: {
-                items: 6
-            },
-            1450: {
-                items: 7
             },
             1620: {
                 items: 6
