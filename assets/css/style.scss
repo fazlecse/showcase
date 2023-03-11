@@ -141,7 +141,13 @@ body {
     font-size: 14px;
     overflow-x: hidden;
     background-color: var(--white);
-    padding-bottom: 50px;
+    padding-bottom: 30px;
+}
+
+@media (max-width: 991px) {
+    body {
+        padding-bottom: initial;
+    }
 }
 
 html {
@@ -443,7 +449,6 @@ body::-webkit-scrollbar-thumb {
     border-radius: 100px;
     transition: all .3s ease-in-out;
     font-size: 14px;
-    margin-left: 5px;
     color: var(--white);
     display: flex;
     align-items: center;
@@ -573,6 +578,12 @@ body::-webkit-scrollbar-thumb {
 
 section {
     padding: 100px 0;
+}
+
+@media (max-width: 991px) {
+    section {
+        padding: 50px 0;
+    }
 }
 
 .pro-title {
@@ -2164,9 +2175,6 @@ hr.divider:after {
         h1 {
             font-size: 60px;
             margin-bottom: 15px;
-        }
-
-        h1 {
             color: var(--white);
         }
 
@@ -2177,6 +2185,32 @@ hr.divider:after {
     }
 }
 
+// Responsive hire banner start
+@media(max-width: 991px) {
+    .banner-area {
+        .title-area {
+            h1 {
+                font-size: 40px;
+            }
+        }
+    }
+}
+
+@media(max-width: 575px) {
+    .banner-area {
+        .title-area {
+            h1 {
+                font-size: 30px;
+            }
+
+            h3 {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+// Responsive hire banner end
 // Hire hero area end
 
 // Hire page start
@@ -2192,6 +2226,7 @@ hr.divider:after {
     .search-area {
         padding: 20px 0;
         border-bottom: 1px solid var(--border-color2);
+        max-width: 100%;
     }
 }
 
@@ -2349,6 +2384,16 @@ hr.divider:after {
 
 .hire-content-top {
     padding: 20px;
+
+    .shorting-area {
+        .cmn-btn2 {
+            border-radius: 5px;
+        }
+    }
+}
+
+.hire-content-grid {
+    padding-bottom: 20px;
 }
 
 .profile-card {
@@ -2435,7 +2480,7 @@ hr.divider:after {
             position: absolute;
             display: flex;
             justify-content: space-between;
-            padding: 0 25px;
+            padding: 0 18px;
             opacity: 0;
             visibility: hidden;
             transition: var(--transition);
@@ -2501,6 +2546,7 @@ hr.divider:after {
                     font-size: 13px;
                     overflow: hidden;
                     text-overflow: ellipsis;
+                    white-space: nowrap;
                 }
             }
 
@@ -2510,17 +2556,42 @@ hr.divider:after {
 }
 
 // Responsive hire page start
-@media (max-width: 1651px) {
+@media only screen and (max-width: 1651px) and (min-width: 1400px) {
     .profile-card {
         .profile-content {
             .hire-content-button {
                 padding: 0 5px;
-                i{
+
+                i {
                     margin-right: 5px;
                 }
 
                 .cmn-btn {
                     margin-right: 7px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1199px) {
+    .profile-card {
+        .profile-content {
+            .hire-content-button {
+                padding: 0 3px;
+
+                i {
+                    margin-right: 5px;
+                    font-size: 16px;
+                }
+
+                .cmn-btn {
+                    margin-right: 5px;
+                    font-size: 13px;
+                }
+
+                .cmn-btn2 {
+                    font-size: 13px;
                 }
             }
         }
@@ -2547,6 +2618,7 @@ hr.divider:after {
 // Profile area start
 .profile-area {
     background: var(--bg-color5);
+    padding-bottom: 20px;
 }
 
 .profile-box {
@@ -2555,7 +2627,7 @@ hr.divider:after {
     border-radius: 3px;
     box-shadow: 0 1px 3px rgb(25 25 25 / 10%);
     margin-top: -130px;
-    margin-bottom: 50px;
+    // margin-bottom: 50px;
     z-index: 1;
     position: relative;
 }
@@ -2794,6 +2866,9 @@ hr.divider:after {
     }
 }
 
+.project-content-area {
+    padding-bottom: 30px;
+}
 
 .cmn-card4 {
     &:hover .card-thum .thum-text {
@@ -2828,7 +2903,7 @@ hr.divider:after {
         img {
             border-radius: 5px;
             width: 100%;
-            height: 220px;
+            height: 15vw;
         }
 
         .thum-text {
@@ -2862,7 +2937,39 @@ hr.divider:after {
     }
 }
 
+// Responsive profile start
+@media (max-width: 1399px) {
+    .profile-box {
+        padding: 25px 20px 16px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .cmn-card4 .card-thum img {
+        height: 22vw;
+    }
+}
+
+@media (max-width: 991px) {
+    .profile-box {
+        margin-top: initial;
+    }
+
+    .cmn-card4 .card-thum img {
+        height: 32vw;
+    }
+}
+
+@media (max-width: 575px) {
+    .cmn-card4 .card-thum img {
+        height: 60vw;
+    }
+}
+
+// Responsive profile end
 // Profile area end
+
+
 // project banner start
 .project-profile-banner {
     background: var(--bg-color4);
@@ -3294,6 +3401,7 @@ hr.divider:after {
         .cmn-btn,
         .cmn-btn2 {
             height: 40px;
+            border-radius: 5px;
 
             &:hover {
                 background: var(--secondary-color2);
@@ -3713,9 +3821,22 @@ hr.divider:after {
     }
 }
 
-
-
 // offcanvas end
+
+// Responsive job page start
+@media (max-width: 575px) {
+    .job-search-bar {
+        .search-nav {
+            display: none;
+        }
+    }
+
+    .cmn-tab .nav .nav-link {
+        font-size: 16px;
+    }
+}
+
+// Responsive job page end
 
 // Job page end
 
@@ -3941,7 +4062,36 @@ hr.divider:after {
     }
 }
 
+// Responsive apply modal start
+@media (max-width: 991px) {
+    .apply-modal .modal-content .apply-modal-body {
+        padding: 18px 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .apply-modal .modal-content .apply-modal-body textarea.form-control {
+        max-height: 263px;
+        height: 400px !important;
+    }
+}
+
+@media (max-width: 470px) {
+    .apply-modal .modal-content .apply-modal-body {
+        padding: 18px 0;
+
+        .content-footer .btn-area .cmn-btn {
+            width: initial;
+            font-size: 14px;
+        }
+    }
+}
+
+// Responsive apply modal end
+
 // apply modal end
+
+
 // job-post-modal responsive area start
 @media (min-width: 576px) {
     .apply-modal {
@@ -4087,6 +4237,14 @@ hr.divider:after {
     }
 }
 
+// Responsive profile message start
+@media (max-width: 575px) {
+    .profile-message-freelance-modal .modal-body {
+        padding: 0 15px 20px;
+    }
+}
+
+// Responsive profile message end
 // Profile massage modal end
 // Modal area end
 
@@ -4474,6 +4632,7 @@ hr.divider:after {
 
         .cmn-btn2 {
             height: 45px;
+            border-radius: 5px;
         }
 
         .cmn-btn-group {
@@ -4485,6 +4644,14 @@ hr.divider:after {
     }
 }
 
+// Responsive login signup start
+@media (max-width: 991px) {
+    .login-signup-page {
+        padding-top: 100px;
+    }
+}
+
+// Responsive login signup end
 // login signup area end
 
 // Blog area start
@@ -4529,7 +4696,7 @@ hr.divider:after {
         .image-area {
             img {
                 height: 100%;
-                height: 270px;
+                height: 15vw;
                 width: 100%;
                 border-radius: 20px;
             }
@@ -4549,6 +4716,37 @@ hr.divider:after {
         }
     }
 }
+
+// Responsive blog start
+@media (max-width: 991px) {
+    .blog-area {
+        .blog-box .image-area img {
+            height: 28vw;
+        }
+
+        .section-header .blog-subtitle {
+            font-size: 20px;
+        }
+
+        .blog-box {
+            .subtitle-area .subtitle {
+                font-size: 15px;
+            }
+
+            .text-area .title {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .blog-area .blog-box .image-area img {
+        height: 50vw;
+    }
+}
+
+// Responsive blog end
 
 // Blog area end
 
@@ -4660,6 +4858,91 @@ hr.divider:after {
     }
 }
 
+// Responsive blog details start
+@media (max-width: 1399px) {
+    .blog-details-area .section-right .header-area .hero-title {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .blog-details-area .section-right {
+        padding: 0 0 0 50px;
+
+        .header-area .hero-title {
+            font-size: 32px;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .blog-details-area .section-right {
+        padding: 0 20px 0 25px;
+
+        .header-area .hero-title {
+            font-size: 28px;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .blog-details-area {
+        .blog-details-hero {
+            background: initial;
+        }
+
+        .section-left .image-area {
+            padding: 50px 0;
+        }
+
+        .blog-details-content {
+            .pull {
+                font-size: 22px;
+
+                &::before {
+                    font-size: 60px;
+                    left: -32px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .blog-details-area {
+        .blog-details-content {
+            .pull {
+                font-size: 22px;
+                margin: 20px 20px 20px 60px;
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .blog-details-area{
+        .section-right {
+            padding: 0;
+    
+            .header-area {
+                .hero-title {
+                    font-size: 20px;
+                }
+    
+                .by-line {
+                    font-size: 16px;
+                }
+            }
+        }
+        .blog-details-content {
+            p {
+                width: 80%;
+            }
+        }
+    } 
+}
+
+// Responsive blog details end
 // Blog details area end
 
 
@@ -4816,6 +5099,9 @@ hr.divider:after {
 
     }
 }
+
+// Responsive footer area start
+.blog-area {}
 
 // Responsive footer area end
 
