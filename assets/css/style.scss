@@ -65,7 +65,9 @@
 }
 
 /* preloader-end */
-
+.rtl {
+    direction: rtl;
+}
 
 /* scroll-up_start */
 .scroll-up {
@@ -662,6 +664,10 @@ section {
     }
 }
 
+.rtl .badge {
+    margin-right: 8px;
+    margin-left: 0;
+}
 
 hr.divider {
     margin-top: 50px;
@@ -1116,7 +1122,26 @@ hr.divider:after {
 
 // Responsive nav area end
 
+// Rtl nav start
+.rtl .offcanvas.offcanvas-end {
+    left: 0;
+    right: auto;
+    transform: translateX(-100%);
+}
+.rtl .offcanvas.show:not(.hiding), .offcanvas.showing{
+    transform: none !important;
+}
+.rtl .offcanvas-body .navbar-nav .nav-link {
+    margin-right: 10px;
+}
+@media (min-width: 991px){
+    .rtl .navbar .navbar-nav .nav-link {
+        margin-right: 30px;
+        margin-left: 0;
+    }
+}
 
+// Rtl nav end
 // Nav area end
 
 // filter bar area start
@@ -1207,7 +1232,7 @@ hr.divider:after {
     background: var(--secondary-color);
 }
 
-// Filter bar responsive start
+// Responsive filter bar start
 @media (min-width: 1200px) {
     .filter-bar .search-bar .filter-search-dropdown .cmn-btn2 {
         display: none;
@@ -1244,20 +1269,71 @@ hr.divider:after {
     }
 }
 
+@media (max-width: 575px) {
+    .filter-bar {
+        .search-bar {
+            .search-area {
+                .form-control {
+                    height: 40px;
+                }
+            }
+
+            .filter-search-dropdown {
+                .cmn-btn2 {
+                    height: 40px;
+                    padding: 0 10px !important;
+                }
+            }
+        }
+
+
+    }
+}
+
 .dropdown-toggle::after {
     margin-left: 0.6em !important;
 }
 
-// Filter bar responsive end
+// Responsive filter bar  end
+
+// Rtl filter bar start
+.rtl .dropdown-toggle::after {
+    margin-right: 0.6em !important;
+    margin-left: 0 !important;
+}
+
+.rtl .filter-bar {
+    .search-bar {
+        .search-area {
+            .form-control {
+                padding: 5px 50px 5px 10px;
+                border-radius: 0;
+                border-top-right-radius: 100px;
+                border-bottom-right-radius: 100px;
+                border-left: 1px solid var(--border-color2);
+                border-right: 1px solid var(--bg-color2);
+            }
+
+            .input-group-text {
+                right: 10px;
+                left: auto;
+                transform: rotate(90deg);
+            }
+        }
+    }
+}
+
+// Rtl filter bar end
 
 // filter bar area end
 
 // filter content start
 .filter-content {
-    padding-top: 30px;
+    padding: 30px 0;
 }
 
 .single-box {
+
     &:hover .overlay-title {
         opacity: 1;
         visibility: visible;
@@ -1335,6 +1411,10 @@ hr.divider:after {
         z-index: 1;
         transition: var(--transition);
 
+        .thum-icon {
+            margin-right: 3px;
+        }
+
     }
 
     .overlay-title {
@@ -1394,7 +1474,7 @@ hr.divider:after {
     }
 }
 
-// Filter content responsive start
+// Responsive Filter content  start
 @media (max-width: 1399px) {
     .single-thum img {
         height: 22vw;
@@ -1413,8 +1493,38 @@ hr.divider:after {
     }
 }
 
-// Filter content responsive end
+// Responsive Filter content end
 
+// Rtl Filter content start
+.rtl .user-link .profile-thum img {
+    margin-left: 8px;
+    margin-right: 0;
+}
+
+.rtl .shot-statistics .shot-statistics-item i {
+    margin-left: 5px;
+    margin-right: 0;
+}
+
+.rtl .single-thum {
+    .overlay-title {
+        right: 15px;
+        left: auto;
+    }
+
+    .thum-btn {
+        right: 15px;
+        left: auto;
+
+        .thum-icon {
+            margin-right: 0;
+            margin-left: 3px;
+        }
+
+    }
+}
+
+// Rtl Filter content end
 
 // filter content end
 
@@ -1567,6 +1677,32 @@ hr.divider:after {
     }
 }
 
+// Responsive discover start
+@media (max-width: 1199px) {
+    h1 {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 991px) {
+    h1 {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 575px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+}
+
+// Responsive discover end
+// Discover area end
+
 // Livestreams-carousel-area-start
 .livestreams-carousel-area {
     background: var(--bg-color3);
@@ -1575,7 +1711,6 @@ hr.divider:after {
 
     .swiper {
 
-        // width: 100%;
         .single-box {
             height: 30vw;
         }
@@ -1677,8 +1812,8 @@ hr.divider:after {
 
 
 // Responsive livestreams carousel area end
-
 // Livestreams-carousel-area-end
+
 // Whats new area start
 .coverdcardlist1 {
     padding: 30px 0;
@@ -1978,7 +2113,54 @@ hr.divider:after {
 }
 
 // Responsive whats new end
+// Rtl whats new start
+.rtl .cmn-card1 .card-thum .live-tag{
+    right: 10px;
+    left: 0;
+}
+.rtl .cmn-card1 .card-content .card-user .user-name{
+    margin-left: 0;
+    margin-right: 5px;
+}
+.rtl .cmn-card2{
+    .card-content .card-user .user-name{
+        margin-left: 0;
+        margin-right: 5px;
+    }
+    .card-thum{
+        .thum-text {
+            .duration{
+                right: 10px;
+                left: auto;
+            }
+            .view{
+                left: 10px;
+                right: auto;
+            }
+        }
+    } 
+} 
 
+
+.rtl .cmn-card3{
+    .card-content .card-user .user-name{
+        margin-left: 0;
+        margin-right: 5px;
+    }
+    .card-thum{
+        .thum-text{
+            .calender{
+                left: auto;
+                right: 10px;
+                i{
+                    margin-right: 0;
+                    margin-left: 5px;
+                }
+            } 
+        }   
+    } 
+}
+// Rtl whats new end
 // Whats new area end
 
 // live schedule area start
@@ -4261,7 +4443,7 @@ hr.divider:after {
     }
 
     .stream-video {
-        height: 40vw;
+        height: 38vw;
         width: 100%;
 
         .video-iframe {
@@ -4292,6 +4474,11 @@ hr.divider:after {
                     color: var(--heading-color);
                     font-weight: 500;
                     font-family: var(--heading-font);
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    -webkit-box-orient: vertical;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
                 }
 
                 .stream-publish-date {
@@ -4404,8 +4591,16 @@ hr.divider:after {
         }
 
         .viewer-sidebar {
+            padding-top: 20px;
             height: calc(100vh - 260px);
             overflow: auto;
+
+            .viewer-sidebar-title {
+                text-transform: uppercase;
+                color: var(--heading-color);
+                font-family: var(--heading-font);
+                font-weight: 500;
+            }
 
             .viewer-siderbar-item {
                 margin: 15px 0;
@@ -4438,6 +4633,78 @@ hr.divider:after {
     }
 }
 
+// Responsive stream channel start
+@media (min-width: 992px) and (max-width: 1399px) {
+    .stream-channel-area {
+        .stream-sidebar {
+            .viwer-user-container {
+                padding: 20px 0;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .stream-channel-area .stream-sidebar .viwer-user-container .viwer-user-container-inner .cmn-btn {
+        font-size: 12px;
+        height: 30px;
+        padding: 5px !important;
+    }
+}
+
+@media (max-width: 1199px) {
+    .container-fluid {
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * .5);
+    }
+}
+
+@media (max-width: 991px) {
+    .stream-channel-area {
+        .stream-channel-container {
+            .stream-video {
+                height: 55vw;
+            }
+
+            .coverdcardlist1 {
+                display: none;
+            }
+        }
+
+        .stream-content {
+            .stream-header {
+                display: grid;
+                gap: 15px;
+
+                .stream-title-container {
+                    .stream-title {
+                        font-size: 16px;
+                    }
+
+                    .stream-publish-date {
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .stream-channel-area .stream-sidebar .viwer-user-container .viwer-user-container-inner .profile .profile-content .profile-title {
+        font-weight: 500;
+    }
+
+}
+
+@media (max-width: 575px) {
+    .cmn-card2 .card-content .card-title {
+        font-size: 13px;
+    }
+
+}
+
+// Responsive stream channel end
 // Stream channel end
 
 // Edit profile page start
@@ -4920,26 +5187,27 @@ hr.divider:after {
 }
 
 @media (max-width: 575px) {
-    .blog-details-area{
+    .blog-details-area {
         .section-right {
             padding: 0;
-    
+
             .header-area {
                 .hero-title {
                     font-size: 20px;
                 }
-    
+
                 .by-line {
                     font-size: 16px;
                 }
             }
         }
+
         .blog-details-content {
             p {
                 width: 80%;
             }
         }
-    } 
+    }
 }
 
 // Responsive blog details end
@@ -5079,29 +5347,9 @@ hr.divider:after {
     }
 }
 
-@media (max-width: 575px) {
-    .filter-bar {
-        .search-bar {
-            .search-area {
-                .form-control {
-                    height: 40px;
-                }
-            }
 
-            .filter-search-dropdown {
-                .cmn-btn2 {
-                    height: 40px;
-                    padding: 0 10px !important;
-                }
-            }
-        }
-
-
-    }
-}
 
 // Responsive footer area start
-.blog-area {}
 
 // Responsive footer area end
 

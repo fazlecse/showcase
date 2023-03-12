@@ -30,7 +30,7 @@ $(document).ready(function () {
         margin: 10,
         nav: true,
         dots: false,
-        // rtl:true,
+        rtl:true,
         responsive: {
             0: {
                 items: 1
@@ -65,7 +65,7 @@ $(document).ready(function () {
         margin: 20,
         nav: true,
         dots: false,
-        // rtl:true,
+        rtl:true,
         responsive: {
             0: {
                 items: 1
@@ -146,15 +146,6 @@ $(document).ready(function () {
     });
 
 
-
-
-
-    // achivement_area_start 
-    // $('.about_counter').counterUp({
-    //     delay: 10,
-    //     time: 1000
-    // });
-
     // scroll-up
     $(".scroll-up").fadeOut();
     $(window).scroll(function () {
@@ -164,17 +155,6 @@ $(document).ready(function () {
             $(".scroll-up").fadeOut();
         }
     });
-
-    // product_area_start range_area
-    // $(".js_range_slider").ionRangeSlider({
-    //     type: "double",
-    //     min: 0,
-    //     max: 100,
-    //     from: 800,
-    //     to: 500,
-    //     grid: true
-    // });
-
 
 
 });
